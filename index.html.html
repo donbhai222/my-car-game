@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लकी नंबर रेस - कोड</title>
+    <style>
+        /* गेम की CSS स्टाइलिंग */
+        body {
+            text-align: center;
+            background-color: #222; /* गहरा बैकग्राउंड */
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #game-container {
+            max-width: 400px;
+            margin: 20px auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            background-color: #333; /* कैनवास के चारों ओर का बॉक्स */
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        #score-p {
+            font-size: 16px;
+            margin: 5px 0 15px 0;
+        }
+
+        #raceCanvas {
+            background: #444; /* सड़क का रंग */
+            display: block;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            margin: 0 auto;
+        }
+
+        #controls-div {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .control-btn {
+            width: 120px;
+            height: 120px;
+            font-size: 30px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            background-color: #3498db; /* नीला बटन */
+            transition: opacity 0.2s;
+        }
+
+        .control-btn:active {
+            opacity: 0.8; /* क्लिक करने पर हल्का पारदर्शी */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>लकी नंबर रेस 🚗</h1>
+        <p id="score-p">स्कोर: 0</p>
+        
+        <canvas id="raceCanvas" width="300" height="400"></canvas>
+        
+        <div id="controls-div">
+            <button id="left-btn" class="control-btn">⬅️<br>बाएं</button>
+            <button id="right-btn" class="control-btn">➡️<br>दाएं</button>
+        </div>
+    </div>
+
+    <script>
+        /* गेम की JavaScript लॉजिक */
+        const canvas = document.getElementById("raceCanvas");
+        const ctx = canvas.getContext("2d");
+        const scoreEl = document.getElementById("score-p");
+
+        let score = 0;
+        let gameOver = false;
+        let speed = 5; // दुश्मन की शुरुआती गति
+
+        // खिलाड़ी की कार
+        let carX = 135;
+        const carY = 330;
+        const carWidth = 40;
+        const carHeight = 60;
+
+        // दुश्मन की कार
+        let enemyY = -50;
+        let enemyX = Math.floor(Math.random() * (260 - 0) + 0);
+        const enemyWidth = 40;
+        const enemyHeight = 60;
+
+        function updateScore() {
+            score += 10;
+            scoreEl.innerText = "स्कोर: " + score;
+            // हर 50 स्कोर पर गति बढ़ाएं
+            if (score % 50 === 0 && score > 0) speed++;
+        }
+
+        function drawPlayerCar() {
+            ctx.fillStyle = "red";
+            ctx.fillRect(carX, carY, carWidth, carHeight);
+        }
+
+        function drawEnemyCar() {
+            ctx.fillStyle = "limegreen"; // दुश्मन की कार का रंग
+            ctx.fillRect(enemyX, enemyY, enemyWidth, enemyHeight);
+        }
+
+        function moveEnemy() {
+            enemyY += speed;
+            // अगर दुश्मन स्क्रीन के नीचे चला जाए, तो उसे ऊपर रीसेट करें
+            if (enemyY > 400) {
+                enemyY = -50;
+                enemyX = Math.floor(Math.random() * (260 - 0) + 0);
+                updateScore();
+            }
+        }
+
+        function checkCollision() {
+            // टक्कर का पता लगाने का लॉजिक
+            if (
+                enemyY + enemyHeight >= carY &&
+                enemyY <= carY + carHeight &&
+                enemyX + enemyWidth >= carX &&
+                enemyX <= carX + carWidth
+            ) {
+                gameOver = true;
+                alert("गेम ओवर! आपका अंतिम स्कोर: " + score);
+            }
+        }
+
+        function draw() {
+            if (gameOver) return;
+
+            // कैनवास साफ़ करें
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawPlayerCar();
+            drawEnemyCar();
+            moveEnemy();
+            checkCollision();
+
+            // अगले फ्रेम को ड्रा करें
+            requestAnimationFrame(draw);
+        }
+
+        // खिलाड़ी को हिलाने के फंक्शन
+        function movePlayerLeft() {
+            if (carX > 0) carX -= 40;
+        }
+
+        function movePlayerRight() {
+            if (carX < canvas.width - carWidth) carX += 40;
+        }
+
+        // बटन क्लिक इवेंट
+        document.getElementById("left-btn").addEventListener("click", movePlayerLeft);
+        document.getElementById("right-btn").addEventListener("click", movePlayerRight);
+
+        // कीबोर्ड इवेंट (कंप्यूटर के लिए)
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") movePlayerLeft();
+            else if (e.key === "ArrowRight") movePlayerRight();
+        });
+
+        // गेम शुरू करें
+        draw();
+    </script>
+</body>
+</html>
