@@ -3,60 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thar Racing Game</title>
+    <title>Thar Racing Mania</title>
     <style>
-        body { text-align: center; background-color: #222; color: white; font-family: sans-serif; margin: 0; padding: 10px; }
-        #game-container { max-width: 300px; margin: 0 auto; border: 5px solid #555; background-color: #444; position: relative; }
-        canvas { display: block; margin: 0 auto; background: #666; }
-        .control-btn { width: 120px; height: 80px; font-size: 20px; margin: 10px; cursor: pointer; background: #e67e22; border: none; color: white; border-radius: 10px; }
+        body { text-align: center; background-color: #000; color: white; font-family: Arial; margin: 0; }
+        canvas { background: #333; border: 5px solid #fff; margin-top: 20px; box-shadow: 0 0 20px #555; }
+        .controls { margin-top: 20px; }
+        button { padding: 15px 30px; font-size: 18px; cursor: pointer; border-radius: 10px; background: #c0392b; color: white; border: none; }
     </style>
 </head>
 <body>
-    <h3>Thar Racing 🚙</h3>
-    <p id="score-display">स्कोर: 0</p>
-    <div id="game-container">
-        <canvas id="raceCanvas" width="300" height="400"></canvas>
+    <h1>Thar Racing Mania 🚙</h1>
+    <p>स्कोर: <span id="score">0</span></p>
+    <canvas id="gameCanvas" width="300" height="400"></canvas>
+    <div class="controls">
+        <button onclick="move(-40)">⬅️ बाएँ</button>
+        <button onclick="move(40)">दाएँ ➡️</button>
     </div>
-    <button class="control-btn" onclick="movePlayerLeft()">⬅️ बाएँ</button>
-    <button class="control-btn" onclick="movePlayerRight()">दाएँ ➡️</button>
 
     <script>
-        const canvas = document.getElementById("raceCanvas");
+        const canvas = document.getElementById("gameCanvas");
         const ctx = canvas.getContext("2d");
-        let score = 0, carX = 130, enemyY = -50, enemyX = 130, speed = 5;
+        const tharImg = new Image();
+        tharImg.src = 'thar.png'; // आपकी इमेज यहाँ लोड होगी
 
-        function drawThar(x, y) {
-            ctx.fillStyle = "#333";
-            ctx.fillRect(x, y, 40, 50); // बॉडी
-            ctx.fillStyle = "#111";
-            ctx.fillRect(x + 5, y + 5, 30, 20); // छत
-            ctx.fillStyle = "black";
-            ctx.fillRect(x - 5, y + 5, 5, 15); ctx.fillRect(x + 40, y + 5, 5, 15); // टायर
-            ctx.fillRect(x - 5, y + 35, 5, 15); ctx.fillRect(x + 40, y + 35, 5, 15);
-        }
+        let carX = 120, score = 0, enemyY = -100, enemyX = 120;
 
-        function gameLoop() {
+        function draw() {
             ctx.clearRect(0, 0, 300, 400);
             
-            // सड़क की लाइनें
-            ctx.strokeStyle = "white"; ctx.lineWidth = 4; ctx.setLineDash([20, 20]);
-            ctx.beginPath(); ctx.moveTo(150, 0); ctx.lineTo(150, 400); ctx.stroke();
-
-            drawThar(carX, 330); // खिलाड़ी की थार
-            ctx.fillStyle = "red"; ctx.fillRect(enemyX, enemyY, 40, 50); // दूसरी गाड़ी
-
-            enemyY += speed;
-            if (enemyY > 400) { enemyY = -50; enemyX = Math.random() * 250; score += 10; document.getElementById("score-display").innerText = "स्कोर: " + score; speed += 0.2; }
-
-            // टक्कर चेक
-            if (enemyY > 300 && Math.abs(enemyX - carX) < 40) { alert("Game Over! स्कोर: " + score); location.reload(); }
-            requestAnimationFrame(gameLoop);
+            // थार को ड्रा करें (इमेज)
+            ctx.drawImage(tharImg, carX, 300, 60, 80);
+            
+            // दुश्मन कार (रेड रेक्टेंगल)
+            ctx.fillStyle = "red";
+            ctx.fillRect(enemyX, enemyY, 60, 80);
+            
+            enemyY += 5;
+            if(enemyY > 400) { enemyY = -100; enemyX = Math.random() * 240; score += 10; document.getElementById("score").innerText = score; }
+            
+            requestAnimationFrame(draw);
         }
 
-        function movePlayerLeft() { if (carX > 20) carX -= 30; }
-        function movePlayerRight() { if (carX < 240) carX += 30; }
+        function move(dir) {
+            carX += dir;
+            if(carX < 0) carX = 0;
+            if(carX > 240) carX = 240;
+        }
 
-        gameLoop();
+        tharImg.onload = draw;
     </script>
 </body>
 </html>
