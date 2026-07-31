@@ -114,7 +114,7 @@
             box-sizing: border-box;
         }
 
-        /* Chart Top Bar with Go to Bottom & Dark Neon Blinking Play Game Button */
+        /* Chart Top Bar with Go to Bottom & Sky Blue Neon Blinking Play Game Button */
         .chart-top-bar {
             display: flex;
             justify-content: space-between;
@@ -147,27 +147,27 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            background: #090d16;
-            color: #38bdf8;
+            background: #e0f2fe;
+            color: #0284c7;
             padding: 8px 14px;
             border-radius: 6px;
             font-size: 14px;
             font-weight: 800;
             text-decoration: none;
-            animation: darkNeonBlink 1.2s infinite;
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.6), inset 0 0 6px rgba(168, 85, 247, 0.4);
+            animation: skyNeonBlink 1.2s infinite;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.8);
             cursor: pointer;
             border: 1.5px solid #38bdf8;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .blink-game-btn:hover { background: #0f172a; color: #a855f7; border-color: #a855f7; box-shadow: 0 0 15px rgba(168, 85, 247, 0.8); }
-        .gaming-icon { font-size: 16px; filter: drop-shadow(0 0 5px #38bdf8); }
+        .blink-game-btn:hover { background: #bae6fd; color: #0369a1; border-color: #0284c7; box-shadow: 0 0 16px rgba(56, 189, 248, 0.8); }
+        .gaming-icon { font-size: 16px; filter: drop-shadow(0 0 4px #0284c7); }
 
-        @keyframes darkNeonBlink {
-            0% { opacity: 1; transform: scale(1); border-color: #38bdf8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
-            50% { opacity: 0.7; transform: scale(0.97); border-color: #a855f7; box-shadow: 0 0 16px rgba(168, 85, 247, 0.9); }
-            100% { opacity: 1; transform: scale(1); border-color: #38bdf8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
+        @keyframes skyNeonBlink {
+            0% { opacity: 1; transform: scale(1); border-color: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.5); }
+            50% { opacity: 0.75; transform: scale(0.97); border-color: #0284c7; box-shadow: 0 0 16px rgba(56, 189, 248, 0.9); }
+            100% { opacity: 1; transform: scale(1); border-color: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.5); }
         }
 
         #chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: #fff; border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
@@ -264,7 +264,7 @@
     </p>
 </div>
 
-<!-- Chart Top Bar with Go to Bottom and Dark Neon Blinking Play Game Button -->
+<!-- Chart Top Bar with Go to Bottom and Sky Blue Neon Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -285,7 +285,7 @@
     </table>
 </div>
 
-<!-- Bottom Navigation Bar with Go to Top and Dark Neon Blinking Play Game Button -->
+<!-- Bottom Navigation Bar with Go to Top and Sky Blue Neon Blinking Play Game Button -->
 <div class="bottom-nav-bar">
     <div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
     <button onclick="openGameSection()" class="blink-game-btn">
