@@ -34,6 +34,10 @@
         .special-note { background: rgba(255, 255, 255, 0.95); padding: 14px; margin: 12px auto; width: 90%; max-width: 500px; border-left: 5px solid var(--vip-green); border-radius: 8px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.2); box-sizing: border-box; }
         .special-note p { margin: 0; font-size: 13px; color: #1e293b; line-height: 1.6; font-weight: 500; }
 
+        /* Disclaimer Box in English */
+        .disclaimer-box { background: rgba(15, 23, 42, 0.85); border: 1.5px solid var(--gold); padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); box-sizing: border-box; }
+        .disclaimer-box p { margin: 0; font-size: 11px; color: #fef08a; line-height: 1.5; font-weight: 600; }
+
         .nav-btn { background: var(--vip-green); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 8px 22px; display: inline-block; font-size: 12px; margin: 10px 0; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4); transition: 0.2s; }
         .nav-btn:hover { background: #15803d; }
 
@@ -51,36 +55,37 @@
             box-sizing: border-box;
         }
         .go-to-bottom-btn {
-            background: #2b2b2b;
-            color: #ffcc00;
+            background: #16a34a;
+            color: #ffffff;
             padding: 8px 12px;
             border-radius: 5px;
             font-size: 13px;
             font-weight: bold;
             text-decoration: none;
-            border: 1px solid #444;
+            border: 1px solid #15803d;
             transition: 0.2s;
             cursor: pointer;
+            box-shadow: 0 0 8px rgba(22, 163, 74, 0.4);
         }
-        .go-to-bottom-btn:hover { background: #3b3b3b; }
+        .go-to-bottom-btn:hover { background: #15803d; }
 
         .blink-game-btn {
             display: flex;
             align-items: center;
             gap: 6px;
-            background: #28a745;
-            color: #fff;
+            background: #1e1e1e;
+            color: #f59e0b;
             padding: 8px 14px;
             border-radius: 5px;
             font-size: 14px;
             font-weight: bold;
             text-decoration: none;
             animation: blinkEffect 1.2s infinite;
-            box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
             cursor: pointer;
-            border: none;
+            border: 1.5px solid #f59e0b;
         }
-        .blink-game-btn:hover { background: #218838; }
+        .blink-game-btn:hover { background: #2b2b2b; }
         .gaming-icon { font-size: 16px; }
 
         @keyframes blinkEffect {
@@ -148,6 +153,13 @@
     </p>
 </div>
 
+<!-- Disclaimer Box in English -->
+<div class="disclaimer-box">
+    <p>
+        <b>Disclaimer:</b> This website is created for entertainment purposes only. All information and charts provided here are for estimation and record purposes only. Please make decisions at your own discretion.
+    </p>
+</div>
+
 <!-- Chart Top Bar with Go to Bottom and Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
@@ -173,6 +185,7 @@
 
 <div class="site-desc" style="font-size: 13px; font-weight: 700; margin: 15px 5px; color: #f1f5f9; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">People get more from Game with a BIG STAR PINAL CHART and BOMBAY SPECIAL VIP CHART.</div>
 
+<div style="font-size: 13px; font-weight: 800; color: #facc15; margin: 10px 0 2px 0; text-transform: uppercase; letter-spacing: 0.5px;">ACCESS PANEL CHART</div>
 <button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
 
 <div id="vipModal" class="overlay">
