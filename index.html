@@ -27,39 +27,52 @@
             --card-bg: #ffffff;
         }
         body { background: var(--bg-gradient); color: #1e293b; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; overflow-x: hidden; }
-        
-        /* Top Navigation Bar with 3 Lines & Dropdown Menu */
-        .top-navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #0f172a;
-            padding: 12px 18px;
-            border-bottom: 2px solid var(--gold);
-            box-sizing: border-box;
+
+        /* Green Background for Main Header with 3 Lines & Dropdown Menu */
+        .header { 
+            background: var(--vip-green); 
+            padding: 14px; 
+            border-bottom: 3px solid var(--gold); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
             position: relative;
-        }
-        .nav-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+        }
+        .header-content {
+            text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 20px; color: #ffffff; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
+        .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #fef08a; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+
+        /* 3-Lines Menu inside Title Header Box on the Left */
+        .menu-container {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         .menu-icon {
             font-size: 22px;
-            color: #f59e0b;
+            color: #ffffff;
             cursor: pointer;
             font-weight: bold;
-            padding: 2px 6px;
+            padding: 4px 8px;
             border-radius: 4px;
-            background: rgba(245, 158, 11, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+        }
+        .menu-icon:hover {
+            background: rgba(0, 0, 0, 0.35);
         }
         
         /* Dropdown Menu Container (Hidden by default) */
         .dropdown-menu {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 12px;
+            top: calc(100% + 8px);
+            left: 0;
             background: #0f172a;
             border: 1.5px solid var(--gold);
             border-radius: 8px;
@@ -90,11 +103,6 @@
             background: #1e293b;
             color: var(--gold);
         }
-
-        /* Green Background for Main Header */
-        .header { background: var(--vip-green); padding: 14px; border-bottom: 3px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-        .header h1 { margin: 0; font-size: 20px; color: #ffffff; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
-        .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #fef08a; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
 
         /* Disclaimer Box */
         .disclaimer-box { background: rgba(255, 255, 255, 0.9); border: 1.5px solid var(--gold); padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.08); box-sizing: border-box; }
@@ -239,22 +247,21 @@
 </head>
 <body>
 
-<!-- Top Navigation Bar with 3 Lines & Dropdown Menu -->
-<div class="top-navbar">
-    <div class="nav-left">
-        <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
-    </div>
-
-    <!-- Dropdown Menu containing Home Page and Login inside 3-lines -->
-    <div id="dropdownMenu" class="dropdown-menu">
-        <a href="#" class="dropdown-item" onclick="closeDropdown()">🏠 Home Page</a>
-        <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
-    </div>
-</div>
-
 <div class="header">
-    <h1>ROYAL PANEL CHART</h1>
-    <div class="sub-title">WELCOME TO ROYAL PANEL CHART</div>
+    <!-- 3-Lines Menu Container inside Header Box on Left -->
+    <div class="menu-container">
+        <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
+        <!-- Dropdown Menu containing Home Page and Login inside 3-lines -->
+        <div id="dropdownMenu" class="dropdown-menu">
+            <a href="#" class="dropdown-item" onclick="closeDropdown()">🏠 Home Page</a>
+            <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
+        </div>
+    </div>
+
+    <div class="header-content">
+        <h1>ROYAL PANEL CHART</h1>
+        <div class="sub-title">WELCOME TO ROYAL PANEL CHART</div>
+    </div>
 </div>
 
 <!-- Disclaimer Box -->
