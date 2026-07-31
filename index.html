@@ -237,26 +237,23 @@
         .next-box ol { margin: 6px 0 0 15px; padding: 0; }
         .next-box li { margin-bottom: 6px; }
 
-        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
-        .sub-plan-card { border: 2px solid #cbd5e1; border-radius: 10px; padding: 10px; background: linear-gradient(145deg, #ffffff, #f1f5f9); text-align: center; transition: 0.2s; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 12px 0; }
+        .sub-plan-card { border: 2px solid #cbd5e1; border-radius: 10px; padding: 12px 8px; background: linear-gradient(145deg, #ffffff, #f1f5f9); text-align: center; transition: 0.2s; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .sub-plan-card:hover { border-color: var(--vip-green); box-shadow: 0 6px 15px rgba(22, 163, 74, 0.2); transform: translateY(-3px); }
-        .sub-plan-logo { font-size: 24px; margin-bottom: 4px; }
-        .sub-plan-title { font-size: 12px; font-weight: 800; color: var(--dark-blue); }
+        .sub-plan-title { font-size: 12.5px; font-weight: 800; color: var(--dark-blue); margin-bottom: 4px; }
         .sub-plan-price { font-size: 16px; font-weight: 900; color: var(--vip-green); margin: 6px 0; }
-        .sub-plan-desc { font-size: 9.5px; color: #475569; line-height: 1.3; margin-bottom: 8px; font-weight: 600; }
-        .sel-btn { background: var(--vip-green); color: white; border: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.2s; box-sizing: border-box; }
+        .sel-btn { background: var(--vip-green); color: white; border: none; padding: 7px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.2s; box-sizing: border-box; margin-top: 8px; }
         .sel-btn:hover { background: #15803d; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <!-- 3-Lines Menu Container inside Header Box on Left -->
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
-        <!-- Dropdown Menu containing Home Page and Login inside 3-lines -->
         <div id="dropdownMenu" class="dropdown-menu">
             <a href="#" class="dropdown-item" onclick="closeDropdown()">🏠 Home Page</a>
+            <div class="dropdown-item" onclick="openSubscriptionModal(); closeDropdown();">⭐ Subscription / सदस्यता</div>
             <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
         </div>
     </div>
@@ -267,14 +264,12 @@
     </div>
 </div>
 
-<!-- Disclaimer Box -->
 <div class="disclaimer-box">
     <p>
         <b>Disclaimer:</b> This website is created for entertainment purposes only. All information and charts provided here are for estimation and record purposes only. Please make decisions at your own discretion.
     </p>
 </div>
 
-<!-- Chart Top Bar with Go to Bottom and Sky Blue Neon Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -292,7 +287,6 @@
     </table>
 </div>
 
-<!-- Bottom Navigation Bar with Go to Top and Sky Blue Neon Blinking Play Game Button -->
 <div class="bottom-nav-bar">
     <div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -306,14 +300,13 @@
 <div style="font-size: 13px; font-weight: 800; color: #b45309; margin: 10px 0 2px 0; text-transform: uppercase; letter-spacing: 0.5px;">ACCESS PANEL CHART</div>
 <button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
 
-<!-- All Rights Reserved Box -->
 <div class="copyright-box">
     ALL RIGHTS RESERVED 2026
 </div>
 
 <div id="vipModal" class="overlay">
     <div class="modal-content">
-        <!-- Step 1: Directly Open Create Account Form -->
+        <!-- Step 1: Create Account Form -->
         <div id="step-create-account">
             <div class="modal-header-box" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
               <span style="font-size: 16px;">ENTER DETAILS / विवरण दर्ज करें</span>
@@ -407,56 +400,30 @@
             <div id="timerBox" style="font-size: 32px; color: var(--vip-green); font-weight: 900; margin: 5px 0;">02:00</div>
         </div>
 
-        <!-- Step 5: Subscription Plans Page (4 Box Grid Layout) -->
+        <!-- Step 5: Subscription Plans Page (2 Options in Hindi & English) -->
         <div id="step-subscription" style="display:none; text-align: center;">
-            <div class="modal-header-box">Subscription / सदस्यता लें</div>
-            <p style="margin: 0 0 10px 0; font-size: 11.5px; color: #64748b; font-weight: 600;">अपनी आवश्यकता का समय अवधि चुनें / Choose your required time duration</p>
+            <div class="modal-header-box" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 16px;">Subscription / सदस्यता</span>
+              <span onclick="closeVipModal()" style="font-size: 20px; font-weight: bold; color: #ffffff; cursor: pointer;">✕</span>
+            </div>
+            <p style="margin: 0 0 10px 0; font-size: 11.5px; color: #64748b; font-weight: 600;">अपनी आवश्यकता का विकल्प चुनें / Choose your required option</p>
 
-            <div class="plans-grid">
-                <!-- Starter Plan -->
-                <div class="sub-plan-card">
-                    <div>
-                        <div class="sub-plan-logo">🔑</div>
-                        <div class="sub-plan-title">Starter - 1 Day</div>
-                        <div class="sub-plan-price">₹1499</div>
-                        <div class="sub-plan-desc">Real-time update<br>24 Hour Access</div>
-                    </div>
-                    <button class="sel-btn" onclick="openPlanPayment('Starter - 1 Day', '1499')">SELECT</button>
+            <div class="plans-grid" style="grid-template-columns: 1fr;">
+                <!-- Option 1 -->
+                <div class="sub-plan-card" style="text-align: left; padding: 12px;">
+                    <div class="sub-plan-title" style="font-size: 13px;">1. एक दिन के लिए खोलने का charge / 1 Day Access</div>
+                    <div class="sub-plan-price" style="font-size: 18px;">₹999</div>
+                    <button class="sel-btn" onclick="openPlanPayment('1 Day Access (एक दिन)', '999')">SELECT / चुनें</button>
                 </div>
 
-                <!-- Popular Plan -->
-                <div class="sub-plan-card">
-                    <div>
-                        <div class="sub-plan-logo">⚡</div>
-                        <div class="sub-plan-title">Popular - 7 Days</div>
-                        <div class="sub-plan-price">₹2499</div>
-                        <div class="sub-plan-desc">Standard support<br>7 Days Access</div>
-                    </div>
-                    <button class="sel-btn" onclick="openPlanPayment('Popular - 7 Days', '2499')">SELECT</button>
-                </div>
-
-                <!-- Best Value Plan -->
-                <div class="sub-plan-card">
-                    <div>
-                        <div class="sub-plan-logo">⭐</div>
-                        <div class="sub-plan-title">Best Value - 10 Days</div>
-                        <div class="sub-plan-price">₹3499</div>
-                        <div class="sub-plan-desc">Premium support<br>10 Days Access</div>
-                    </div>
-                    <button class="sel-btn" onclick="openPlanPayment('Best Value - 10 Days', '3499')">SELECT</button>
-                </div>
-
-                <!-- Ultimate Plan -->
-                <div class="sub-plan-card">
-                    <div>
-                        <div class="sub-plan-logo">💎</div>
-                        <div class="sub-plan-title">Ultimate - 1 Month</div>
-                        <div class="sub-plan-price">₹4999</div>
-                        <div class="sub-plan-desc">24/7 VIP support<br>30 Days Access</div>
-                    </div>
-                    <button class="sel-btn" onclick="openPlanPayment('Ultimate - 1 Month', '4999')">SELECT</button>
+                <!-- Option 2 -->
+                <div class="sub-plan-card" style="text-align: left; padding: 12px;">
+                    <div class="sub-plan-title" style="font-size: 13px;">2. सात दिन के लिए खोलने का charge / 7 Days Access</div>
+                    <div class="sub-plan-price" style="font-size: 18px;">₹1999</div>
+                    <button class="sel-btn" onclick="openPlanPayment('7 Days Access (सात दिन)', '1999')">SELECT / चुनें</button>
                 </div>
             </div>
+            <button class="btn-pay-main" style="background: #64748b; margin-top: 10px;" onclick="closeVipModal()">बंद करें (Close)</button>
         </div>
 
         <!-- Step 5.1: Plan Payment & QR Page -->
@@ -517,15 +484,19 @@
 
     function openGameSection() { openVipModal(); }
     function openVipModal() { document.getElementById('vipModal').style.display='flex'; resetModal(); }
+    function openSubscriptionModal() {
+        document.getElementById('vipModal').style.display='flex';
+        resetModal();
+        document.getElementById('step-create-account').style.display='none';
+        document.getElementById('step-subscription').style.display='block';
+    }
     
-    // Toggle 3-line dropdown menu
     function toggleDropdown(event) {
         event.stopPropagation();
         let menu = document.getElementById('dropdownMenu');
         menu.classList.toggle('active');
     }
 
-    // Close dropdown when clicking outside
     window.onclick = function(event) {
         if (!event.target.matches('.menu-icon')) {
             let dropdown = document.getElementById('dropdownMenu');
@@ -539,7 +510,6 @@
         document.getElementById('dropdownMenu').classList.remove('active');
     }
 
-    // Login button direct action (skips step 1 and opens step 2 directly)
     function openLoginDirect() {
         document.getElementById('vipModal').style.display='flex';
         resetModal();
@@ -637,7 +607,6 @@
         .then(data => {
             let rows = data.split('\n').map(r => r.split(','));
             
-            // Render Header dynamically from first row of CSV
             if(rows.length > 0) {
                 let headerHtml = '';
                 for(let j = 0; j < rows[0].length; j++) {
@@ -651,7 +620,6 @@
                 document.getElementById('gridHeader').innerHTML = headerHtml;
             }
 
-            // Render Body rows dynamically
             let html = '';
             for(let i = 1; i < rows.length; i++) {
                 if(rows[i].length > 1 && rows[i].some(cell => cell.trim() !== '')) {
