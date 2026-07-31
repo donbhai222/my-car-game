@@ -22,13 +22,12 @@
             --vip-red: #dc2626; 
             --vip-green: #16a34a; 
             --grid-border: #d4af37; 
-            /* Background made even lighter and softer */
             --bg-gradient: linear-gradient(135deg, #fffef7 0%, #fffbf0 100%);
             --card-bg: #ffffff;
         }
         body { background: var(--bg-gradient); color: #1e293b; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; overflow-x: hidden; }
 
-        /* Green Background for Main Header with 3 Lines & Dropdown Menu */
+        /* Header Styling */
         .header { 
             background: var(--vip-green); 
             padding: 14px; 
@@ -39,13 +38,11 @@
             align-items: center;
             justify-content: center;
         }
-        .header-content {
-            text-align: center;
-        }
+        .header-content { text-align: center; }
         .header h1 { margin: 0; font-size: 20px; color: #000000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
         .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #000000; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
 
-        /* 3-Lines Menu inside Title Header Box on the Left */
+        /* Menu inside Header */
         .menu-container {
             position: absolute;
             left: 15px;
@@ -63,11 +60,8 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             display: inline-block;
         }
-        .menu-icon:hover {
-            background: rgba(0, 0, 0, 0.35);
-        }
+        .menu-icon:hover { background: rgba(0, 0, 0, 0.35); }
         
-        /* Dropdown Menu Container (Hidden by default) */
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -82,9 +76,7 @@
             text-align: left;
             overflow: hidden;
         }
-        .dropdown-menu.active {
-            display: block;
-        }
+        .dropdown-menu.active { display: block; }
         .dropdown-item {
             display: block;
             padding: 12px 16px;
@@ -96,13 +88,8 @@
             cursor: pointer;
             transition: 0.2s;
         }
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-        .dropdown-item:hover {
-            background: #1e293b;
-            color: var(--gold);
-        }
+        .dropdown-item:last-child { border-bottom: none; }
+        .dropdown-item:hover { background: #1e293b; color: var(--gold); }
 
         /* Disclaimer Box */
         .disclaimer-box { background: rgba(255, 255, 255, 0.9); border: none; padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.08); box-sizing: border-box; }
@@ -111,7 +98,7 @@
         .nav-btn { background: var(--vip-green); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 8px 22px; display: inline-block; font-size: 12px; margin: 0; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4); transition: 0.2s; text-decoration: none; }
         .nav-btn:hover { background: #15803d; }
 
-        /* Bottom Navigation Bar Container */
+        /* Bottom Nav Bar */
         .bottom-nav-bar {
             display: flex;
             justify-content: center;
@@ -122,7 +109,7 @@
             box-sizing: border-box;
         }
 
-        /* Chart Top Bar with Go to Bottom & Sky Blue Neon Blinking Play Game Button */
+        /* Top Bar Buttons */
         .chart-top-bar {
             display: flex;
             justify-content: space-between;
@@ -178,6 +165,7 @@
             100% { opacity: 1; transform: scale(1); border-color: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.5); }
         }
 
+        /* Chart Table */
         #chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: #fff; border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
         table { border-collapse: collapse; width: 100%; min-width: 300px; table-layout: fixed; }
         th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
@@ -204,7 +192,6 @@
         .btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3); transition: 0.2s; box-sizing: border-box; }
         .btn-pay-main:hover { background: #15803d; }
 
-        /* Footer Copyright Box */
         .copyright-box {
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid var(--grid-border);
@@ -222,6 +209,7 @@
             letter-spacing: 0.5px;
         }
 
+        /* Modal Overlays */
         .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
         .modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; box-sizing: border-box; text-align: left; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.4); color: #1e293b; }
         
@@ -257,10 +245,8 @@
 <body>
 
 <div class="header">
-    <!-- 3-Lines Menu Container inside Header Box on Left -->
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
-        <!-- Dropdown Menu containing Home Page and Login inside 3-lines -->
         <div id="dropdownMenu" class="dropdown-menu">
             <a href="#" class="dropdown-item" onclick="closeDropdown()">🏠 Home Page</a>
             <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
@@ -273,14 +259,12 @@
     </div>
 </div>
 
-<!-- Disclaimer Box -->
 <div class="disclaimer-box">
     <p>
         <b>Disclaimer:</b> This website is created for entertainment purposes only. All information and charts provided here are for estimation and record purposes only. Please make decisions at your own discretion.
     </p>
 </div>
 
-<!-- Chart Top Bar with Go to Bottom and Sky Blue Neon Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -301,7 +285,6 @@
     </table>
 </div>
 
-<!-- Bottom Navigation Bar with Go to Top and Sky Blue Neon Blinking Play Game Button -->
 <div class="bottom-nav-bar">
     <div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -315,14 +298,14 @@
 <div style="font-size: 13px; font-weight: 800; color: #b45309; margin: 10px 0 2px 0; text-transform: uppercase; letter-spacing: 0.5px;">ACCESS PANEL CHART</div>
 <button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
 
-<!-- All Rights Reserved Box -->
 <div class="copyright-box">
     ALL RIGHTS RESERVED 2026
 </div>
 
+<!-- VIP MODAL -->
 <div id="vipModal" class="overlay">
     <div class="modal-content">
-        <!-- Step 1: Directly Open Create Account Form -->
+        <!-- Step 1: Create Account -->
         <div id="step-create-account">
             <div class="modal-header-box" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
               <span style="font-size: 16px;">ENTER DETAILS / विवरण दर्ज करें</span>
@@ -331,7 +314,7 @@
             
             <div class="notice-box">
                 <b>Account Activation Notice:</b><br>
-                विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा。<br>
+                विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा।<br>
                 <i>(Account will be opened by admin after submitting details and payment.)</i>
             </div>
 
@@ -345,7 +328,7 @@
             <button class="btn-pay-main" style="background: #64748b; margin-top: 4px;" onclick="closeVipModal()">बंद करें (Close)</button>
         </div>
 
-        <!-- Step 2: Payment & Instructions -->
+        <!-- Step 2: Account Fee Payment -->
         <div id="step2" style="display:none;">
             <div class="modal-header-box">One Time Account Activation</div>
             <p style="margin: 0 0 10px 0; text-align: center; font-size: 11.5px; color: #64748b; font-weight: 600;">वन टाइम अकाउंट एक्टिवेशन</p>
@@ -366,8 +349,8 @@
             <div class="instruction-box">
                 <b>Instructions / निर्देश:</b>
                 <ul>
-                    <li>QR कोड को स्कैन करें या UPI ID पर भुगतान करें。<br><i>(Scan QR or pay on UPI ID.)</i></li>
-                    <li>भुगतान के बाद 12 अंकों की UTR / Txn ID सुरक्षित रखें。<br><i>(Keep UTR / Txn ID safe after payment.)</i></li>
+                    <li>QR कोड को स्कैन करें या UPI ID पर भुगतान करें।<br><i>(Scan QR or pay on UPI ID.)</i></li>
+                    <li>भुगतान के बाद 12 अंकों की UTR / Txn ID सुरक्षित रखें।<br><i>(Keep UTR / Txn ID safe after payment.)</i></li>
                 </ul>
             </div>
 
@@ -393,22 +376,22 @@
             <p onclick="document.getElementById('step-pay-details').style.display='none'; document.getElementById('step2').style.display='block';" style="color:var(--vip-green); cursor:pointer; font-size:12px; margin-top:8px; text-align: center; font-weight: 700;">← वापस जाएं (Back)</p>
         </div>
 
-        <!-- Step 3: Thank You & Pending Approval with Timer -->
+        <!-- Step 3: Pending Approval Timer -->
         <div id="step3" style="display:none; text-align: center;">
             <div class="modal-header-box" style="background: var(--vip-green);">THANK YOU / धन्यवाद</div>
             <p style="font-size: 13px; font-weight: 800; color: var(--vip-green); margin: 6px 0;">Pending Admin Approval</p>
             
             <div class="notice-box" style="text-align: left; font-size: 11.5px;">
-                आपका पेमेंट सफल रहा। अकाउंट एडमिन द्वारा जाँच के बाद ओपन किया जाएगा。<br>
+                आपका पेमेंट सफल रहा। अकाउंट एडमिन द्वारा जाँच के बाद ओपन किया जाएगा।<br>
                 <i>(Your payment was successful. Account will be opened after verification by admin.)</i>
             </div>
 
             <div class="next-box">
                 <b>What Happens Next / आगे क्या होगा:</b>
                 <ol>
-                    <li>एडमिन आपके भुगतान की जाँच करेगा。<br><i>(Admin will check your payment.)</i></li>
-                    <li>आपका अकाउंट चुने हुए प्लान के साथ ओपन होगा。<br><i>(Your account will open with the chosen plan.)</i></li>
-                    <li>फिर आप होमपेज पर चार्ट रिजल्ट देख सकेंगे。<br><i>(Then you can view chart results on homepage.)</i></li>
+                    <li>एडमिन आपके भुगतान की जाँच करेगा।<br><i>(Admin will check your payment.)</i></li>
+                    <li>आपका अकाउंट चुने हुए प्लान के साथ ओपन होगा।<br><i>(Your account will open with the chosen plan.)</i></li>
+                    <li>फिर आप होमपेज पर चार्ट रिजल्ट देख सकेंगे।<br><i>(Then you can view chart results on homepage.)</i></li>
                 </ol>
             </div>
 
@@ -416,13 +399,12 @@
             <div id="timerBox" style="font-size: 32px; color: var(--vip-green); font-weight: 900; margin: 5px 0;">02:00</div>
         </div>
 
-        <!-- Step 5: Subscription Plans Page (4 Box Grid Layout) -->
+        <!-- Step 5: Subscription Plans Page Grid Layout -->
         <div id="step-subscription" style="display:none; text-align: center;">
             <div class="modal-header-box">Subscription / सदस्यता लें</div>
             <p style="margin: 0 0 10px 0; font-size: 11.5px; color: #64748b; font-weight: 600;">अपनी आवश्यकता का समय अवधि चुनें / Choose your required time duration</p>
 
             <div class="plans-grid">
-                <!-- Starter Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">🔑</div>
@@ -433,7 +415,6 @@
                     <button class="sel-btn" onclick="openPlanPayment('Starter - 1 Day', '1499')">SELECT</button>
                 </div>
 
-                <!-- Popular Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">⚡</div>
@@ -444,7 +425,6 @@
                     <button class="sel-btn" onclick="openPlanPayment('Popular - 7 Days', '2499')">SELECT</button>
                 </div>
 
-                <!-- Best Value Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">⭐</div>
@@ -455,7 +435,6 @@
                     <button class="sel-btn" onclick="openPlanPayment('Best Value - 10 Days', '3499')">SELECT</button>
                 </div>
 
-                <!-- Ultimate Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">💎</div>
@@ -503,7 +482,7 @@
             <p style="font-size: 12px; color: #64748b; font-weight: 600;">कृपया प्रतीक्षा करें...</p>
         </div>
 
-        <!-- Step 4: Success / Final Admin Notice -->
+        <!-- Step 4: Final Success Page -->
         <div id="step4" style="display:none; text-align: center;">
             <div class="modal-header-box">SUCCESS / सफल ✅</div>
             <p style="font-size: 12px; font-weight: 800; color: var(--vip-green); margin: 6px 0;">भुगतान सफलतापूर्वक प्राप्त हुआ</p>
@@ -527,18 +506,16 @@
     function openGameSection() { openVipModal(); }
     function openVipModal() { document.getElementById('vipModal').style.display='flex'; resetModal(); }
     
-    // Toggle 3-line dropdown menu
     function toggleDropdown(event) {
         event.stopPropagation();
         let menu = document.getElementById('dropdownMenu');
         menu.classList.toggle('active');
     }
 
-    // Close dropdown when clicking outside
     window.onclick = function(event) {
         if (!event.target.matches('.menu-icon')) {
             let dropdown = document.getElementById('dropdownMenu');
-            if (dropdown.classList.contains('active')) {
+            if (dropdown && dropdown.classList.contains('active')) {
                 dropdown.classList.remove('active');
             }
         }
@@ -548,7 +525,6 @@
         document.getElementById('dropdownMenu').classList.remove('active');
     }
 
-    // Login button direct action (skips step 1 and opens step 2 directly)
     function openLoginDirect() {
         document.getElementById('vipModal').style.display='flex';
         resetModal();
@@ -572,6 +548,12 @@
 
     function copyUpi() {
         let upiText = document.getElementById('upiText').innerText;
+        navigator.clipboard.writeText(upiText);
+        alert("UPI ID Copied / यूपीआई आईडी कॉपी हो गई है!");
+    }
+
+    function copyPlanUpi() {
+        let upiText = document.getElementById('planUpiText').innerText;
         navigator.clipboard.writeText(upiText);
         alert("UPI ID Copied / यूपीआई आईडी कॉपी हो गई है!");
     }
@@ -602,99 +584,71 @@
             document.getElementById('timerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
             if(t-- <= 0) { 
                 clearInterval(x); 
-                document.getElementById('step3').style.display='none'; 
-                document.getElementById('step-subscription').style.display='block'; 
+                document.getElementById('step3').style.display = 'none';
+                document.getElementById('step-subscription').style.display = 'block';
             }
         }, 1000);
     }
 
-    function openPlanPayment(planName, price) {
-        document.getElementById('planTitleDisplay').innerText = planName;
-        document.getElementById('planPriceDisplay').innerText = "₹" + price;
-        document.getElementById('step-subscription').style.display='none';
-        document.getElementById('step-plan-pay').style.display='block';
-    }
-
-    function copyPlanUpi() {
-        let upiText = document.getElementById('planUpiText').innerText;
-        navigator.clipboard.writeText(upiText);
-        alert("UPI ID Copied / यूपीआई आईडी कॉपी हो गई है!");
+    function openPlanPayment(planTitle, planPrice) {
+        document.getElementById('planTitleDisplay').innerText = planTitle;
+        document.getElementById('planPriceDisplay').innerText = '₹' + planPrice;
+        document.getElementById('step-subscription').style.display = 'none';
+        document.getElementById('step-plan-pay').style.display = 'block';
     }
 
     function submitPlanPayment() {
         let utid = document.getElementById('planUtidInput').value;
         if(utid.length < 6) {
-            return alert("कृपया 12 अंकों की UTR / Transaction ID सही से दर्ज करें!");
+            return alert("कृपया सही 12-अंकों का Transaction / UTR ID दर्ज करें");
         }
-        document.getElementById('step-plan-pay').style.display='none';
-        document.getElementById('step-plan-timer').style.display='block';
+        document.getElementById('step-plan-pay').style.display = 'none';
+        document.getElementById('step-plan-timer').style.display = 'block';
         startPlanTimer();
     }
 
     function startPlanTimer() {
-        let t = 60; // 1 minute timer
+        let t = 60;
         let x = setInterval(() => {
             let m = Math.floor(t / 60), s = t % 60;
             document.getElementById('planTimerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
-            if(t-- <= 0) { 
-                clearInterval(x); 
-                document.getElementById('step-plan-timer').style.display='none'; 
-                document.getElementById('step4').style.display='block'; 
+            if(t-- <= 0) {
+                clearInterval(x);
+                document.getElementById('step-plan-timer').style.display = 'none';
+                document.getElementById('step4').style.display = 'block';
             }
         }, 1000);
     }
 
-    async function loadChart() {
+    // Google Sheets CSV Data Fetcher
+    async function loadChartData() {
         try {
-            const res = await fetch(CSV + "&cache=" + Date.now());
+            const res = await fetch(CSV);
             const data = await res.text();
-            const rows = data.split('\n').filter(r => r.trim() !== '').map(r => r.split(','));
-            let html = '', lockShown = false;
-            for(let i=1; i<rows.length; i++) {
-                let d = (rows[i][0] || "").trim(); if(!d) continue;
-                // Automatically format date into 2 clean lines by replacing the space or separator with a line break if it wraps
-                let formattedDate = d.includes('-') ? d.replace('-', '<br>') : (d.includes('/') ? d.replace('/', '<br>') : d.replace(' ', '<br>'));
-                html += `<tr><td class="date-box">${formattedDate}</td>`;
-                for(let j=1; j<=16; j+=3) {
-                    let lp=(rows[i][j]||"").trim(), jd=(rows[i][j+1]||"").trim(), rp=(rows[i][j+2]||"").trim();
-                    if(!jd && !lp) {
-                        if(!lockShown) { 
-                            html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`; 
-                            lockShown = true; 
-                        }
-                        else html += `<td></td>`;
+            const rows = data.split('\n').map(r => r.split(','));
+            let html = '';
+            
+            for(let i = 1; i < rows.length; i++) {
+                if(!rows[i] || rows[i].length < 2) continue;
+                html += '<tr>';
+                html += `<td class="date-box">${rows[i][0] || ''}</td>`;
+                for(let j = 1; j <= 6; j++) {
+                    let cellVal = rows[i][j] ? rows[i][j].trim() : '';
+                    if(!cellVal || cellVal === '*') {
+                        html += `<td><span class="lock-btn" onclick="openGameSection()">🔒</span></td>`;
                     } else {
-                        let isRed = (jd.length==2 && (jd[0]==jd[1] || Math.abs(jd[0]-jd[1])==5));
-                        html += `<td class="${isRed?'red-house':''}">
-                            <div class="cell-content">
-                                <div class="panna-vertical">${lp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
-                                <div class="jodi">${jd}</div>
-                                <div class="panna-vertical">${rp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
-                            </div>
-                        </td>`;
+                        html += `<td>${cellVal}</td>`;
                     }
                 }
-                html += `</tr>`;
+                html += '</tr>';
             }
             document.getElementById('gridData').innerHTML = html;
-        } catch(e) { console.log(e); }
+        } catch(e) {
+            console.log("CSV Data Load Fail", e);
+        }
     }
-    window.onload = loadChart;
-</script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a6b47d42539311d47e435cc/1juph15ut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    window.onload = loadChartData;
 </script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
