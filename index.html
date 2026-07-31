@@ -151,9 +151,9 @@
 <!-- Chart Top Bar with Go to Bottom and Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
-    <button onclick="openVipModal()" class="blink-game-btn">
+    <button onclick="openGameSection()" class="blink-game-btn">
         <span class="gaming-icon">🎮</span>
-        <span>PLAY GAME</span>
+        <span class="blink-text">PLAY GAME</span>
     </button>
 </div>
 
@@ -173,7 +173,7 @@
 
 <div class="site-desc" style="font-size: 13px; font-weight: 700; margin: 15px 5px; color: #f1f5f9; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">People get more from Game with a BIG STAR PINAL CHART and BOMBAY SPECIAL VIP CHART.</div>
 
-<button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openVipModal()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
+<button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
 
 <div id="vipModal" class="overlay">
     <div class="modal-content">
@@ -379,6 +379,7 @@
 <script>
     const CSV = "https://docs.google.com/spreadsheets/d/1z7pEP9CAcp5xozZR_hPVzsEBEYrzQ8gbYusHpfWYBxQ/export?format=csv&gid=0";
 
+    function openGameSection() { openVipModal(); }
     function openVipModal() { document.getElementById('vipModal').style.display='flex'; resetModal(); }
     function closeVipModal() { document.getElementById('vipModal').style.display='none'; }
     
@@ -481,7 +482,7 @@
                     let lp=(rows[i][j]||"").trim(), jd=(rows[i][j+1]||"").trim(), rp=(rows[i][j+2]||"").trim();
                     if(!jd && !lp) {
                         if(!lockShown) { 
-                            html += `<td onclick="openVipModal()"><span class="lock-btn">🔒</span></td>`; 
+                            html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`; 
                             lockShown = true; 
                         }
                         else html += `<td></td>`;
