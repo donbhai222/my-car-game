@@ -183,7 +183,16 @@
         th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
         td { border: 1px solid var(--grid-border); height: 50px; background: #fff; vertical-align: middle; text-align: center; padding: 0; }
         
-        .date-box { background: #fef3c7 !important; font-size: 10px; font-weight: 700; width: 45px !important; color: #1e3a8a !important; }
+        .date-box { 
+            background: #fef3c7 !important; 
+            font-size: 11px; 
+            font-weight: 700; 
+            width: 52px !important; 
+            color: #0a192f !important; 
+            line-height: 1.15; 
+            padding: 2px;
+            word-break: break-word;
+        }
         .cell-content { display: flex; align-items: center; justify-content: center; width: 100%; }
         .panna-vertical { display: flex; flex-direction: column; font-size: 8px; line-height: 0.9; width: 10px; font-weight: 700; color: #475569; }
         .jodi { font-size: 18px; font-weight: 900; color: #0f172a; margin: 0 4px; }
@@ -284,7 +293,7 @@
     <table>
         <thead>
             <tr>
-                <th style="width:45px;">DATE</th>
+                <th style="width:52px;">DATE</th>
                 <th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
             </tr>
         </thead>
@@ -643,7 +652,9 @@
             let html = '', lockShown = false;
             for(let i=1; i<rows.length; i++) {
                 let d = (rows[i][0] || "").trim(); if(!d) continue;
-                html += `<tr><td class="date-box">${d}</td>`;
+                // Automatically format date into 2 clean lines by replacing the space or separator with a line break if it wraps
+                let formattedDate = d.includes('-') ? d.replace('-', '<br>') : (d.includes('/') ? d.replace('/', '<br>') : d.replace(' ', '<br>'));
+                html += `<tr><td class="date-box">${formattedDate}</td>`;
                 for(let j=1; j<=16; j+=3) {
                     let lp=(rows[i][j]||"").trim(), jd=(rows[i][j+1]||"").trim(), rp=(rows[i][j+2]||"").trim();
                     if(!jd && !lp) {
