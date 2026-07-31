@@ -109,6 +109,24 @@
         .btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3); transition: 0.2s; box-sizing: border-box; }
         .btn-pay-main:hover { background: #15803d; }
 
+        /* Footer Copyright Box */
+        .copyright-box {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--grid-border);
+            padding: 10px 14px;
+            margin: 25px auto 10px auto;
+            width: 90%;
+            max-width: 360px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+            font-size: 12px;
+            font-weight: 700;
+            color: #cbd5e1;
+            letter-spacing: 0.5px;
+        }
+
         .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
         .modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; box-sizing: border-box; text-align: left; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.4); color: #1e293b; }
         
@@ -182,6 +200,11 @@
 
 <div style="font-size: 13px; font-weight: 800; color: #facc15; margin: 10px 0 2px 0; text-transform: uppercase; letter-spacing: 0.5px;">ACCESS PANEL CHART</div>
 <button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
+
+<!-- All Rights Reserved Box -->
+<div class="copyright-box">
+    ALL RIGHTS RESERVED 2026
+</div>
 
 <div id="vipModal" class="overlay">
     <div class="modal-content">
