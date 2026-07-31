@@ -36,8 +36,19 @@
         .disclaimer-box { background: rgba(15, 23, 42, 0.85); border: 1.5px solid var(--gold); padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); box-sizing: border-box; }
         .disclaimer-box p { margin: 0; font-size: 11px; color: #fef08a; line-height: 1.5; font-weight: 600; }
 
-        .nav-btn { background: var(--vip-green); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 8px 22px; display: inline-block; font-size: 12px; margin: 10px 0; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4); transition: 0.2s; }
+        .nav-btn { background: var(--vip-green); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 8px 22px; display: inline-block; font-size: 12px; margin: 0; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4); transition: 0.2s; text-decoration: none; }
         .nav-btn:hover { background: #15803d; }
+
+        /* Bottom Navigation Bar Container */
+        .bottom-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            max-width: 90%;
+            margin: 15px auto;
+            box-sizing: border-box;
+        }
 
         /* Chart Top Bar with Go to Bottom & Blinking Play Game Button */
         .chart-top-bar {
@@ -194,7 +205,14 @@
     </table>
 </div>
 
-<div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
+<!-- Bottom Navigation Bar with Go to Top and Blinking Play Game Button -->
+<div class="bottom-nav-bar">
+    <div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
+    <button onclick="openGameSection()" class="blink-game-btn">
+        <span class="gaming-icon">🎮</span>
+        <span class="blink-text">PLAY GAME</span>
+    </button>
+</div>
 
 <div class="site-desc" style="font-size: 13px; font-weight: 700; margin: 15px 5px; color: #f1f5f9; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">People get more from Game with a BIG STAR PINAL CHART and ROYAL PANEL CHART.</div>
 
