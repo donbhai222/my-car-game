@@ -185,7 +185,7 @@
         
         .date-box { 
             background: #fef3c7 !important; 
-            font-size: 11px; 
+            font-size: 9.5px !important; 
             font-weight: 700; 
             width: 52px !important; 
             color: #0a192f !important; 
@@ -602,17 +602,17 @@
             document.getElementById('timerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
             if(t-- <= 0) { 
                 clearInterval(x); 
-                document.getElementById('step3').style.display='none'; 
-                document.getElementById('step-subscription').style.display='block'; 
+                document.getElementById('step3').style.display='none';
+                document.getElementById('step4').style.display='block';
             }
         }, 1000);
     }
 
-    function openPlanPayment(planName, price) {
-        document.getElementById('planTitleDisplay').innerText = planName;
-        document.getElementById('planPriceDisplay').innerText = "₹" + price;
-        document.getElementById('step-subscription').style.display='none';
-        document.getElementById('step-plan-pay').style.display='block';
+    function openPlanPayment(title, price) {
+        document.getElementById('planTitleDisplay').innerText = title;
+        document.getElementById('planPriceDisplay').innerText = '₹' + price;
+        document.getElementById('step-subscription').style.display = 'none';
+        document.getElementById('step-plan-pay').style.display = 'block';
     }
 
     function copyPlanUpi() {
@@ -624,52 +624,49 @@
     function submitPlanPayment() {
         let utid = document.getElementById('planUtidInput').value;
         if(utid.length < 6) {
-            return alert("कृपया 12 अंकों की UTR / Transaction ID सही से दर्ज करें!");
+            return alert("कृपया सही UTR / Transaction ID दर्ज करें / Please enter valid UTR ID");
         }
-        document.getElementById('step-plan-pay').style.display='none';
-        document.getElementById('step-plan-timer').style.display='block';
-        startPlanTimer();
-    }
-
-    function startPlanTimer() {
-        let t = 60; // 1 minute timer
+        document.getElementById('step-plan-pay').style.display = 'none';
+        document.getElementById('step-plan-timer').style.display = 'block';
+        
+        let t = 60;
         let x = setInterval(() => {
             let m = Math.floor(t / 60), s = t % 60;
             document.getElementById('planTimerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
-            if(t-- <= 0) { 
-                clearInterval(x); 
-                document.getElementById('step-plan-timer').style.display='none'; 
-                document.getElementById('step4').style.display='block'; 
+            if(t-- <= 0) {
+                clearInterval(x);
+                document.getElementById('step-plan-timer').style.display = 'none';
+                document.getElementById('step4').style.display = 'block';
             }
         }, 1000);
     }
 
-    async function loadChart() {
-        try {
-            const res = await fetch(CSV + "&cache=" + Date.now());
-            const data = await res.text();
-            const rows = data.split('\n').filter(r => r.trim() !== '').map(r => r.split(','));
-            let html = '', lockShown = false;
-            for(let i=1; i<rows.length; i++) {
-                let d = (rows[i][0] || "").trim(); if(!d) continue;
-                // Automatically format date into 2 clean lines by replacing the space or separator with a line break if it wraps
-                let formattedDate = d.includes('-') ? d.replace('-', '<br>') : (d.includes('/') ? d.replace('/', '<br>') : d.replace(' ', '<br>'));
-                html += `<tr><td class="date-box">${formattedDate}</td>`;
-                for(let j=1; j<=16; j+=3) {
-                    let lp=(rows[i][j]||"").trim(), jd=(rows[i][j+1]||"").trim(), rp=(rows[i][j+2]||"").trim();
-                    if(!jd && !lp) {
-                        if(!lockShown) { 
-                            html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`; 
-                            lockShown = true; 
-                        }
-                        else html += `<td></td>`;
+    // Fetch and render CSV chart data
+    fetch(CSV)
+        .then(res => res.text())
+        .then(data => {
+            let rows = data.split('\n').map(r => r.split(','));
+            let html = '';
+            for(let i = 1; i < rows.length; i++) {
+                if(rows[i].length < 7) continue;
+                html += `<tr>`;
+                html += `<td class="date-box">${rows[i][0]}</td>`;
+                for(let j = 1; j <= 6; j++) {
+                    let val = rows[i][j] ? rows[i][j].trim() : '';
+                    if(val === '' || val.toLowerCase() === 'lock' || val === '🔒') {
+                        html += `<td><span class="lock-btn" onclick="openGameSection()">🔒</span></td>`;
                     } else {
-                        let isRed = (jd.length==2 && (jd[0]==jd[1] || Math.abs(jd[0]-jd[1])==5));
-                        html += `<td class="${isRed?'red-house':''}">
+                        let isRed = val.includes('*') || val.includes('r');
+                        let cleanVal = val.replace('*','');
+                        let p1 = cleanVal.substring(0,3) || '...';
+                        let jodi = cleanVal.substring(3,5) || '..';
+                        let p2 = cleanVal.substring(5,8) || '...';
+                        
+                        html += `<td class="${isRed ? 'red-house' : ''}">
                             <div class="cell-content">
-                                <div class="panna-vertical">${lp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
-                                <div class="jodi">${jd}</div>
-                                <div class="panna-vertical">${rp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
+                                <div class="panna-vertical"><span>${p1[0]}</span><span>${p1[1]}</span><span>${p1[2]}</span></div>
+                                <div class="jodi">${jodi}</div>
+                                <div class="panna-vertical"><span>${p2[0]}</span><span>${p2[1]}</span><span>${p2[2]}</span></div>
                             </div>
                         </td>`;
                     }
@@ -677,24 +674,8 @@
                 html += `</tr>`;
             }
             document.getElementById('gridData').innerHTML = html;
-        } catch(e) { console.log(e); }
-    }
-    window.onload = loadChart;
+        })
+        .catch(err => console.error("Error loading chart data:", err));
 </script>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a6b47d42539311d47e435cc/1juph15ut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
