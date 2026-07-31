@@ -27,6 +27,48 @@
         }
         body { background: var(--bg-gradient); color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; overflow-x: hidden; }
         
+        /* Top Navigation Bar with 3 Lines */
+        .top-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0f172a;
+            padding: 10px 15px;
+            border-bottom: 2px solid var(--gold);
+            box-sizing: border-box;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .menu-icon {
+            font-size: 20px;
+            color: #f59e0b;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .site-logo {
+            font-size: 14px;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .login-nav-btn {
+            background: var(--vip-green);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);
+            transition: 0.2s;
+        }
+        .login-nav-btn:hover { background: #15803d; }
+
         /* Green Background for Main Header */
         .header { background: var(--vip-green); padding: 14px; border-bottom: 3px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
         .header h1 { margin: 0; font-size: 20px; color: #ffffff; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
@@ -171,6 +213,15 @@
     </style>
 </head>
 <body>
+
+<!-- Top Navigation Bar with 3 Lines & Login Button -->
+<div class="top-navbar">
+    <div class="nav-left">
+        <span class="menu-icon">☰</span>
+        <a href="#" class="site-logo">ROYAL PANEL CHART</a>
+    </div>
+    <button class="login-nav-btn" onclick="openLoginDirect()">LOGIN</button>
+</div>
 
 <div class="header">
     <h1>ROYAL PANEL CHART</h1>
@@ -430,6 +481,15 @@
 
     function openGameSection() { openVipModal(); }
     function openVipModal() { document.getElementById('vipModal').style.display='flex'; resetModal(); }
+    
+    // Login button direct action (skips step 1 and opens step 2 directly)
+    function openLoginDirect() {
+        document.getElementById('vipModal').style.display='flex';
+        resetModal();
+        document.getElementById('step-create-account').style.display='none';
+        document.getElementById('step2').style.display='block';
+    }
+
     function closeVipModal() { document.getElementById('vipModal').style.display='none'; }
     
     function resetModal() {
