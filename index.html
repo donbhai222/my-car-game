@@ -20,13 +20,12 @@
             --vip-red: #dc2626; 
             --vip-green: #16a34a; 
             --grid-border: #d4af37; 
-            /* Background made even lighter and softer */
             --bg-gradient: linear-gradient(135deg, #fffef7 0%, #fffbf0 100%);
             --card-bg: #ffffff;
         }
         body { background: var(--bg-gradient); color: #1e293b; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding-bottom: 50px; overflow-x: hidden; }
 
-        /* Green Background for Main Header with 3 Lines & Dropdown Menu */
+        /* Green Background for Main Header */
         .header { 
             background: var(--vip-green); 
             padding: 14px; 
@@ -37,70 +36,21 @@
             align-items: center;
             justify-content: center;
         }
-        .header-content {
-            text-align: center;
-        }
-        .header h1 { margin: 0; font-size: 20px; color: #000000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
-        .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #000000; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        .header-content { text-align: center; }
+        .header h1 { margin: 0; font-size: 20px; color: #ffffff; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
+        .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #ffffff; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
 
         /* 3-Lines Menu inside Title Header Box on the Left */
-        .menu-container {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .menu-icon {
-            font-size: 22px;
-            color: #ffffff;
-            cursor: pointer;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            display: inline-block;
-        }
-        .menu-icon:hover {
-            background: rgba(0, 0, 0, 0.35);
-        }
+        .menu-container { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); }
+        .menu-icon { font-size: 22px; color: #ffffff; cursor: pointer; font-weight: bold; padding: 4px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); display: inline-block; }
+        .menu-icon:hover { background: rgba(0, 0, 0, 0.35); }
         
-        /* Dropdown Menu Container (Hidden by default) */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: calc(100% + 8px);
-            left: 0;
-            background: #0f172a;
-            border: 1.5px solid var(--gold);
-            border-radius: 8px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-            z-index: 1000;
-            width: 190px;
-            text-align: left;
-            overflow: hidden;
-        }
-        .dropdown-menu.active {
-            display: block;
-        }
-        .dropdown-item {
-            display: block;
-            padding: 12px 16px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 700;
-            border-bottom: 1px solid #1e293b;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-        .dropdown-item:hover {
-            background: #1e293b;
-            color: var(--gold);
-        }
+        /* Dropdown Menu Container */
+        .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #0f172a; border: 1.5px solid var(--gold); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 1000; width: 190px; text-align: left; overflow: hidden; }
+        .dropdown-menu.active { display: block; }
+        .dropdown-item { display: block; padding: 12px 16px; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; border-bottom: 1px solid #1e293b; cursor: pointer; transition: 0.2s; }
+        .dropdown-item:last-child { border-bottom: none; }
+        .dropdown-item:hover { background: #1e293b; color: var(--gold); }
 
         /* Disclaimer Box */
         .disclaimer-box { background: rgba(255, 255, 255, 0.9); border: none; padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.08); box-sizing: border-box; }
@@ -109,64 +59,13 @@
         .nav-btn { background: var(--vip-green); color: white; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 8px 22px; display: inline-block; font-size: 12px; margin: 0; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4); transition: 0.2s; text-decoration: none; }
         .nav-btn:hover { background: #15803d; }
 
-        /* Bottom Navigation Bar Container */
-        .bottom-nav-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            max-width: 90%;
-            margin: 15px auto;
-            box-sizing: border-box;
-        }
+        .bottom-nav-bar { display: flex; justify-content: center; align-items: center; gap: 12px; max-width: 90%; margin: 15px auto; box-sizing: border-box; }
 
-        /* Chart Top Bar with Go to Bottom & Sky Blue Neon Blinking Play Game Button */
-        .chart-top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #ffffff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            border: 1.5px solid #e2e8f0;
-            max-width: 90%;
-            margin: 15px auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            box-sizing: border-box;
-        }
-        .go-to-bottom-btn {
-            background: #16a34a;
-            color: #ffffff;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: bold;
-            text-decoration: none;
-            border: 1px solid #15803d;
-            transition: 0.2s;
-            cursor: pointer;
-            box-shadow: 0 0 8px rgba(22, 163, 74, 0.4);
-        }
+        .chart-top-bar { display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 10px 15px; border-radius: 8px; border: 1.5px solid #e2e8f0; max-width: 90%; margin: 15px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.05); box-sizing: border-box; }
+        .go-to-bottom-btn { background: #16a34a; color: #ffffff; padding: 8px 12px; border-radius: 5px; font-size: 13px; font-weight: bold; text-decoration: none; border: 1px solid #15803d; transition: 0.2s; cursor: pointer; box-shadow: 0 0 8px rgba(22, 163, 74, 0.4); }
         .go-to-bottom-btn:hover { background: #15803d; }
 
-        .blink-game-btn {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: #e0f2fe;
-            color: #0284c7;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 800;
-            text-decoration: none;
-            animation: skyNeonBlink 1.2s infinite;
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.8);
-            cursor: pointer;
-            border: 1.5px solid #38bdf8;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .blink-game-btn { display: flex; align-items: center; gap: 6px; background: #e0f2fe; color: #0284c7; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 800; text-decoration: none; animation: skyNeonBlink 1.2s infinite; box-shadow: 0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.8); cursor: pointer; border: 1.5px solid #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; }
         .blink-game-btn:hover { background: #bae6fd; color: #0369a1; border-color: #0284c7; box-shadow: 0 0 16px rgba(56, 189, 248, 0.8); }
         .gaming-icon { font-size: 16px; filter: drop-shadow(0 0 4px #0284c7); }
 
@@ -181,16 +80,7 @@
         th { background: #16a34a; color: #ffffff; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
         td { border: 1px solid var(--grid-border); height: 50px; background: #fff; vertical-align: middle; text-align: center; padding: 0; }
         
-        .date-box { 
-            background: #fef3c7 !important; 
-            font-size: 11px; 
-            font-weight: 700; 
-            width: 52px !important; 
-            color: #0a192f !important; 
-            line-height: 1.15; 
-            padding: 2px;
-            word-break: break-word;
-        }
+        .date-box { background: #fef3c7 !important; font-size: 11px; font-weight: 700; width: 52px !important; color: #0a192f !important; line-height: 1.15; padding: 2px; word-break: break-word; }
         .cell-content { display: flex; align-items: center; justify-content: center; width: 100%; }
         .panna-vertical { display: flex; flex-direction: column; font-size: 8px; line-height: 0.9; width: 10px; font-weight: 700; color: #475569; }
         .jodi { font-size: 18px; font-weight: 900; color: #0f172a; margin: 0 4px; }
@@ -202,23 +92,7 @@
         .btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3); transition: 0.2s; box-sizing: border-box; }
         .btn-pay-main:hover { background: #15803d; }
 
-        /* Footer Copyright Box */
-        .copyright-box {
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--grid-border);
-            padding: 10px 14px;
-            margin: 25px auto 10px auto;
-            width: 90%;
-            max-width: 360px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            box-sizing: border-box;
-            font-size: 12px;
-            font-weight: 700;
-            color: #78350f;
-            letter-spacing: 0.5px;
-        }
+        .copyright-box { background: rgba(255, 255, 255, 0.9); border: 1px solid var(--grid-border); padding: 10px 14px; margin: 25px auto 10px auto; width: 90%; max-width: 360px; border-radius: 8px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.08); box-sizing: border-box; font-size: 12px; font-weight: 700; color: #78350f; letter-spacing: 0.5px; }
 
         .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
         .modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; box-sizing: border-box; text-align: left; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.4); color: #1e293b; }
@@ -228,19 +102,15 @@
         input:focus { border-color: var(--vip-green); box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1); }
         
         .modal-header-box { background: var(--vip-green); color: white; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; font-weight: 800; font-size: 15px; text-align: center; letter-spacing: 0.5px; }
-
         .notice-box { background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid var(--vip-green); padding: 12px; border-radius: 6px; margin-bottom: 12px; font-size: 11.5px; color: #334155; line-height: 1.5; word-break: break-word; box-sizing: border-box; width: 100%; }
         .instruction-box { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; margin: 10px 0; font-size: 11.5px; color: #334155; line-height: 1.5; word-break: break-word; box-sizing: border-box; width: 100%; }
         .instruction-box ul { margin: 6px 0 0 15px; padding: 0; }
         .instruction-box li { margin-bottom: 4px; }
-
         .upi-box { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; font-size: 13px; font-weight: 700; border: 1.5px solid #cbd5e1; color: #0f172a; box-sizing: border-box; width: 100%; }
         .copy-btn { background: var(--vip-green); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600; flex-shrink: 0; }
-        
         .next-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 11.5px; color: #334155; text-align: left; line-height: 1.6; word-break: break-word; box-sizing: border-box; width: 100%; }
         .next-box ol { margin: 6px 0 0 15px; padding: 0; }
         .next-box li { margin-bottom: 6px; }
-
         .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
         .sub-plan-card { border: 2px solid #cbd5e1; border-radius: 10px; padding: 10px; background: linear-gradient(145deg, #ffffff, #f1f5f9); text-align: center; transition: 0.2s; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .sub-plan-card:hover { border-color: var(--vip-green); box-shadow: 0 6px 15px rgba(22, 163, 74, 0.2); transform: translateY(-3px); }
@@ -255,30 +125,23 @@
 <body>
 
 <div class="header">
-    <!-- 3-Lines Menu Container inside Header Box on Left -->
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
-        <!-- Dropdown Menu containing Home Page and Login inside 3-lines -->
         <div id="dropdownMenu" class="dropdown-menu">
             <a href="#" class="dropdown-item" onclick="closeDropdown()">🏠 Home Page</a>
             <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
         </div>
     </div>
-
     <div class="header-content">
         <h1>ROYAL PANEL CHART</h1>
         <div class="sub-title">WELCOME TO ROYAL PANEL CHART</div>
     </div>
 </div>
 
-<!-- Disclaimer Box -->
 <div class="disclaimer-box">
-    <p>
-        <b>Disclaimer:</b> This website is created for entertainment purposes only. All information and charts provided here are for estimation and record purposes only. Please make decisions at your own discretion.
-    </p>
+    <p><b>Disclaimer:</b> This website is created for entertainment purposes only. All information and charts provided here are for estimation and record purposes only. Please make decisions at your own discretion.</p>
 </div>
 
-<!-- Chart Top Bar with Go to Bottom and Sky Blue Neon Blinking Play Game Button -->
 <div class="chart-top-bar">
     <a href="#bottom" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="go-to-bottom-btn">↓ Go to Bottom</a>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -299,7 +162,6 @@
     </table>
 </div>
 
-<!-- Bottom Navigation Bar with Go to Top and Sky Blue Neon Blinking Play Game Button -->
 <div class="bottom-nav-bar">
     <div class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Go to Top ↑</div>
     <button onclick="openGameSection()" class="blink-game-btn">
@@ -313,14 +175,10 @@
 <div style="font-size: 13px; font-weight: 800; color: #b45309; margin: 10px 0 2px 0; text-transform: uppercase; letter-spacing: 0.5px;">ACCESS PANEL CHART</div>
 <button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
 
-<!-- All Rights Reserved Box -->
-<div class="copyright-box">
-    ALL RIGHTS RESERVED (2026) 
-</div>
+<div class="copyright-box">ALL RIGHTS RESERVED (2026)</div>
 
 <div id="vipModal" class="overlay">
     <div class="modal-content">
-        <!-- Step 1: Directly Open Create Account Form -->
         <div id="step-create-account">
             <div class="modal-header-box" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
               <span style="font-size: 16px;">ENTER DETAILS / विवरण दर्ज करें</span>
@@ -328,9 +186,7 @@
             </div>
             
             <div class="notice-box">
-                <b>Account Activation Notice:</b><br>
-                विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा。<br>
-                <i>(Account will be opened by admin after submitting details and payment.)</i>
+                <b>Account Activation Notice:</b><br>विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा。<br><i>(Account will be opened by admin after submitting details and payment.)</i>
             </div>
 
             <label style="font-size: 11.5px; font-weight: 700; color: #334155;">Name / नाम:</label>
@@ -343,7 +199,6 @@
             <button class="btn-pay-main" style="background: #64748b; margin-top: 4px;" onclick="closeVipModal()">बंद करें (Close)</button>
         </div>
 
-        <!-- Step 2: Payment & Instructions -->
         <div id="step2" style="display:none;">
             <div class="modal-header-box">One Time Account Activation</div>
             <p style="margin: 0 0 10px 0; text-align: center; font-size: 11.5px; color: #64748b; font-weight: 600;">वन टाइम अकाउंट एक्टिवेशन</p>
@@ -373,34 +228,23 @@
             <p onclick="document.getElementById('step2').style.display='none'; document.getElementById('step-create-account').style.display='block';" style="color:var(--vip-green); cursor:pointer; font-size:12px; margin-top:8px; text-align: center; font-weight: 700;">← वापस जाएं (Back)</p>
         </div>
 
-        <!-- Step 2.1: Payment Details Input Page -->
         <div id="step-pay-details" style="display:none;">
             <div class="modal-header-box">Payment Details / भुगतान विवरण</div>
-
             <label style="font-size: 11.5px; font-weight: 700; color: #334155;">Mobile Number / मोबाइल नंबर:</label>
             <input type="number" id="payNumber" placeholder="अपना मोबाइल नंबर / Mobile Number">
-
             <label style="font-size: 11.5px; font-weight: 700; color: #334155;">UPI ID ( जिससे भुगतान किया ):</label>
             <input type="text" id="payUpi" placeholder="UPI ID (e.g. yourname@paytm)">
-
             <label style="font-size: 11.5px; font-weight: 700; color: #334155;">Transaction / UTR ID:</label>
             <input type="text" id="payUtid" placeholder="12 Digit Transaction / UTR ID">
-
             <button class="btn-pay-main" style="margin-top: 10px;" onclick="submitPayment()">SUBMIT PAYMENT DETAILS</button>
             <p style="text-align: center; font-size: 11px; color: #64748b; margin-top: 2px; font-weight: 600;">भुगतान विवरण जमा करें</p>
             <p onclick="document.getElementById('step-pay-details').style.display='none'; document.getElementById('step2').style.display='block';" style="color:var(--vip-green); cursor:pointer; font-size:12px; margin-top:8px; text-align: center; font-weight: 700;">← वापस जाएं (Back)</p>
         </div>
 
-        <!-- Step 3: Thank You & Pending Approval with Timer -->
         <div id="step3" style="display:none; text-align: center;">
             <div class="modal-header-box" style="background: var(--vip-green);">THANK YOU / धन्यवाद</div>
             <p style="font-size: 13px; font-weight: 800; color: var(--vip-green); margin: 6px 0;">Pending Admin Approval</p>
-            
-            <div class="notice-box" style="text-align: left; font-size: 11.5px;">
-                आपका पेमेंट सफल रहा। अकाउंट एडमिन द्वारा जाँच के बाद ओपन किया जाएगा。<br>
-                <i>(Your payment was successful. Account will be opened after verification by admin.)</i>
-            </div>
-
+            <div class="notice-box" style="text-align: left; font-size: 11.5px;">आपका पेमेंट सफल रहा। अकाउंट एडमिन द्वारा जाँच के बाद ओपन किया जाएगा。<br><i>(Your payment was successful. Account will be opened after verification by admin.)</i></div>
             <div class="next-box">
                 <b>What Happens Next / आगे क्या होगा:</b>
                 <ol>
@@ -409,18 +253,14 @@
                     <li>फिर आप होमपेज पर चार्ट रिजल्ट देख सकेंगे。<br><i>(Then you can view chart results on homepage.)</i></li>
                 </ol>
             </div>
-
             <div style="font-size: 11.5px; font-weight: 700; margin-top: 10px; color: #334155;">Verification Timer / सत्यापन टाइमर:</div>
             <div id="timerBox" style="font-size: 32px; color: var(--vip-green); font-weight: 900; margin: 5px 0;">02:00</div>
         </div>
 
-        <!-- Step 5: Subscription Plans Page (4 Box Grid Layout) -->
         <div id="step-subscription" style="display:none; text-align: center;">
             <div class="modal-header-box">Subscription / सदस्यता लें</div>
             <p style="margin: 0 0 10px 0; font-size: 11.5px; color: #64748b; font-weight: 600;">अपनी आवश्यकता का समय अवधि चुनें / Choose your required time duration</p>
-
             <div class="plans-grid">
-                <!-- Starter Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">🔑</div>
@@ -430,8 +270,6 @@
                     </div>
                     <button class="sel-btn" onclick="openPlanPayment('Starter - 1 Day', '1499')">SELECT</button>
                 </div>
-
-                <!-- Popular Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">⚡</div>
@@ -441,8 +279,6 @@
                     </div>
                     <button class="sel-btn" onclick="openPlanPayment('Popular - 7 Days', '2499')">SELECT</button>
                 </div>
-
-                <!-- Best Value Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">⭐</div>
@@ -452,8 +288,6 @@
                     </div>
                     <button class="sel-btn" onclick="openPlanPayment('Best Value - 10 Days', '3499')">SELECT</button>
                 </div>
-
-                <!-- Ultimate Plan -->
                 <div class="sub-plan-card">
                     <div>
                         <div class="sub-plan-logo">💎</div>
@@ -466,19 +300,15 @@
             </div>
         </div>
 
-        <!-- Step 5.1: Plan Payment & QR Page -->
         <div id="step-plan-pay" style="display:none; text-align: center;">
             <div class="modal-header-box" id="planTitleDisplay">Plan Payment</div>
             <div style="font-size: 24px; font-weight: 900; color: var(--vip-green); margin: 6px 0;" id="planPriceDisplay">₹0</div>
-
             <img src="paytm-png.jpeg" class="qr-img" alt="QR Code">
-            
             <div style="font-size: 11.5px; font-weight: 700; color: #334155; text-align: left; margin-bottom: 4px;">UPI ID:</div>
             <div class="upi-box">
                 <span id="planUpiText">omkaryadav@paytm</span>
                 <button class="copy-btn" onclick="copyPlanUpi()">COPY / कॉपी करें</button>
             </div>
-
             <div class="instruction-box" style="text-align: left;">
                 <b>निर्देश / Instructions:</b>
                 <ul>
@@ -486,26 +316,21 @@
                     <li>सफलतापूर्वक भुगतान के बाद 12 अंकों की UTR / Transaction ID सही से दर्ज करें।</li>
                 </ul>
             </div>
-
             <label style="font-size: 11.5px; font-weight: 700; color: #334155; display: block; text-align: left;">Transaction / UTR ID:</label>
             <input type="text" id="planUtidInput" placeholder="12 Digit Transaction / UTR ID">
-
             <button class="btn-pay-main" style="margin-top: 8px;" onclick="submitPlanPayment()">PAYMENT DONE / भुगतान हो गया</button>
             <p onclick="document.getElementById('step-plan-pay').style.display='none'; document.getElementById('step-subscription').style.display='block';" style="color:var(--vip-green); cursor:pointer; font-size:12px; margin-top:8px; text-align: center; font-weight: 700;">← वापस जाएं (Back)</p>
         </div>
 
-        <!-- Step 5.2: Plan Timer Verification Page -->
         <div id="step-plan-timer" style="display:none; text-align: center;">
             <div class="modal-header-box">VERIFYING PAYMENT</div>
             <div id="planTimerBox" style="font-size: 34px; color: var(--vip-green); font-weight: 900; margin: 12px 0;">01:00</div>
             <p style="font-size: 12px; color: #64748b; font-weight: 600;">कृपया प्रतीक्षा करें...</p>
         </div>
 
-        <!-- Step 4: Success / Final Admin Notice -->
         <div id="step4" style="display:none; text-align: center;">
             <div class="modal-header-box">SUCCESS / सफल ✅</div>
             <p style="font-size: 12px; font-weight: 800; color: var(--vip-green); margin: 6px 0;">भुगतान सफलतापूर्वक प्राप्त हुआ</p>
-            
             <div class="next-box" style="text-align: left; font-size: 11.5px;">
                 <b>आगे क्या होगा / What Happens Next:</b>
                 <ol>
@@ -513,7 +338,6 @@
                     <li>इस प्रक्रिया में कुछ घंटों का समय भी लग सकता है।</li>
                 </ol>
             </div>
-
             <button class="btn-pay-main" style="margin-top: 10px;" onclick="closeVipModal()">CLOSE / बंद करें</button>
         </div>
     </div>
@@ -522,17 +346,59 @@
 <script>
     const CSV = "https://docs.google.com/spreadsheets/d/1z7pEP9CAcp5xozZR_hPVzsEBEYrzQ8gbYusHpfWYBxQ/export?format=csv&gid=0";
 
+    async function loadSheetData() {
+        try {
+            let res = await fetch(CSV);
+            let data = await res.text();
+            let rows = data.split("\n").map(r => r.split(","));
+            let html = "";
+            
+            for(let i = 1; i < rows.length; i++) {
+                let cols = rows[i];
+                if(cols.length < 7) continue;
+                
+                html += `<tr>
+                    <td class="date-box">${cols[0]?.trim() || ''}</td>`;
+                
+                for(let j = 1; j <= 6; j++) {
+                    let val = cols[j]?.trim() || '';
+                    if(val === "" || val === "---") {
+                        html += `<td><div class="cell-content"><span class="lock-btn" onclick="openVipModal()">🔒</span></div></td>`;
+                    } else {
+                        let isRed = val.includes('*');
+                        let cleanVal = val.replace(/\*/g, '');
+                        let p1 = cleanVal.slice(0, 3) || '...';
+                        let jodi = cleanVal.slice(3, 5) || '..';
+                        let p2 = cleanVal.slice(5, 8) || '...';
+                        
+                        html += `<td class="${isRed ? 'red-house' : ''}">
+                            <div class="cell-content">
+                                <div class="panna-vertical"><span>${p1[0]}</span><span>${p1[1]}</span><span>${p1[2]}</span></div>
+                                <span class="jodi">${jodi}</span>
+                                <div class="panna-vertical"><span>${p2[0]}</span><span>${p2[1]}</span><span>${p2[2]}</span></div>
+                            </div>
+                        </td>`;
+                    }
+                }
+                html += `</tr>`;
+            }
+            document.getElementById('gridData').innerHTML = html;
+        } catch(e) {
+            console.error("Error loading CSV:", e);
+        }
+    }
+
+    loadSheetData();
+
     function openGameSection() { openVipModal(); }
     function openVipModal() { document.getElementById('vipModal').style.display='flex'; resetModal(); }
     
-    // Toggle 3-line dropdown menu
     function toggleDropdown(event) {
         event.stopPropagation();
         let menu = document.getElementById('dropdownMenu');
         menu.classList.toggle('active');
     }
 
-    // Close dropdown when clicking outside
     window.onclick = function(event) {
         if (!event.target.matches('.menu-icon')) {
             let dropdown = document.getElementById('dropdownMenu');
@@ -546,7 +412,6 @@
         document.getElementById('dropdownMenu').classList.remove('active');
     }
 
-    // Login button direct action (skips step 1 and opens step 2 directly)
     function openLoginDirect() {
         document.getElementById('vipModal').style.display='flex';
         resetModal();
@@ -602,6 +467,39 @@
                 clearInterval(x); 
                 document.getElementById('step3').style.display='none'; 
                 document.getElementById('step-subscription').style.display='block'; 
+            }
+        }, 1000);
+    }
+
+    function openPlanPayment(title, price) {
+        document.getElementById('planTitleDisplay').innerText = title;
+        document.getElementById('planPriceDisplay').innerText = "₹" + price;
+        document.getElementById('step-subscription').style.display = 'none';
+        document.getElementById('step-plan-pay').style.display = 'block';
+    }
+
+    function copyPlanUpi() {
+        let upiText = document.getElementById('planUpiText').innerText;
+        navigator.clipboard.writeText(upiText);
+        alert("UPI ID Copied / यूपीआई आईडी कॉपी हो गई है!");
+    }
+
+    function submitPlanPayment() {
+        let utid = document.getElementById('planUtidInput').value;
+        if(utid.length < 6) {
+            return alert("कृपया सही Transaction / UTR ID दर्ज करें");
+        }
+        document.getElementById('step-plan-pay').style.display = 'none';
+        document.getElementById('step-plan-timer').style.display = 'block';
+        
+        let t = 60;
+        let x = setInterval(() => {
+            let m = Math.floor(t / 60), s = t % 60;
+            document.getElementById('planTimerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
+            if(t-- <= 0) {
+                clearInterval(x);
+                document.getElementById('step-plan-timer').style.display = 'none';
+                document.getElementById('step4').style.display = 'block';
             }
         }, 1000);
     }
