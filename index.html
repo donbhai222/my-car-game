@@ -178,7 +178,7 @@
 
         #chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: #fff; border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
         table { border-collapse: collapse; width: 100%; min-width: 300px; table-layout: fixed; }
-        th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
+        th { background: #16a34a; color: #ffffff; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
         td { border: 1px solid var(--grid-border); height: 50px; background: #fff; vertical-align: middle; text-align: center; padding: 0; }
         
         .date-box { 
@@ -605,94 +605,6 @@
             }
         }, 1000);
     }
-
-    function openPlanPayment(planName, price) {
-        document.getElementById('planTitleDisplay').innerText = planName;
-        document.getElementById('planPriceDisplay').innerText = "₹" + price;
-        document.getElementById('step-subscription').style.display='none';
-        document.getElementById('step-plan-pay').style.display='block';
-    }
-
-    function copyPlanUpi() {
-        let upiText = document.getElementById('planUpiText').innerText;
-        navigator.clipboard.writeText(upiText);
-        alert("UPI ID Copied / यूपीआई आईडी कॉपी हो गई है!");
-    }
-
-    function submitPlanPayment() {
-        let utid = document.getElementById('planUtidInput').value;
-        if(utid.length < 6) {
-            return alert("कृपया 12 अंकों की UTR / Transaction ID सही से दर्ज करें!");
-        }
-        document.getElementById('step-plan-pay').style.display='none';
-        document.getElementById('step-plan-timer').style.display='block';
-        startPlanTimer();
-    }
-
-    function startPlanTimer() {
-        let t = 60; // 1 minute timer
-        let x = setInterval(() => {
-            let m = Math.floor(t / 60), s = t % 60;
-            document.getElementById('planTimerBox').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
-            if(t-- <= 0) { 
-                clearInterval(x); 
-                document.getElementById('step-plan-timer').style.display='none'; 
-                document.getElementById('step4').style.display='block'; 
-            }
-        }, 1000);
-    }
-
-    async function loadChart() {
-        try {
-            const res = await fetch(CSV + "&cache=" + Date.now());
-            const data = await res.text();
-            const rows = data.split('\n').filter(r => r.trim() !== '').map(r => r.split(','));
-            let html = '', lockShown = false;
-            for(let i=1; i<rows.length; i++) {
-                let d = (rows[i][0] || "").trim(); if(!d) continue;
-                // Automatically format date into 2 clean lines by replacing the space or separator with a line break if it wraps
-                let formattedDate = d.includes('-') ? d.replace('-', '<br>') : (d.includes('/') ? d.replace('/', '<br>') : d.replace(' ', '<br>'));
-                html += `<tr><td class="date-box">${formattedDate}</td>`;
-                for(let j=1; j<=16; j+=3) {
-                    let lp=(rows[i][j]||"").trim(), jd=(rows[i][j+1]||"").trim(), rp=(rows[i][j+2]||"").trim();
-                    if(!jd && !lp) {
-                        if(!lockShown) { 
-                            html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`; 
-                            lockShown = true; 
-                        }
-                        else html += `<td></td>`;
-                    } else {
-                        let isRed = (jd.length==2 && (jd[0]==jd[1] || Math.abs(jd[0]-jd[1])==5));
-                        html += `<td class="${isRed?'red-house':''}">
-                            <div class="cell-content">
-                                <div class="panna-vertical">${lp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
-                                <div class="jodi">${jd}</div>
-                                <div class="panna-vertical">${rp.split('').map(n=>`<span>${n}</span>`).join('')}</div>
-                            </div>
-                        </td>`;
-                    }
-                }
-                html += `</tr>`;
-            }
-            document.getElementById('gridData').innerHTML = html;
-        } catch(e) { console.log(e); }
-    }
-    window.onload = loadChart;
 </script>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a6b47d42539311d47e435cc/1juph15ut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
