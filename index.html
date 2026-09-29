@@ -1,256 +1,245 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    
-    <title>ROYAL PANEL CHART | Fast Results & Live Updates</title>
-    <meta name="description" content="ROYAL PANEL CHART - सबसे तेज़ और सटीक सट्टा मटका चार्ट रिजल्ट्स। लाइव अपडेट, स्टैटिस्टिक्स, PDF डाउनलोड और बहुत कुछ।">
-    <meta name="keywords" content="Royal Panel Chart, Satta Matka, Matka Results, VIP Chart, Fast Matka Update">
-   
-    <meta property="og:title" content="ROYAL PANEL CHART - Live Results">
-    <meta property="og:description" content="सबसे भरोसेमंद और सटीक सट्टा मटका चार्ट।">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>ROYAL PANEL CHART | Live Results & Advanced Features</title>
+<meta name="description" content="ROYAL PANEL CHART - सबसे तेज़ और सटीक सट्टा मटका चार्ट रिजल्ट्स। Live updates, statistics, PDF download, favorites और बहुत कुछ।">
+<meta name="keywords" content="Royal Panel Chart, Satta Matka, Matka Results, VIP Chart, Fast Matka Update">
+<meta property="og:title" content="ROYAL PANEL CHART - Live Results">
+<meta property="og:description" content="सबसे भरोसेमंद और सटीक सट्टा मटका चार्ट।">
 
-    <!-- PDF Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    <style>
-        :root { 
-            --dark-blue: #0f172a; 
-            --gold: #f59e0b; 
-            --vip-red: #dc2626; 
-            --vip-green: #16a34a; 
-            --grid-border: #d4af37; 
-            --bg-gradient: linear-gradient(135deg, #fffef7 0%, #fffbf0 100%);
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-soft: #64748b;
-            --header-bg: #16a34a;
-            --input-bg: #ffffff;
-        }
+<style>
+:root { 
+    --dark-blue: #0f172a; 
+    --gold: #f59e0b; 
+    --vip-red: #dc2626; 
+    --vip-green: #16a34a; 
+    --grid-border: #d4af37; 
+    --bg-gradient: linear-gradient(135deg, #fffef7 0%, #fffbf0 100%);
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-soft: #64748b;
+    --header-bg: #16a34a;
+    --input-bg: #ffffff;
+    --border-soft: #e2e8f0;
+}
 
-        /* 🌙 DARK MODE */
-        body.dark-mode {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --card-bg: #1e293b;
-            --text-main: #e2e8f0;
-            --text-soft: #94a3b8;
-            --header-bg: #15803d;
-            --input-bg: #0f172a;
-        }
+body.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: #1e293b;
+    --text-main: #e2e8f0;
+    --text-soft: #94a3b8;
+    --header-bg: #15803d;
+    --input-bg: #0f172a;
+    --border-soft: #334155;
+}
 
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-        body { 
-            background: var(--bg-gradient); 
-            color: var(--text-main); 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            margin: 0; 
-            padding-bottom: 80px; 
-            overflow-x: hidden;
-            transition: background 0.3s, color 0.3s;
-        }
+body { 
+    background: var(--bg-gradient); 
+    color: var(--text-main); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-align: center; 
+    margin: 0; 
+    padding-bottom: 90px; 
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+}
 
-        /* ========== HEADER ========== */
-        .header { 
-            background: var(--header-bg); 
-            padding: 14px; 
-            border-bottom: 3px solid var(--gold); 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .header h1 { margin: 0; font-size: 19px; color: #000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
-        .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #000; text-transform: uppercase; font-weight: 700; }
+/* ================= HEADER ================= */
+.header { 
+    background: var(--header-bg); 
+    padding: 14px; 
+    border-bottom: 3px solid var(--gold); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header h1 { margin: 0; font-size: 19px; color: #000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
+.header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #000; text-transform: uppercase; font-weight: 700; }
 
-        .menu-container { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); }
-        .menu-icon { font-size: 22px; color: #fff; cursor: pointer; font-weight: bold; padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); }
-        
-        .header-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); display: flex; gap: 6px; }
-        .mode-toggle { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 16px; padding: 5px 8px; border-radius: 4px; cursor: pointer; }
+.menu-container { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); }
+.menu-icon { font-size: 22px; color: #fff; cursor: pointer; font-weight: bold; padding: 4px 10px; border-radius: 4px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); }
+.header-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
+.mode-toggle { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 16px; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
 
-        .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #0f172a; border: 1.5px solid var(--gold); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 1000; width: 220px; text-align: left; overflow: hidden; }
-        .dropdown-menu.active { display: block; }
-        .dropdown-item { display: block; padding: 12px 16px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; border-bottom: 1px solid #1e293b; cursor: pointer; transition: 0.2s; }
-        .dropdown-item:last-child { border-bottom: none; }
-        .dropdown-item:hover { background: #1e293b; color: var(--gold); }
+.dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #0f172a; border: 1.5px solid var(--gold); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 1000; width: 220px; text-align: left; overflow: hidden; }
+.dropdown-menu.active { display: block; }
+.dropdown-item { display: block; padding: 12px 16px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; border-bottom: 1px solid #1e293b; cursor: pointer; transition: 0.2s; }
+.dropdown-item:last-child { border-bottom: none; }
+.dropdown-item:hover { background: #1e293b; color: var(--gold); }
 
-        /* ========== LIVE BADGE ========== */
-        .live-badge { display: inline-flex; align-items: center; gap: 6px; background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1.5px solid #16a34a; }
-        body.dark-mode .live-badge { background: rgba(22,163,74,0.2); color: #4ade80; }
-        .live-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: livePulse 1.5s infinite; }
-        @keyframes livePulse { 0%,100% { opacity:1; transform:scale(1); box-shadow:0 0 0 0 rgba(22,163,74,0.7); } 50% { opacity:0.7; transform:scale(1.2); box-shadow:0 0 0 8px rgba(22,163,74,0); } }
+/* ================= LIVE BADGE ================= */
+.live-wrap { text-align: center; margin-top: 12px; }
+.live-badge { display: inline-flex; align-items: center; gap: 6px; background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1.5px solid #16a34a; }
+body.dark-mode .live-badge { background: rgba(22,163,74,0.2); color: #4ade80; }
+.live-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: livePulse 1.5s infinite; }
+@keyframes livePulse { 0%,100% { opacity:1; transform:scale(1); box-shadow:0 0 0 0 rgba(22,163,74,0.7); } 50% { opacity:0.7; transform:scale(1.2); box-shadow:0 0 0 8px rgba(22,163,74,0); } }
 
-        /* ========== COUNTDOWN ========== */
-        .countdown-bar { background: linear-gradient(135deg, #1e293b, #0f172a); color: #fff; padding: 12px; margin: 12px auto; width: 90%; max-width: 600px; border-radius: 10px; border: 2px solid var(--gold); box-shadow: 0 4px 15px rgba(245,158,11,0.3); }
-        .countdown-bar .cd-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
-        .countdown-bar .cd-time { font-size: 24px; font-weight: 900; letter-spacing: 2px; font-family: 'Courier New', monospace; }
-        .countdown-bar .cd-result { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+/* ================= COUNTDOWN ================= */
+.countdown-bar { background: linear-gradient(135deg, #1e293b, #0f172a); color: #fff; padding: 12px; margin: 12px auto; width: 90%; max-width: 600px; border-radius: 10px; border: 2px solid var(--gold); box-shadow: 0 4px 15px rgba(245,158,11,0.3); }
+.countdown-bar .cd-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+.countdown-bar .cd-time { font-size: 26px; font-weight: 900; letter-spacing: 2px; font-family: 'Courier New', monospace; }
+.countdown-bar .cd-result { font-size: 11px; color: #94a3b8; margin-top: 4px; }
 
-        /* ========== DISCLAIMER ========== */
-        .disclaimer-box { background: var(--card-bg); border: none; padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
-        .disclaimer-box p { margin: 0; font-size: 11px; color: var(--text-soft); line-height: 1.5; font-weight: 600; }
+/* ================= DISCLAIMER ================= */
+.disclaimer-box { background: var(--card-bg); padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+.disclaimer-box p { margin: 0; font-size: 11px; color: var(--text-soft); line-height: 1.5; font-weight: 600; }
 
-        /* ========== SEARCH & FILTER ========== */
-        .search-section { background: var(--card-bg); margin: 12px auto; width: 90%; max-width: 600px; padding: 12px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        body.dark-mode .search-section { border-color: #334155; }
-        .search-row { display: flex; gap: 8px; margin-bottom: 10px; }
-        .search-input { flex: 1; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); outline: none; }
-        .search-input:focus { border-color: var(--vip-green); }
-        .search-btn { background: var(--vip-green); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
+/* ================= SEARCH & FILTER ================= */
+.search-section { background: var(--card-bg); margin: 12px auto; width: 90%; max-width: 600px; padding: 12px; border-radius: 10px; border: 1.5px solid var(--border-soft); }
+.search-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.search-input { flex: 1; padding: 10px 12px; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); outline: none; }
+.search-input:focus { border-color: var(--vip-green); }
+.search-btn { background: var(--vip-green); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
 
-        .month-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
-        .month-tabs::-webkit-scrollbar { height: 3px; }
-        .month-tab { padding: 7px 14px; background: #e2e8f0; color: #475569; border-radius: 20px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; border: none; }
-        body.dark-mode .month-tab { background: #334155; color: #cbd5e1; }
-        .month-tab.active { background: var(--vip-green); color: white; }
+.month-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+.month-tab { padding: 7px 14px; background: var(--border-soft); color: var(--text-soft); border-radius: 20px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; border: none; }
+.month-tab.active { background: var(--vip-green); color: white; }
 
-        /* ========== ACTION BUTTONS ========== */
-        .action-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; margin: 12px auto; width: 90%; max-width: 600px; }
-        .action-btn { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 10px 6px; cursor: pointer; transition: 0.2s; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-        body.dark-mode .action-btn { border-color: #334155; }
-        .action-btn:hover { border-color: var(--vip-green); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(22,163,74,0.2); }
-        .action-btn .ic { font-size: 20px; }
-        .action-btn .lbl { font-size: 10px; font-weight: 700; color: var(--text-main); }
+/* ================= QUICK ACTIONS ================= */
+.action-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 12px auto; width: 90%; max-width: 600px; }
+.action-btn { background: var(--card-bg); border: 1.5px solid var(--border-soft); border-radius: 10px; padding: 10px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: 0.2s; }
+.action-btn:hover { border-color: var(--vip-green); transform: translateY(-2px); }
+.action-btn .ic { font-size: 18px; }
+.action-btn .lbl { font-size: 9px; font-weight: 700; color: var(--text-main); }
 
-        /* ========== CHART TOP BAR ========== */
-        .chart-top-bar { display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border: 1.5px solid #e2e8f0; max-width: 90%; margin: 15px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        body.dark-mode .chart-top-bar { border-color: #334155; }
-        .go-to-bottom-btn { background: #16a34a; color: #fff; padding: 8px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; text-decoration: none; border: 1px solid #15803d; cursor: pointer; }
+/* ================= CHART TOP BAR ================= */
+.chart-top-bar { display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border: 1.5px solid var(--border-soft); max-width: 90%; margin: 15px auto; gap: 8px; }
+.go-to-bottom-btn { background: #16a34a; color: #fff; padding: 8px 12px; border-radius: 5px; font-size: 11px; font-weight: bold; text-decoration: none; cursor: pointer; border: none; }
+.blink-game-btn { display: flex; align-items: center; gap: 6px; background: #e0f2fe; color: #0284c7; padding: 8px 14px; border-radius: 6px; font-size: 11px; font-weight: 800; cursor: pointer; border: 1.5px solid #38bdf8; text-transform: uppercase; animation: skyNeonBlink 1.2s infinite; }
+@keyframes skyNeonBlink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.75; transform:scale(0.97); box-shadow: 0 0 20px rgba(56,189,248,0.9); } }
 
-        .blink-game-btn { display: flex; align-items: center; gap: 6px; background: #e0f2fe; color: #0284c7; padding: 8px 14px; border-radius: 6px; font-size: 12px; font-weight: 800; text-decoration: none; animation: skyNeonBlink 1.2s infinite; box-shadow: 0 0 12px rgba(56,189,248,0.5); cursor: pointer; border: 1.5px solid #38bdf8; text-transform: uppercase; }
-        @keyframes skyNeonBlink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.75; transform:scale(0.97); box-shadow: 0 0 20px rgba(56,189,248,0.9); } }
+/* ================= CHART TABLE ================= */
+#chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: var(--card-bg); border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: box-shadow 0.3s; }
+table { border-collapse: collapse; width: 100%; min-width: 300px; table-layout: fixed; }
+th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
+body.dark-mode th { background: #78350f; color: #fef3c7; }
+td { border: 1px solid var(--grid-border); height: 50px; background: var(--card-bg); vertical-align: middle; text-align: center; padding: 0; position: relative; }
+tr.highlight-row td { background: #fef9c3 !important; }
+body.dark-mode tr.highlight-row td { background: #422006 !important; }
+tr.hidden-row { display: none; }
 
-        /* ========== CHART TABLE ========== */
-        #chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: var(--card-bg); border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: box-shadow 0.3s; }
-        table { border-collapse: collapse; width: 100%; min-width: 300px; table-layout: fixed; }
-        th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
-        body.dark-mode th { background: #78350f; color: #fef3c7; }
-        td { border: 1px solid var(--grid-border); height: 50px; background: var(--card-bg); vertical-align: middle; text-align: center; padding: 0; position: relative; }
-        tr.highlight-row td { background: #fef9c3; }
-        body.dark-mode tr.highlight-row td { background: #422006; }
+.date-box { background: #fef3c7 !important; font-size: 11px; font-weight: 700; width: 52px !important; color: #0a192f !important; line-height: 1.15; padding: 2px; word-break: break-word; }
+body.dark-mode .date-box { background: #78350f !important; color: #fef3c7 !important; }
 
-        .date-box { background: #fef3c7 !important; font-size: 11px; font-weight: 700; width: 52px !important; color: #0a192f !important; line-height: 1.15; padding: 2px; word-break: break-word; }
-        body.dark-mode .date-box { background: #78350f !important; color: #fef3c7 !important; }
+.cell-content { display: flex; align-items: center; justify-content: center; width: 100%; }
+.panna-vertical { display: flex; flex-direction: column; font-size: 8px; line-height: 0.9; width: 10px; font-weight: 700; color: #475569; }
+body.dark-mode .panna-vertical { color: #cbd5e1; }
+.jodi { font-size: 18px; font-weight: 900; color: var(--text-main); margin: 0 4px; }
+.red-house .jodi, .red-house .panna-vertical { color: var(--vip-red) !important; }
 
-        .cell-content { display: flex; align-items: center; justify-content: center; width: 100%; }
-        .panna-vertical { display: flex; flex-direction: column; font-size: 8px; line-height: 0.9; width: 10px; font-weight: 700; color: #475569; }
-        body.dark-mode .panna-vertical { color: #cbd5e1; }
-        .jodi { font-size: 18px; font-weight: 900; color: var(--text-main); margin: 0 4px; }
-        .red-house .jodi, .red-house .panna-vertical { color: var(--vip-red) !important; }
+.fav-btn { position: absolute; top: 1px; right: 1px; font-size: 11px; cursor: pointer; opacity: 0.3; user-select: none; }
+.fav-btn.active { opacity: 1; }
 
-        .fav-btn { position: absolute; top: 2px; right: 2px; font-size: 10px; cursor: pointer; opacity: 0.4; }
-        .fav-btn.active { opacity: 1; }
+.lock-btn { color: var(--vip-green); font-size: 20px; font-weight: bold; cursor: pointer; background: #f0fdf4; padding: 6px 12px; border-radius: 6px; border: 1px dashed var(--vip-green); display: inline-block; }
 
-        .lock-btn { color: var(--vip-green); font-size: 20px; font-weight: bold; cursor: pointer; background: #f0fdf4; padding: 6px 12px; border-radius: 6px; border: 1px dashed var(--vip-green); display: inline-block; }
+/* ================= STATS PANEL ================= */
+.stats-panel { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid var(--border-soft); display: none; }
+.stats-panel.show { display: block; }
+.stats-panel h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.stat-box { background: #f8fafc; padding: 10px 6px; border-radius: 8px; border: 1px solid var(--border-soft); }
+body.dark-mode .stat-box { background: #0f172a; }
+.stat-box .num { font-size: 20px; font-weight: 900; color: var(--vip-green); }
+.stat-box .lbl { font-size: 9px; color: var(--text-soft); margin-top: 3px; text-transform: uppercase; font-weight: 700; }
 
-        /* ========== STATS / ANALYTICS ========== */
-        .stats-panel { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: none; }
-        body.dark-mode .stats-panel { border-color: #334155; }
-        .stats-panel h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-bottom: 12px; }
-        .stat-box { background: #f8fafc; padding: 10px 6px; border-radius: 8px; border: 1px solid #e2e8f0; }
-        body.dark-mode .stat-box { background: #0f172a; border-color: #334155; }
-        .stat-box .num { font-size: 20px; font-weight: 900; color: var(--vip-green); }
-        .stat-box .lbl { font-size: 9.5px; color: var(--text-soft); margin-top: 3px; text-transform: uppercase; font-weight: 700; }
+.hot-cold-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.hc-box { background: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid var(--border-soft); text-align: left; }
+body.dark-mode .hc-box { background: #0f172a; }
+.hc-box h4 { margin: 0 0 6px; font-size: 11px; color: var(--text-soft); text-transform: uppercase; }
+.hc-box .hc-item { font-size: 12px; padding: 3px 0; color: var(--text-main); font-weight: 700; display: flex; justify-content: space-between; }
+.hc-box .hc-item span { color: var(--vip-green); }
 
-        .hot-cold-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-        .hc-box { background: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: left; }
-        body.dark-mode .hc-box { background: #0f172a; border-color: #334155; }
-        .hc-box h4 { margin: 0 0 6px; font-size: 11px; color: var(--text-soft); text-transform: uppercase; }
-        .hc-box .hc-item { font-size: 12px; padding: 3px 0; color: var(--text-main); font-weight: 700; }
-        .hc-box .hc-item span { float: right; color: var(--vip-green); }
+/* ================= INFO SECTIONS ================= */
+.info-section { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid var(--border-soft); text-align: left; }
+.info-section h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
 
-        /* ========== FAQ / TIPS ========== */
-        .info-section { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid #e2e8f0; text-align: left; }
-        body.dark-mode .info-section { border-color: #334155; }
-        .info-section h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
-        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 10px 0; cursor: pointer; }
-        body.dark-mode .faq-item { border-color: #334155; }
-        .faq-q { font-size: 13px; font-weight: 700; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; }
-        .faq-a { font-size: 12px; color: var(--text-soft); margin-top: 6px; line-height: 1.5; display: none; }
-        .faq-item.open .faq-a { display: block; }
-        .faq-item.open .faq-q::after { content: '−'; }
-        .faq-q::after { content: '+'; font-size: 18px; color: var(--vip-green); font-weight: 900; }
+.faq-item { border-bottom: 1px solid var(--border-soft); padding: 10px 0; cursor: pointer; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 13px; font-weight: 700; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.faq-q::after { content: '+'; font-size: 20px; color: var(--vip-green); font-weight: 900; }
+.faq-item.open .faq-q::after { content: '−'; }
+.faq-a { font-size: 12px; color: var(--text-soft); margin-top: 6px; line-height: 1.6; display: none; }
+.faq-item.open .faq-a { display: block; }
 
-        /* ========== CONTACT FORM ========== */
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin: 6px 0; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); font-family: inherit; outline: none; }
-        .contact-form textarea { min-height: 80px; resize: vertical; }
-        .contact-form button { background: var(--vip-green); color: white; padding: 10px; border: none; border-radius: 8px; width: 100%; font-weight: 700; cursor: pointer; font-size: 13px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin: 6px 0; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); font-family: inherit; outline: none; }
+.contact-form textarea { min-height: 70px; resize: vertical; }
+.contact-form button { background: var(--vip-green); color: white; padding: 11px; border: none; border-radius: 8px; width: 100%; font-weight: 700; cursor: pointer; font-size: 13px; margin-top: 6px; }
 
-        /* ========== FLOATING BUTTONS ========== */
-        .floating-btns { position: fixed; bottom: 20px; right: 15px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
-        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.2s; border: none; cursor: pointer; }
-        .float-btn:hover { transform: scale(1.1); }
-        .whatsapp-btn { background: #25d366; color: #fff; }
-        .telegram-btn { background: #0088cc; color: #fff; }
-        .top-btn { background: var(--gold); color: #0f172a; }
+/* ================= FLOATING BUTTONS ================= */
+.floating-btns { position: fixed; bottom: 20px; right: 15px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+.float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.2s; border: none; cursor: pointer; }
+.float-btn:hover { transform: scale(1.1); }
+.whatsapp-btn { background: #25d366; color: #fff; }
+.top-btn { background: var(--gold); color: #0f172a; }
 
-        /* ========== TOAST ========== */
-        .toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: var(--vip-green); color: #fff; padding: 12px 24px; border-radius: 25px; font-weight: 700; font-size: 13px; z-index: 10000; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .toast.show { display: block; animation: toastSlide 0.3s ease; }
-        @keyframes toastSlide { from { opacity: 0; transform: translate(-50%, -20px); } to { opacity: 1; transform: translate(-50%, 0); } }
+/* ================= TOAST / NOTIFICATION ================= */
+.toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: var(--vip-green); color: #fff; padding: 12px 24px; border-radius: 25px; font-weight: 700; font-size: 13px; z-index: 10000; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.toast.show { display: block; animation: toastSlide 0.3s ease; }
+.toast.error { background: var(--vip-red); }
+.toast.info { background: #0ea5e9; }
+@keyframes toastSlide { from { opacity: 0; transform: translate(-50%, -20px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
-        /* ========== PAYMENT / MODAL (existing) ========== */
-        .btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; box-shadow: 0 4px 12px rgba(22,163,74,0.3); }
-        
-        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
-        .overlay.active { display: flex; }
-        .modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.4); color: var(--text-main); }
-        .qr-img { width: 160px; border: 2px solid #cbd5e1; border-radius: 8px; margin: 10px auto; display: block; }
-        input { width: 100%; padding: 11px 14px; margin: 8px 0; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13px; outline: none; background: var(--input-bg); color: var(--text-main); }
-        .modal-header-box { background: var(--vip-green); color: white; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; font-weight: 800; font-size: 15px; text-align: center; }
+/* ================= CONFETTI ================= */
+.confetti { position: fixed; width: 10px; height: 10px; background: #f59e0b; z-index: 9999; pointer-events: none; animation: confettiFall 3s linear forwards; }
+@keyframes confettiFall { 
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } 
+}
 
-        .notice-box { background: #f8fafc; border-left: 4px solid var(--vip-green); padding: 12px; border-radius: 6px; margin-bottom: 12px; font-size: 11.5px; color: var(--text-main); line-height: 1.5; }
-        body.dark-mode .notice-box { background: #0f172a; }
+/* ================= PAYMENT MODAL (existing) ================= */
+.btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; }
+.overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
+.overlay.active { display: flex; }
+.modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; max-height: 90vh; overflow-y: auto; color: var(--text-main); }
+.qr-img { width: 160px; border: 2px solid #cbd5e1; border-radius: 8px; margin: 10px auto; display: block; }
+input { width: 100%; padding: 11px 14px; margin: 8px 0; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; outline: none; background: var(--input-bg); color: var(--text-main); }
+.modal-header-box { background: var(--vip-green); color: white; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; font-weight: 800; font-size: 15px; text-align: center; }
+.notice-box { background: #f8fafc; border-left: 4px solid var(--vip-green); padding: 12px; border-radius: 6px; margin-bottom: 12px; font-size: 11.5px; color: var(--text-main); line-height: 1.5; }
+body.dark-mode .notice-box { background: #0f172a; }
+.upi-box { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; font-size: 13px; font-weight: 700; border: 1.5px solid var(--border-soft); }
+body.dark-mode .upi-box { background: #0f172a; }
+.copy-btn { background: var(--vip-green); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600; }
+.instruction-box, .next-box { background: #f8fafc; border: 1px solid var(--border-soft); padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 11.5px; color: var(--text-main); line-height: 1.6; text-align: left; }
+body.dark-mode .instruction-box, body.dark-mode .next-box { background: #0f172a; }
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
+.sub-plan-card { border: 2px solid var(--border-soft); border-radius: 10px; padding: 10px; background: var(--card-bg); text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+.sub-plan-card:hover { border-color: var(--vip-green); }
+.sub-plan-logo { font-size: 22px; }
+.sub-plan-title { font-size: 12px; font-weight: 800; color: var(--text-main); }
+.sub-plan-price { font-size: 16px; font-weight: 900; color: var(--vip-green); margin: 6px 0; }
+.sub-plan-desc { font-size: 9.5px; color: var(--text-soft); margin-bottom: 8px; font-weight: 600; }
+.sel-btn { background: var(--vip-green); color: white; border: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; width: 100%; }
+.copyright-box { background: var(--card-bg); border: 1px solid var(--grid-border); padding: 10px; margin: 25px auto 10px auto; width: 90%; max-width: 360px; border-radius: 8px; font-size: 12px; font-weight: 700; color: var(--text-soft); }
 
-        .upi-box { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; font-size: 13px; font-weight: 700; border: 1.5px solid #cbd5e1; }
-        body.dark-mode .upi-box { background: #0f172a; }
-        .copy-btn { background: var(--vip-green); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600; }
-
-        .instruction-box { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; margin: 10px 0; font-size: 11.5px; color: var(--text-main); line-height: 1.5; }
-        body.dark-mode .instruction-box { background: #0f172a; border-color: #334155; }
-
-        .next-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 11.5px; color: var(--text-main); line-height: 1.6; }
-        body.dark-mode .next-box { background: #0f172a; border-color: #334155; }
-
-        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
-        .sub-plan-card { border: 2px solid #cbd5e1; border-radius: 10px; padding: 10px; background: var(--card-bg); text-align: center; transition: 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .sub-plan-card:hover { border-color: var(--vip-green); transform: translateY(-3px); }
-        .sub-plan-logo { font-size: 24px; }
-        .sub-plan-title { font-size: 12px; font-weight: 800; color: var(--text-main); }
-        .sub-plan-price { font-size: 16px; font-weight: 900; color: var(--vip-green); margin: 6px 0; }
-        .sub-plan-desc { font-size: 9.5px; color: var(--text-soft); line-height: 1.3; margin-bottom: 8px; font-weight: 600; }
-        .sel-btn { background: var(--vip-green); color: white; border: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; width: 100%; }
-
-        .copyright-box { background: var(--card-bg); border: 1px solid var(--grid-border); padding: 10px 14px; margin: 25px auto 10px auto; width: 90%; max-width: 360px; border-radius: 8px; font-size: 12px; font-weight: 700; color: var(--text-soft); }
-
-        /* ========== SEARCH RESULT HIGHLIGHT ========== */
-        .search-highlight td { animation: highlightFlash 1.5s ease; }
-        @keyframes highlightFlash { 0%,100% { background: var(--card-bg); } 50% { background: #fef08a; } }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 480px) {
-            .header h1 { font-size: 16px; }
-            .countdown-bar .cd-time { font-size: 20px; }
-        }
-    </style>
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+    .header h1 { font-size: 16px; }
+    .countdown-bar .cd-time { font-size: 22px; }
+    .action-grid { grid-template-columns: repeat(3, 1fr); }
+    .action-btn .lbl { font-size: 10px; }
+}
+</style>
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
+<!-- ================= HEADER ================= -->
 <div class="header">
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
         <div id="dropdownMenu" class="dropdown-menu">
             <a href="#top" class="dropdown-item" onclick="closeDropdown()">🏠 Home</a>
             <a href="#chartWrapper" class="dropdown-item" onclick="closeDropdown()">📊 Chart</a>
-            <a href="#statsPanel" class="dropdown-item" onclick="toggleStats(); closeDropdown()">📈 Statistics</a>
+            <a class="dropdown-item" onclick="toggleStats(); closeDropdown()">📈 Statistics</a>
             <a href="#faqSection" class="dropdown-item" onclick="closeDropdown()">❓ FAQ</a>
             <a href="#contactSection" class="dropdown-item" onclick="closeDropdown()">📞 Contact</a>
             <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown();">🔑 Login</div>
@@ -267,29 +256,30 @@
     </div>
 </div>
 
-<!-- ========== LIVE + COUNTDOWN ========== -->
-<div style="text-align:center; margin-top:12px;">
+<!-- ================= LIVE BADGE ================= -->
+<div class="live-wrap">
     <span class="live-badge">
         <span class="live-dot"></span>
         <span>LIVE UPDATING</span>
     </span>
 </div>
 
+<!-- ================= COUNTDOWN ================= -->
 <div class="countdown-bar">
     <div class="cd-label">⏰ NEXT RESULT IN</div>
     <div class="cd-time" id="countdown">--:--:--</div>
     <div class="cd-result" id="nextResultInfo">Loading...</div>
 </div>
 
-<!-- ========== DISCLAIMER ========== -->
+<!-- ================= DISCLAIMER ================= -->
 <div class="disclaimer-box">
-    <p><b>Disclaimer:</b> This website is for entertainment purposes only. All charts are for record purposes. Make decisions at your own discretion.</p>
+    <p><b>Disclaimer:</b> This website is for entertainment purposes only. All charts are for record purposes. Please make decisions at your own discretion.</p>
 </div>
 
-<!-- ========== SEARCH & FILTER ========== -->
+<!-- ================= SEARCH & FILTER ================= -->
 <div class="search-section">
     <div class="search-row">
-        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search date (e.g. 01-01)">
+        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search date (e.g. 01-01)" onkeypress="if(event.key==='Enter') searchDate()">
         <button class="search-btn" onclick="searchDate()">Search</button>
     </div>
     <div class="month-tabs" id="monthTabs">
@@ -309,31 +299,680 @@
     </div>
 </div>
 
-<!-- ========== QUICK ACTIONS ========== -->
+<!-- ================= QUICK ACTIONS ================= -->
 <div class="action-grid">
-    <button class="action-btn" onclick="toggleStats()">
-        <span class="ic">📊</span><span class="lbl">Stats</span>
-    </button>
-    <button class="action-btn" onclick="downloadPDF()">
-        <span class="ic">📥</span><span class="lbl">PDF</span>
-    </button>
-    <button class="action-btn" onclick="window.print()">
-        <span class="ic">🖨️</span><span class="lbl">Print</span>
-    </button>
-    <button class="action-btn" onclick="shareWhatsApp()">
-        <span class="ic">📱</span><span class="lbl">Share</span>
-    </button>
-    <button class="action-btn" onclick="showFavorites()">
-        <span class="ic">⭐</span><span class="lbl">Favorites</span>
-    </button>
-    <button class="action-btn" onclick="enableNotifications()">
-        <span class="ic">🔔</span><span class="lbl">Notify</span>
-    </button>
+    <button class="action-btn" onclick="toggleStats()"><span class="ic">📊</span><span class="lbl">Stats</span></button>
+    <button class="action-btn" onclick="downloadPDF()"><span class="ic">📥</span><span class="lbl">PDF</span></button>
+    <button class="action-btn" onclick="window.print()"><span class="ic">🖨️</span><span class="lbl">Print</span></button>
+    <button class="action-btn" onclick="shareWhatsApp()"><span class="ic">📱</span><span class="lbl">Share</span></button>
+    <button class="action-btn" onclick="showFavorites()"><span class="ic">⭐</span><span class="lbl">Favs</span></button>
+    <button class="action-btn" onclick="enableNotifications()"><span class="ic">🔔</span><span class="lbl">Notify</span></button>
 </div>
 
-<!-- ========== STATS PANEL ========== -->
+<!-- ================= STATS PANEL ================= -->
 <div class="stats-panel" id="statsPanel">
     <h3>📈 Chart Statistics</h3>
-    <div class="stats-grid" id="statsGrid">
+    <div class="stats-grid">
         <div class="stat-box"><div class="num" id="stTotal">0</div><div class="lbl">Total Entries</div></div>
-        <div class="stat-box"><div class="num" id="st
+        <div class="stat-box"><div class="num" id="stRed">0</div><div class="lbl">Red Jodi</div></div>
+        <div class="stat-box"><div class="num" id="stBlack">0</div><div class="lbl">Black Jodi</div></div>
+        <div class="stat-box"><div class="num" id="stUnique">0</div><div class="lbl">Unique Jodi</div></div>
+    </div>
+    <div class="hot-cold-section">
+        <div class="hc-box">
+            <h4>🔥 Hot Jodis (Top 5)</h4>
+            <div id="hotList"></div>
+        </div>
+        <div class="hc-box">
+            <h4>❄️ Cold Jodis</h4>
+            <div id="coldList"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CHART TOP BAR ================= -->
+<div class="chart-top-bar">
+    <button class="go-to-bottom-btn" onclick="window.scrollTo({top: document.body.scrollHeight, behavior:'smooth'})">↓ Bottom</button>
+    <button class="blink-game-btn" onclick="openGameSection()">🎮 PLAY GAME</button>
+</div>
+
+<!-- ================= CHART ================= -->
+<div id="chartWrapper">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:52px;">DATE</th>
+                <th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+            </tr>
+        </thead>
+        <tbody id="gridData"></tbody>
+    </table>
+</div>
+
+<!-- ================= FAQ SECTION ================= -->
+<div class="info-section" id="faqSection">
+    <h3>❓ Frequently Asked Questions</h3>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What is Royal Panel Chart?</div>
+        <div class="faq-a">Royal Panel Chart is a live updated chart showing daily Matka results for all days of the week. We provide accurate and up-to-date records.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How often is the chart updated?</div>
+        <div class="faq-a">The chart is updated live as soon as new results are available. You can see the LIVE badge at the top indicating real-time updates.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Is the data accurate?</div>
+        <div class="faq-a">Yes, our data is sourced directly from official records and updated regularly. However, this website is for entertainment purposes only.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Can I download the chart?</div>
+        <div class="faq-a">Yes! Use the PDF button in the quick actions to download the chart, or use the Print option to save it as a PDF.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How do I contact support?</div>
+        <div class="faq-a">Use the contact form below or click on the WhatsApp floating button to reach us directly.</div>
+    </div>
+</div>
+
+<!-- ================= CONTACT SECTION ================= -->
+<div class="info-section" id="contactSection">
+    <h3>📞 Contact Us</h3>
+    <form class="contact-form" onsubmit="submitContact(event)">
+        <input type="text" id="ctName" placeholder="Your Name" required>
+        <input type="tel" id="ctPhone" placeholder="Mobile Number" required>
+        <textarea id="ctMsg" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- ================= PAYMENT BUTTON ================= -->
+<div style="font-size: 13px; font-weight: 800; color: #b45309; margin: 15px 0 2px 0; text-transform: uppercase;">ACCESS PANEL CHART</div>
+<button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
+
+<!-- ================= COPYRIGHT ================= -->
+<div class="copyright-box">
+    ALL RIGHTS RESERVED (2026)
+</div>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+<div class="floating-btns">
+    <a href="https://wa.me/919999999999" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp">💬</a>
+    <button class="float-btn top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">⬆</button>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast"></div>
+
+<!-- ================= PAYMENT MODAL (existing flow) ================= -->
+<div id="vipModal" class="overlay">
+    <div class="modal-content">
+        <div id="step-create-account">
+            <div class="modal-header-box" style="display:flex; justify-content:space-between; align-items:center;">
+                <span>ENTER DETAILS</span>
+                <span onclick="closeVipModal()" style="font-size:20px; cursor:pointer;">✕</span>
+            </div>
+            <div class="notice-box">
+                <b>Account Activation Notice:</b><br>
+                विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा।
+            </div>
+            <label style="font-size:11.5px; font-weight:700;">Name / नाम:</label>
+            <input type="text" id="vName" placeholder="अपना नाम लिखें">
+            <label style="font-size:11.5px; font-weight:700;">Mobile Number:</label>
+            <input type="number" id="vPhone" placeholder="मोबाइल नंबर">
+            <button class="btn-pay-main" onclick="goPay()">NEXT / आगे बढ़ें</button>
+            <button class="btn-pay-main" style="background:#64748b;" onclick="closeVipModal()">बंद करें</button>
+        </div>
+
+        <div id="step2" style="display:none;">
+            <div class="modal-header-box">One Time Account Activation</div>
+            <div style="text-align:center;">
+                <span style="font-size:11.5px; font-weight:700;">Registration Fee:</span><br>
+                <span style="color:var(--vip-green); font-weight:900; font-size:24px;">₹799</span>
+            </div>
+            <img src="paytm-png.jpeg" class="qr-img" alt="QR">
+            <div style="font-size:11.5px; font-weight:700; margin-bottom:4px;">UPI ID:</div>
+            <div class="upi-box">
+                <span id="upiText">omkaryadav@paytm</span>
+                <button class="copy-btn" onclick="copyUpi()">COPY</button>
+            </div>
+            <div class="instruction-box">
+                <b>Instructions:</b>
+                <ul>
+                    <li>QR स्कैन करें या UPI ID पर भुगतान करें।</li>
+                    <li>भुगतान के बाद 12 अंकों की UTR सुरक्षित रखें।</li>
+                </ul>
+            </div>
+            <button class="btn-pay-main" onclick="goToPaymentDetails()">PAYMENT DONE / भुगतान हो गया</button>
+            <p onclick="backToStep1()" style="color:var(--vip-green); cursor:pointer; font-size:12px; text-align:center; font-weight:700;">← वापस जाएं</p>
+        </div>
+
+        <div id="step-pay-details" style="display:none;">
+            <div class="modal-header-box">Payment Details</div>
+            <label style="font-size:11.5px; font-weight:700;">Mobile Number:</label>
+            <input type="number" id="payNumber" placeholder="Mobile Number">
+            <label style="font-size:11.5px; font-weight:700;">UPI ID (जिससे भुगतान किया):</label>
+            <input type="text" id="payUpi" placeholder="yourname@paytm">
+            <label style="font-size:11.5px; font-weight:700;">Transaction / UTR ID:</label>
+            <input type="text" id="payUtid" placeholder="12 Digit UTR">
+            <button class="btn-pay-main" onclick="submitPayment()">SUBMIT PAYMENT DETAILS</button>
+            <p onclick="backToStep2()" style="color:var(--vip-green); cursor:pointer; font-size:12px; text-align:center; font-weight:700;">← वापस जाएं</p>
+        </div>
+
+        <div id="step3" style="display:none; text-align:center;">
+            <div class="modal-header-box">THANK YOU / धन्यवाद</div>
+            <p style="font-size:13px; font-weight:800; color:var(--vip-green);">Pending Admin Approval</p>
+            <div class="notice-box" style="text-align:left;">
+                आपका पेमेंट सफल रहा। अकाउंट एडमिन द्वारा जाँच के बाद ओपन किया जाएगा।
+            </div>
+            <div style="font-size:11.5px; font-weight:700;">Verification Timer:</div>
+            <div id="timerBox" style="font-size:32px; color:var(--vip-green); font-weight:900;">02:00</div>
+        </div>
+
+        <div id="step-subscription" style="display:none;">
+            <div class="modal-header-box">Subscription Plans</div>
+            <div class="plans-grid">
+                <div class="sub-plan-card">
+                    <div><div class="sub-plan-logo">🔑</div><div class="sub-plan-title">Starter - 1 Day</div><div class="sub-plan-price">₹1499</div></div>
+                    <button class="sel-btn" onclick="openPlanPayment('Starter - 1 Day', '1499')">SELECT</button>
+                </div>
+                <div class="sub-plan-card">
+                    <div><div class="sub-plan-logo">⚡</div><div class="sub-plan-title">Popular - 7 Days</div><div class="sub-plan-price">₹2499</div></div>
+                    <button class="sel-btn" onclick="openPlanPayment('Popular - 7 Days', '2499')">SELECT</button>
+                </div>
+                <div class="sub-plan-card">
+                    <div><div class="sub-plan-logo">⭐</div><div class="sub-plan-title">Best - 10 Days</div><div class="sub-plan-price">₹3499</div></div>
+                    <button class="sel-btn" onclick="openPlanPayment('Best Value - 10 Days', '3499')">SELECT</button>
+                </div>
+                <div class="sub-plan-card">
+                    <div><div class="sub-plan-logo">💎</div><div class="sub-plan-title">Ultimate - 30 Days</div><div class="sub-plan-price">₹4999</div></div>
+                    <button class="sel-btn" onclick="openPlanPayment('Ultimate - 1 Month', '4999')">SELECT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="step-plan-pay" style="display:none; text-align:center;">
+            <div class="modal-header-box" id="planTitleDisplay">Plan Payment</div>
+            <div style="font-size:24px; font-weight:900; color:var(--vip-green);" id="planPriceDisplay">₹0</div>
+            <img src="paytm-png.jpeg" class="qr-img" alt="QR">
+            <div style="font-size:11.5px; font-weight:700; margin-bottom:4px; text-align:left;">UPI ID:</div>
+            <div class="upi-box"><span id="planUpiText">omkaryadav@paytm</span><button class="copy-btn" onclick="copyPlanUpi()">COPY</button></div>
+            <label style="font-size:11.5px; font-weight:700; display:block; text-align:left;">Transaction / UTR ID:</label>
+            <input type="text" id="planUtidInput" placeholder="12 Digit UTR">
+            <button class="btn-pay-main" onclick="submitPlanPayment()">PAYMENT DONE</button>
+        </div>
+
+        <div id="step-plan-timer" style="display:none; text-align:center;">
+            <div class="modal-header-box">VERIFYING PAYMENT</div>
+            <div id="planTimerBox" style="font-size:34px; color:var(--vip-green); font-weight:900;">01:00</div>
+        </div>
+
+        <div id="step4" style="display:none; text-align:center;">
+            <div class="modal-header-box">SUCCESS ✅</div>
+            <p style="font-size:12px; font-weight:800; color:var(--vip-green);">भुगतान सफलतापूर्वक प्राप्त हुआ</p>
+            <div class="next-box">एडमिन द्वारा जाँच के बाद सबस्क्रिप्शन की सेवाएँ एक्टिव कर दी जाएंगी।</div>
+            <button class="btn-pay-main" onclick="closeVipModal()">CLOSE</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// ================= CONFIG =================
+const CSV = "https://docs.google.com/spreadsheets/d/1z7pEP9CAcp5xozZR_hPVzsEBEYrzQ8gbYusHpfWYBxQ/export?format=csv&gid=0";
+
+let allChartRows = [];   // raw data cache
+let lastDataHash = "";
+let favorites = JSON.parse(localStorage.getItem('royalFavs') || '[]');
+let jodiCount = {};      // for stats
+
+// ================= INIT =================
+window.addEventListener('load', () => {
+    initDarkMode();
+    loadChart();
+    startCountdown();
+    
+    // Auto refresh every 30 sec
+    setInterval(loadChart, 30000);
+    
+    // Refresh when tab visible
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) loadChart();
+    });
+});
+
+// ================= DARK MODE =================
+function initDarkMode() {
+    const saved = localStorage.getItem('royalDarkMode');
+    if (saved === 'true') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('modeBtn').innerText = '☀️';
+    }
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    document.getElementById('modeBtn').innerText = isDark ? '☀️' : '🌙';
+    localStorage.setItem('royalDarkMode', isDark);
+    playBeep(800, 0.05);
+}
+
+// ================= LOAD CHART =================
+async function loadChart() {
+    try {
+        const res = await fetch(CSV + "&cache=" + Date.now());
+        const data = await res.text();
+        
+        const currentHash = simpleHash(data);
+        const isNewData = lastDataHash !== "" && currentHash !== lastDataHash;
+        
+        if (currentHash === lastDataHash) return;  // no change
+        lastDataHash = currentHash;
+        
+        const rows = data.split('\n').filter(r => r.trim() !== '').map(r => r.split(','));
+        allChartRows = rows;
+        
+        renderChart();
+        computeStats();
+        
+        if (isNewData) {
+            showToast("🎉 New Result Updated!");
+            launchConfetti();
+            playBeep(1200, 0.15);
+            sendNotification();
+        }
+    } catch (e) { console.log("Load error:", e); }
+}
+
+function simpleHash(str) {
+    let h = 0;
+    for (let i = 0; i < str.length; i++) {
+        h = ((h << 5) - h) + str.charCodeAt(i);
+        h |= 0;
+    }
+    return h;
+}
+
+// ================= RENDER CHART =================
+function renderChart() {
+    const currentMonth = window.currentMonthFilter || 'all';
+    let html = '';
+    let lockShown = false;
+    let totalRows = allChartRows.length;
+    
+    for (let i = 1; i < totalRows; i++) {
+        let d = (allChartRows[i][0] || "").trim();
+        if (!d) continue;
+        
+        // Month filter
+        const monthMatch = d.match(/[-/](\d{1,2})[-/]/);
+        let month = monthMatch ? monthMatch[1].padStart(2, '0') : '';
+        const hideRow = currentMonth !== 'all' && month !== currentMonth;
+        
+        let formattedDate = d.includes('-') ? d.replace('-', '<br>') 
+                          : d.includes('/') ? d.replace('/', '<br>') 
+                          : d.replace(' ', '<br>');
+        
+        html += `<tr data-date="${d}" data-month="${month}" ${hideRow ? 'class="hidden-row"' : ''}>
+                    <td class="date-box">${formattedDate}</td>`;
+        
+        for (let j = 1; j <= 16; j += 3) {
+            let lp = (allChartRows[i][j] || "").trim();
+            let jd = (allChartRows[i][j+1] || "").trim();
+            let rp = (allChartRows[i][j+2] || "").trim();
+            
+            if (!jd && !lp) {
+                if (!lockShown) {
+                    html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`;
+                    lockShown = true;
+                } else html += `<td></td>`;
+            } else {
+                let isRed = (jd.length === 2 && (jd[0] === jd[1] || Math.abs(jd[0]-jd[1]) === 5));
+                let isFav = favorites.includes(jd);
+                html += `<td class="${isRed ? 'red-house' : ''}">
+                    <div class="cell-content">
+                        <div class="panna-vertical">${lp.split('').map(n => `<span>${n}</span>`).join('')}</div>
+                        <div class="jodi">${jd}</div>
+                        <div class="panna-vertical">${rp.split('').map(n => `<span>${n}</span>`).join('')}</div>
+                    </div>
+                    <span class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFav(event, '${jd}')">⭐</span>
+                </td>`;
+            }
+        }
+        html += `</tr>`;
+    }
+    
+    document.getElementById('gridData').innerHTML = html;
+}
+
+// ================= SEARCH =================
+function searchDate() {
+    const q = document.getElementById('searchInput').value.trim();
+    if (!q) return showToast("Enter a date to search", "error");
+    
+    // Remove highlights
+    document.querySelectorAll('#gridData tr').forEach(tr => tr.classList.remove('highlight-row'));
+    
+    // Reset month filter to all
+    window.currentMonthFilter = 'all';
+    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.month-tab')[0].classList.add('active');
+    
+    const rows = document.querySelectorAll('#gridData tr');
+    let found = false;
+    rows.forEach(tr => {
+        tr.classList.remove('hidden-row');
+        const date = tr.getAttribute('data-date') || '';
+        if (date.includes(q) || q.includes(date)) {
+            tr.classList.add('highlight-row');
+            tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            found = true;
+        }
+    });
+    
+    if (found) showToast("✅ Match found!");
+    else showToast("❌ No match for " + q, "error");
+}
+
+// ================= MONTH FILTER =================
+function filterMonth(month, btn) {
+    window.currentMonthFilter = month;
+    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    
+    document.querySelectorAll('#gridData tr').forEach(tr => {
+        const m = tr.getAttribute('data-month') || '';
+        if (month === 'all' || m === month) tr.classList.remove('hidden-row');
+        else tr.classList.add('hidden-row');
+    });
+}
+
+// ================= FAVORITES =================
+function toggleFav(e, jodi) {
+    e.stopPropagation();
+    if (!jodi) return;
+    const idx = favorites.indexOf(jodi);
+    if (idx > -1) favorites.splice(idx, 1);
+    else favorites.push(jodi);
+    localStorage.setItem('royalFavs', JSON.stringify(favorites));
+    renderChart();
+    showToast(idx > -1 ? "Removed from favorites" : "⭐ Added to favorites");
+}
+
+function showFavorites() {
+    if (favorites.length === 0) return showToast("No favorites yet. Click ⭐ on any jodi.", "info");
+    alert("⭐ Your Favorite Jodis:\n\n" + favorites.join(", "));
+}
+
+// ================= STATS =================
+function computeStats() {
+    jodiCount = {};
+    let total = 0, red = 0, black = 0;
+    const uniqueSet = new Set();
+    
+    for (let i = 1; i < allChartRows.length; i++) {
+        for (let j = 2; j <= 16; j += 3) {
+            const jd = (allChartRows[i][j] || "").trim();
+            if (!jd || jd.length !== 2) continue;
+            total++;
+            uniqueSet.add(jd);
+            jodiCount[jd] = (jodiCount[jd] || 0) + 1;
+            const isRed = (jd[0] === jd[1] || Math.abs(jd[0]-jd[1]) === 5);
+            if (isRed) red++; else black++;
+        }
+    }
+    
+    document.getElementById('stTotal').innerText = total;
+    document.getElementById('stRed').innerText = red;
+    document.getElementById('stBlack').innerText = black;
+    document.getElementById('stUnique').innerText = uniqueSet.size;
+    
+    // Hot/Cold
+    const sorted = Object.entries(jodiCount).sort((a,b) => b[1] - a[1]);
+    const hot = sorted.slice(0, 5);
+    const cold = sorted.slice(-5).reverse();
+    
+    document.getElementById('hotList').innerHTML = hot.length 
+        ? hot.map(([k,v]) => `<div class="hc-item">${k} <span>×${v}</span></div>`).join('')
+        : '<div class="hc-item" style="color:#64748b">No data</div>';
+    document.getElementById('coldList').innerHTML = cold.length 
+        ? cold.map(([k,v]) => `<div class="hc-item">${k} <span>×${v}</span></div>`).join('')
+        : '<div class="hc-item" style="color:#64748b">No data</div>';
+}
+
+function toggleStats() {
+    const p = document.getElementById('statsPanel');
+    p.classList.toggle('show');
+    if (p.classList.contains('show')) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ================= PDF / PRINT =================
+function downloadPDF() {
+    showToast("📥 Generating PDF...");
+    const el = document.getElementById('chartWrapper');
+    const opt = {
+        margin: 5,
+        filename: 'royal-panel-chart-' + new Date().toISOString().slice(0,10) + '.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(el).save().then(() => {
+        showToast("✅ PDF Downloaded!");
+    });
+}
+
+// ================= WHATSAPP SHARE =================
+function shareWhatsApp() {
+    const text = "🎯 Check out ROYAL PANEL CHART — Live Matka Results!\n" + window.location.href;
+    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+}
+
+// ================= NOTIFICATIONS =================
+async function enableNotifications() {
+    if (!("Notification" in window)) return showToast("Not supported on this browser", "error");
+    if (Notification.permission === "granted") return showToast("✅ Notifications already ON");
+    const perm = await Notification.requestPermission();
+    if (perm === "granted") showToast("✅ Notifications enabled!");
+    else showToast("❌ Permission denied", "error");
+}
+
+function sendNotification() {
+    if (Notification.permission === "granted") {
+        new Notification("🎯 New Result Updated!", {
+            body: "Royal Panel Chart has new data. Tap to view!",
+            icon: "/favicon.ico"
+        });
+    }
+}
+
+// ================= CONFETTI =================
+function launchConfetti() {
+    const colors = ['#f59e0b', '#16a34a', '#dc2626', '#0ea5e9', '#8b5cf6'];
+    for (let i = 0; i < 40; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.animationDelay = (Math.random() * 0.6) + 's';
+        c.style.animationDuration = (2 + Math.random() * 2) + 's';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 4000);
+    }
+}
+
+// ================= SOUND =================
+let audioCtx;
+function playBeep(freq = 800, dur = 0.1) {
+    try {
+        audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + dur);
+    } catch(e) {}
+}
+
+// ================= COUNTDOWN =================
+const RESULT_TIMES = ["11:30", "12:30", "15:30", "17:30", "19:30", "21:30"];  // example times
+function startCountdown() {
+    setInterval(() => {
+        const now = new Date();
+        const hh = now.getHours();
+        const mm = now.getMinutes();
+        const cur = hh * 60 + mm;
+        
+        let next = null;
+        for (const t of RESULT_TIMES) {
+            const [th, tm] = t.split(':').map(Number);
+            const tmins = th * 60 + tm;
+            if (tmins > cur) { next = t; break; }
+        }
+        if (!next) next = RESULT_TIMES[0];  // next day
+        
+        const [nh, nm] = next.split(':').map(Number);
+        let diff = (nh * 60 + nm) - cur;
+        if (diff < 0) diff += 24 * 60;
+        
+        const h = Math.floor(diff / 60);
+        const m = diff % 60;
+        const s = 59 - now.getSeconds();
+        
+        document.getElementById('countdown').innerText =
+            String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+        document.getElementById('nextResultInfo').innerText = "Next result at " + next + " IST";
+    }, 1000);
+}
+
+// ================= DROPDOWN =================
+function toggleDropdown(e) {
+    e.stopPropagation();
+    document.getElementById('dropdownMenu').classList.toggle('active');
+}
+function closeDropdown() {
+    document.getElementById('dropdownMenu').classList.remove('active');
+}
+window.addEventListener('click', (e) => {
+    if (!e.target.matches('.menu-icon')) closeDropdown();
+});
+
+// ================= CONTACT =================
+function submitContact(e) {
+    e.preventDefault();
+    showToast("✅ Message sent! We'll reply soon.");
+    e.target.reset();
+}
+
+// ================= TOAST =================
+function showToast(msg, type = '') {
+    const t = document.getElementById('toast');
+    t.innerText = msg;
+    t.className = 'toast show ' + type;
+    clearTimeout(t._to);
+    t._to = setTimeout(() => t.className = 'toast ' + type, 2800);
+}
+
+// ================= PAYMENT FLOW (existing) =================
+function openGameSection() { openVipModal(); }
+function openVipModal() { document.getElementById('vipModal').classList.add('active'); resetModal(); }
+function closeVipModal() { document.getElementById('vipModal').classList.remove('active'); }
+function openLoginDirect() {
+    document.getElementById('vipModal').classList.add('active');
+    resetModal();
+    document.getElementById('step-create-account').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+}
+function resetModal() {
+    document.getElementById('step-create-account').style.display = 'block';
+    ['step2','step-pay-details','step3','step-subscription','step-plan-pay','step-plan-timer','step4'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+}
+function backToStep1() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step-create-account').style.display = 'block';
+}
+function backToStep2() {
+    document.getElementById('step-pay-details').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+}
+function goPay() {
+    if (!document.getElementById('vName').value || document.getElementById('vPhone').value.length < 10) {
+        return showToast("सही जानकारी भरें", "error");
+    }
+    document.getElementById('payNumber').value = document.getElementById('vPhone').value;
+    document.getElementById('step-create-account').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+}
+function copyUpi() {
+    navigator.clipboard.writeText(document.getElementById('upiText').innerText);
+    showToast("✅ UPI ID Copied!");
+}
+function goToPaymentDetails() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step-pay-details').style.display = 'block';
+}
+function submitPayment() {
+    const num = document.getElementById('payNumber').value;
+    const upi = document.getElementById('payUpi').value;
+    const utid = document.getElementById('payUtid').value;
+    if (num.length < 10 || !upi || utid.length < 6) return showToast("सभी विवरण सही से भरें", "error");
+    document.getElementById('step-pay-details').style.display = 'none';
+    document.getElementById('step3').style.display = 'block';
+    startTimer('timerBox', 120, 'step3', 'step-subscription');
+}
+function startTimer(boxId, seconds, hideId, showId) {
+    let t = seconds;
+    const x = setInterval(() => {
+        const m = Math.floor(t / 60), s = t % 60;
+        document.getElementById(boxId).innerText = `0${m}:${s < 10 ? '0' + s : s}`;
+        if (t-- <= 0) {
+            clearInterval(x);
+            document.getElementById(hideId).style.display = 'none';
+            document.getElementById(showId).style.display = 'block';
+        }
+    }, 1000);
+}
+let selectedPlanName = "", selectedPlanPrice = "";
+function openPlanPayment(planName, price) {
+    selectedPlanName = planName;
+    selectedPlanPrice = price;
+    document.getElementById('planTitleDisplay').innerText = planName;
+    document.getElementById('planPriceDisplay').innerText = "₹" + price;
+    document.getElementById('step-subscription').style.display = 'none';
+    document.getElementById('step-plan-pay').style.display = 'block';
+}
+function copyPlanUpi() {
+    navigator.clipboard.writeText(document.getElementById('planUpiText').innerText);
+    showToast("✅ UPI ID Copied!");
+}
+function submitPlanPayment() {
+    const utid = document.getElementById('planUtidInput').value;
+    if (utid.length < 6) return showToast("UTR ID सही से भरें", "error");
+    document.getElementById('step-plan-pay').style.display = 'none';
+    document.getElementById('step-plan-timer').style.display = 'block';
+    startTimer('planTimerBox', 60, 'step-plan-timer', 'step4');
+}
+</script>
+
+<!-- ================= TAWK.TO CHAT ================= -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a6b47d42539311d47e435cc/1juph15ut';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>
