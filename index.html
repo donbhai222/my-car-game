@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>ROYAL GAMES ZONE | 8 Premium Games</title>
-<meta name="description" content="8 premium games khelo, points kamao, free subscription pao!">
+<title>ROYAL GAMES ZONE | 20 Premium Games</title>
+<meta name="description" content="20 premium games khelo, points kamao, free subscription pao!">
 
 <style>
 :root { 
@@ -12,8 +12,6 @@
     --vip-red: #dc2626; 
     --vip-green: #16a34a; 
     --bg-main: #0a0e27;
-    --bg-card: #151b3d;
-    --bg-card-2: #1e2552;
     --text-main: #ffffff;
     --text-soft: #94a3b8;
     --neon-pink: #ec4899;
@@ -31,17 +29,15 @@ body {
     background: var(--bg-main);
     background-image: 
         radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+        radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
     background-attachment: fixed;
     color: var(--text-main);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
+    padding-bottom: 30px;
 }
 
-/* Animated background particles */
 body::before {
     content: '';
     position: fixed;
@@ -51,9 +47,7 @@ body::before {
         radial-gradient(2px 2px at 20% 30%, white, transparent),
         radial-gradient(2px 2px at 60% 70%, white, transparent),
         radial-gradient(1px 1px at 50% 50%, white, transparent),
-        radial-gradient(1px 1px at 80% 10%, white, transparent),
-        radial-gradient(2px 2px at 90% 60%, white, transparent),
-        radial-gradient(1px 1px at 33% 80%, white, transparent);
+        radial-gradient(1px 1px at 80% 10%, white, transparent);
     background-size: 200% 200%;
     opacity: 0.3;
     pointer-events: none;
@@ -65,14 +59,13 @@ body::before {
     100% { background-position: 100% 100%; }
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header { 
     position: sticky;
     top: 0;
     z-index: 100;
     background: rgba(10, 14, 39, 0.85);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(168, 85, 247, 0.3);
     padding: 14px 15px;
     display: flex;
@@ -93,7 +86,7 @@ body::before {
     100% { background-position: 200% 0%; }
 }
 .header h1 { 
-    font-size: 17px; 
+    font-size: 16px; 
     font-weight: 900;
     background: linear-gradient(90deg, #ec4899, #a855f7, #06b6d4, #ec4899);
     background-size: 300% 100%;
@@ -102,7 +95,6 @@ body::before {
     -webkit-text-fill-color: transparent;
     animation: textFlow 4s linear infinite;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 @keyframes textFlow {
     0% { background-position: 0% 50%; }
@@ -127,27 +119,12 @@ body::before {
     background: rgba(168, 85, 247, 0.15);
     border: 1px solid rgba(168, 85, 247, 0.4);
     transition: 0.3s;
-    display: inline-block;
 }
 .menu-icon:hover {
     background: rgba(168, 85, 247, 0.3);
     transform: scale(1.05);
 }
 
-.header-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
-.mode-toggle { 
-    background: rgba(168, 85, 247, 0.15); 
-    border: 1px solid rgba(168, 85, 247, 0.4); 
-    color: #fff; 
-    font-size: 16px; 
-    padding: 8px 12px; 
-    border-radius: 10px; 
-    cursor: pointer;
-    transition: 0.3s;
-}
-.mode-toggle:hover { background: rgba(168, 85, 247, 0.3); transform: scale(1.05); }
-
-/* Dropdown */
 .dropdown-menu { 
     display: none; 
     position: absolute; 
@@ -157,11 +134,10 @@ body::before {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(168, 85, 247, 0.4); 
     border-radius: 12px; 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
     z-index: 1000; 
-    width: 240px; 
+    width: 260px; 
     text-align: left; 
-    overflow: hidden;
     max-height: 85vh;
     overflow-y: auto;
     animation: slideDown 0.3s ease;
@@ -173,10 +149,9 @@ body::before {
 .dropdown-menu.active { display: block; }
 .dropdown-item { 
     display: block; 
-    padding: 12px 16px; 
+    padding: 10px 16px; 
     color: #cbd5e1; 
-    text-decoration: none; 
-    font-size: 13px; 
+    font-size: 12px; 
     font-weight: 700; 
     border-bottom: 1px solid rgba(168, 85, 247, 0.1); 
     cursor: pointer; 
@@ -199,47 +174,15 @@ body::before {
     border-top: 1px solid rgba(168, 85, 247, 0.2);
 }
 
-/* ================= HERO SECTION ================= */
+/* HERO */
 .hero {
     text-align: center;
-    padding: 30px 20px 20px;
+    padding: 25px 20px 15px;
     position: relative;
     z-index: 1;
 }
-.hero-badge {
-    display: inline-block;
-    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
-    border: 1px solid rgba(16, 185, 129, 0.5);
-    color: var(--neon-green);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    animation: pulseGlow 2s ease-in-out infinite;
-}
-@keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
-    50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
-}
-.hero-badge .live-dot {
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: var(--neon-green);
-    border-radius: 50%;
-    margin-right: 6px;
-    animation: dotPulse 1.5s infinite;
-    vertical-align: middle;
-}
-@keyframes dotPulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-}
-
 .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 900;
     background: linear-gradient(90deg, #ec4899, #a855f7, #06b6d4);
     background-size: 200% 100%;
@@ -248,36 +191,31 @@ body::before {
     -webkit-text-fill-color: transparent;
     animation: textFlow 4s linear infinite;
     margin-bottom: 8px;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
 }
 .hero p {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-soft);
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
-/* ================= WALLET BAR ================= */
+/* WALLET */
 .wallet-bar {
     display: flex;
     justify-content: center;
     gap: 10px;
     padding: 0 15px;
-    margin: 20px auto;
+    margin: 15px auto;
     max-width: 600px;
     position: relative;
     z-index: 1;
-    flex-wrap: wrap;
 }
 .wallet-item {
     flex: 1;
-    min-width: 100px;
     background: linear-gradient(145deg, rgba(30, 37, 82, 0.8), rgba(21, 27, 61, 0.6));
     backdrop-filter: blur(10px);
     border: 1px solid rgba(168, 85, 247, 0.3);
     border-radius: 14px;
-    padding: 12px 10px;
+    padding: 12px 8px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -298,7 +236,6 @@ body::before {
 .wallet-item:hover {
     transform: translateY(-3px);
     border-color: rgba(168, 85, 247, 0.6);
-    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
 }
 .wallet-item .wi-lbl {
     font-size: 9px;
@@ -309,7 +246,7 @@ body::before {
     margin-bottom: 4px;
 }
 .wallet-item .wi-val {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
     background: linear-gradient(90deg, var(--neon-yellow), var(--neon-orange));
     -webkit-background-clip: text;
@@ -329,11 +266,11 @@ body::before {
     -webkit-text-fill-color: transparent;
 }
 
-/* ================= SECTION TITLE ================= */
+/* SECTION TITLE */
 .section-title {
     text-align: center;
-    margin: 25px 20px 15px;
-    font-size: 16px;
+    margin: 20px 20px 15px;
+    font-size: 15px;
     font-weight: 900;
     color: #fff;
     letter-spacing: 2px;
@@ -351,7 +288,7 @@ body::before {
     border-radius: 2px;
 }
 
-/* ================= GAMES GRID ================= */
+/* GAMES GRID */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -369,14 +306,14 @@ body::before {
 .game-tile {
     background: linear-gradient(145deg, rgba(30, 37, 82, 0.9), rgba(21, 27, 61, 0.9));
     border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 18px;
-    padding: 18px 12px 14px;
+    border-radius: 16px;
+    padding: 14px 10px 12px;
     cursor: pointer;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.4s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -384,90 +321,64 @@ body::before {
     transform: translateY(20px);
     animation: tileEnter 0.5s ease forwards;
 }
-.game-tile:nth-child(1) { animation-delay: 0.05s; }
-.game-tile:nth-child(2) { animation-delay: 0.1s; }
-.game-tile:nth-child(3) { animation-delay: 0.15s; }
-.game-tile:nth-child(4) { animation-delay: 0.2s; }
-.game-tile:nth-child(5) { animation-delay: 0.25s; }
-.game-tile:nth-child(6) { animation-delay: 0.3s; }
-.game-tile:nth-child(7) { animation-delay: 0.35s; }
-.game-tile:nth-child(8) { animation-delay: 0.4s; }
+.game-tile:nth-child(1) { animation-delay: 0.03s; }
+.game-tile:nth-child(2) { animation-delay: 0.06s; }
+.game-tile:nth-child(3) { animation-delay: 0.09s; }
+.game-tile:nth-child(4) { animation-delay: 0.12s; }
+.game-tile:nth-child(5) { animation-delay: 0.15s; }
+.game-tile:nth-child(6) { animation-delay: 0.18s; }
+.game-tile:nth-child(7) { animation-delay: 0.21s; }
+.game-tile:nth-child(8) { animation-delay: 0.24s; }
+.game-tile:nth-child(9) { animation-delay: 0.27s; }
+.game-tile:nth-child(10) { animation-delay: 0.30s; }
+.game-tile:nth-child(11) { animation-delay: 0.33s; }
+.game-tile:nth-child(12) { animation-delay: 0.36s; }
+.game-tile:nth-child(13) { animation-delay: 0.39s; }
+.game-tile:nth-child(14) { animation-delay: 0.42s; }
+.game-tile:nth-child(15) { animation-delay: 0.45s; }
+.game-tile:nth-child(16) { animation-delay: 0.48s; }
+.game-tile:nth-child(17) { animation-delay: 0.51s; }
+.game-tile:nth-child(18) { animation-delay: 0.54s; }
+.game-tile:nth-child(19) { animation-delay: 0.57s; }
+.game-tile:nth-child(20) { animation-delay: 0.60s; }
 @keyframes tileEnter {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.game-tile::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: conic-gradient(from 0deg, transparent, var(--neon-purple), transparent 30%);
-    animation: rotateBorder 4s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.game-tile::after {
-    content: '';
-    position: absolute;
-    inset: 1.5px;
-    background: linear-gradient(145deg, rgba(30, 37, 82, 0.98), rgba(21, 27, 61, 0.98));
-    border-radius: 17px;
-    z-index: 0;
-}
-@keyframes rotateBorder {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-.game-tile:hover::before { opacity: 1; }
-
-.game-tile > * { position: relative; z-index: 1; }
-
 .game-tile:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 
-        0 15px 40px rgba(168, 85, 247, 0.4),
-        0 0 60px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+    border-color: rgba(168, 85, 247, 0.6);
 }
-.game-tile:active { transform: translateY(-2px) scale(0.98); }
-
 .game-tile .gt-icon {
-    font-size: 40px;
+    font-size: 34px;
     filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.5));
     transition: 0.3s;
-    display: block;
 }
 .game-tile:hover .gt-icon {
     transform: scale(1.15) rotate(-5deg);
-    filter: drop-shadow(0 6px 20px rgba(236, 72, 153, 0.7));
 }
 .game-tile .gt-name {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 800;
     color: #fff;
-    letter-spacing: 0.3px;
     line-height: 1.2;
 }
 .game-tile .gt-desc {
-    font-size: 10px;
+    font-size: 9px;
     color: var(--text-soft);
     font-weight: 600;
 }
-
 .game-tile .gt-badge {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    font-size: 8px;
-    padding: 3px 8px;
+    top: 6px;
+    right: 6px;
+    font-size: 7px;
+    padding: 3px 7px;
     border-radius: 8px;
     font-weight: 900;
     letter-spacing: 0.5px;
     z-index: 2;
-    animation: badgePulse 2s infinite;
-}
-@keyframes badgePulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
 }
 .gt-badge.hot {
     background: linear-gradient(135deg, #ec4899, #f43f5e);
@@ -477,15 +388,13 @@ body::before {
 .gt-badge.new {
     background: linear-gradient(135deg, #06b6d4, #3b82f6);
     color: #fff;
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
 }
 .gt-badge.daily {
     background: linear-gradient(135deg, #eab308, #f97316);
     color: #fff;
-    box-shadow: 0 0 15px rgba(234, 179, 8, 0.6);
 }
 
-/* ================= LEADERBOARD ================= */
+/* LEADERBOARD */
 .leaderboard-panel {
     background: linear-gradient(145deg, rgba(30, 37, 82, 0.8), rgba(21, 27, 61, 0.6));
     backdrop-filter: blur(10px);
@@ -496,19 +405,9 @@ body::before {
     max-width: 600px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
-}
-.leaderboard-panel::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, var(--neon-yellow), var(--neon-orange), var(--neon-yellow));
-    background-size: 200% 100%;
-    animation: textFlow 3s linear infinite;
 }
 .leaderboard-panel h3 {
-    font-size: 14px;
+    font-size: 13px;
     color: #fff;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -516,7 +415,6 @@ body::before {
     margin-bottom: 15px;
     font-weight: 900;
 }
-
 .lb-row {
     display: flex;
     justify-content: space-between;
@@ -528,40 +426,12 @@ body::before {
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 8px;
-    transition: 0.3s;
-    animation: lbEnter 0.5s ease backwards;
-}
-.lb-row:nth-child(1) { animation-delay: 0.05s; }
-.lb-row:nth-child(2) { animation-delay: 0.1s; }
-.lb-row:nth-child(3) { animation-delay: 0.15s; }
-.lb-row:nth-child(4) { animation-delay: 0.2s; }
-.lb-row:nth-child(5) { animation-delay: 0.25s; }
-@keyframes lbEnter {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-.lb-row:hover {
-    background: rgba(168, 85, 247, 0.15);
-    transform: translateX(5px);
 }
 .lb-row.top1 {
     background: linear-gradient(90deg, rgba(234, 179, 8, 0.25), transparent);
     border-color: rgba(234, 179, 8, 0.5);
-    box-shadow: 0 0 20px rgba(234, 179, 8, 0.2);
 }
-.lb-row.top2 {
-    background: linear-gradient(90deg, rgba(148, 163, 184, 0.25), transparent);
-    border-color: rgba(148, 163, 184, 0.5);
-}
-.lb-row.top3 {
-    background: linear-gradient(90deg, rgba(249, 115, 22, 0.25), transparent);
-    border-color: rgba(249, 115, 22, 0.5);
-}
-.lb-rank {
-    font-weight: 900;
-    min-width: 32px;
-    font-size: 15px;
-}
+.lb-rank { font-weight: 900; min-width: 32px; font-size: 15px; }
 .lb-row.top1 .lb-rank { color: #eab308; }
 .lb-row.top2 .lb-rank { color: #94a3b8; }
 .lb-row.top3 .lb-rank { color: #f97316; }
@@ -574,7 +444,7 @@ body::before {
     font-weight: 900;
 }
 
-/* ================= REWARDS ================= */
+/* REWARDS */
 .rewards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -587,28 +457,15 @@ body::before {
     padding: 14px 10px;
     text-align: center;
     transition: 0.3s;
-    position: relative;
-    overflow: hidden;
 }
-.reward-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(234, 179, 8, 0.15), transparent 70%);
-    opacity: 0;
-    transition: 0.3s;
-}
-.reward-card:hover::before { opacity: 1; }
 .reward-card:hover {
     transform: translateY(-4px);
     border-color: rgba(234, 179, 8, 0.7);
-    box-shadow: 0 10px 30px rgba(234, 179, 8, 0.3);
 }
 .reward-card.locked {
     opacity: 0.5;
     filter: grayscale(0.6);
 }
-.reward-card > * { position: relative; z-index: 1; }
 .reward-card .rc-icon { font-size: 26px; margin-bottom: 4px; }
 .reward-card .rc-title { font-size: 12px; font-weight: 800; color: #fff; margin-bottom: 4px; }
 .reward-card .rc-cost { font-size: 11px; color: var(--neon-yellow); font-weight: 900; margin-bottom: 8px; }
@@ -622,19 +479,13 @@ body::before {
     font-weight: 800;
     cursor: pointer;
     width: 100%;
-    transition: 0.3s;
-    letter-spacing: 0.5px;
-}
-.reward-card .rc-btn:hover:not(:disabled) {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
 }
 .reward-card .rc-btn:disabled {
     background: rgba(100, 116, 139, 0.5);
     cursor: not-allowed;
 }
 
-/* ================= GAME MODAL ================= */
+/* MODAL */
 .game-overlay {
     display: none;
     position: fixed;
@@ -647,10 +498,7 @@ body::before {
     padding: 15px;
     overflow-y: auto;
 }
-.game-overlay.show {
-    display: flex;
-    animation: overlayIn 0.3s ease;
-}
+.game-overlay.show { display: flex; animation: overlayIn 0.3s ease; }
 @keyframes overlayIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -662,11 +510,8 @@ body::before {
     max-width: 500px;
     border-radius: 22px;
     padding: 18px;
-    box-shadow: 
-        0 20px 60px rgba(0,0,0,0.8),
-        0 0 80px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 80px rgba(168, 85, 247, 0.2);
     margin: auto;
-    position: relative;
     border: 1px solid rgba(168, 85, 247, 0.3);
     animation: modalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -686,11 +531,7 @@ body::before {
     margin-bottom: 15px;
     box-shadow: 0 4px 20px rgba(168, 85, 247, 0.5);
 }
-.game-modal-header h3 {
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    font-weight: 900;
-}
+.game-modal-header h3 { font-size: 15px; letter-spacing: 0.5px; font-weight: 900; }
 .game-modal-close {
     background: rgba(255,255,255,0.2);
     border: none;
@@ -734,22 +575,17 @@ body::before {
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
     transition: 0.3s;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 .game-btn:hover:not(:disabled) {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6);
 }
-.game-btn:active:not(:disabled) { transform: translateY(-1px); }
 .game-btn:disabled {
     background: rgba(100, 116, 139, 0.4);
     cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
 }
 .game-btn.secondary {
     background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
 }
 
 .game-result-box {
@@ -774,7 +610,6 @@ body::before {
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.15));
     color: #4ade80;
     border: 2px solid rgba(16, 185, 129, 0.5);
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
 }
 .game-result-box.lose {
     background: linear-gradient(135deg, rgba(220, 38, 38, 0.25), rgba(244, 63, 94, 0.15));
@@ -782,70 +617,46 @@ body::before {
     border: 2px solid rgba(220, 38, 38, 0.5);
 }
 
-/* ================= NUMBER GUESS ================= */
+/* GUESS INPUT */
 .guess-input-lg {
-    width: 150px;
-    font-size: 48px;
+    width: 130px;
+    font-size: 42px;
     font-weight: 900;
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     background: rgba(10, 14, 39, 0.8);
     color: #fff;
     border: 3px solid var(--neon-purple);
     border-radius: 16px;
     margin: 12px auto;
     display: block;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     outline: none;
-    transition: 0.3s;
-    box-shadow: inset 0 0 20px rgba(168, 85, 247, 0.2);
     font-family: 'Courier New', monospace;
 }
 .guess-input-lg:focus {
     border-color: var(--neon-pink);
-    box-shadow: 0 0 25px rgba(236, 72, 153, 0.5), inset 0 0 20px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.5);
 }
 
-/* ================= SPIN WHEEL ================= */
+/* WHEEL */
 .wheel-container {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     margin: 20px auto;
-    perspective: 1000px;
-}
-.wheel-glow {
-    position: absolute;
-    inset: -20px;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.4), transparent 70%);
-    border-radius: 50%;
-    animation: wheelGlow 2s ease-in-out infinite;
-    z-index: 0;
-}
-@keyframes wheelGlow {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
 }
 .wheel {
-    position: relative;
-    z-index: 1;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background: conic-gradient(
-        #dc2626 0deg 45deg,
-        #16a34a 45deg 90deg,
-        #0ea5e9 90deg 135deg,
-        #f59e0b 135deg 180deg,
-        #8b5cf6 180deg 225deg,
-        #ec4899 225deg 270deg,
-        #14b8a6 270deg 315deg,
-        #f97316 315deg 360deg
+        #dc2626 0deg 45deg, #16a34a 45deg 90deg, #0ea5e9 90deg 135deg,
+        #f59e0b 135deg 180deg, #8b5cf6 180deg 225deg, #ec4899 225deg 270deg,
+        #14b8a6 270deg 315deg, #f97316 315deg 360deg
     );
     border: 6px solid #1e293b;
-    box-shadow: 
-        0 0 40px rgba(236, 72, 153, 0.5),
-        inset 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
     transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
 }
 .wheel-pointer {
@@ -856,7 +667,6 @@ body::before {
     font-size: 40px;
     color: var(--neon-yellow);
     z-index: 10;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
     animation: pointerBounce 1.5s infinite;
 }
 @keyframes pointerBounce {
@@ -867,8 +677,7 @@ body::before {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 60px; height: 60px;
     background: linear-gradient(135deg, var(--neon-yellow), var(--neon-orange));
     border-radius: 50%;
     border: 4px solid #fff;
@@ -879,20 +688,17 @@ body::before {
     font-size: 12px;
     color: #0a0e27;
     z-index: 5;
-    box-shadow: 0 0 30px rgba(234, 179, 8, 0.8);
 }
 
-/* ================= DICE ================= */
+/* DICE */
 .dice-container {
     display: flex;
     justify-content: center;
     gap: 24px;
     margin: 25px 0;
-    perspective: 800px;
 }
 .dice {
-    width: 80px;
-    height: 80px;
+    width: 80px; height: 80px;
     background: linear-gradient(135deg, #fff, #e2e8f0);
     border: 3px solid #1e293b;
     border-radius: 16px;
@@ -900,24 +706,17 @@ body::before {
     align-items: center;
     justify-content: center;
     font-size: 48px;
-    box-shadow: 
-        0 8px 25px rgba(0,0,0,0.4),
-        inset 0 -4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     color: #1e293b;
 }
-.dice.rolling {
-    animation: diceRoll 0.5s infinite;
-}
+.dice.rolling { animation: diceRoll 0.5s infinite; }
 @keyframes diceRoll {
-    0% { transform: rotateX(0deg) rotateY(0deg); }
-    25% { transform: rotateX(180deg) rotateY(90deg); }
-    50% { transform: rotateX(360deg) rotateY(180deg); }
-    75% { transform: rotateX(180deg) rotateY(270deg); }
-    100% { transform: rotateX(0deg) rotateY(360deg); }
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* ================= MEMORY CARDS ================= */
+/* MEMORY */
 .memory-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -936,34 +735,24 @@ body::before {
     font-size: 26px;
     font-weight: 900;
     color: #fff;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    user-select: none;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-}
-.mem-card:hover:not(.flipped):not(.matched) {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+    transition: 0.4s;
 }
 .mem-card.flipped {
     background: linear-gradient(135deg, #fff, #f1f5f9);
     color: #0a0e27;
     border: 2px solid var(--neon-cyan);
-    transform: rotateY(180deg);
 }
 .mem-card.matched {
     background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
     color: #fff;
-    cursor: default;
     animation: matchPulse 0.5s;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
 }
 @keyframes matchPulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
 
-/* ================= QUIZ ================= */
+/* QUIZ */
 .quiz-question {
     background: rgba(10, 14, 39, 0.6);
     padding: 20px;
@@ -978,7 +767,6 @@ body::before {
     justify-content: center;
     text-align: center;
     color: #fff;
-    letter-spacing: 0.5px;
 }
 .quiz-options {
     display: grid;
@@ -999,31 +787,17 @@ body::before {
 .quiz-opt:hover:not(:disabled) {
     border-color: var(--neon-cyan);
     background: rgba(6, 182, 212, 0.15);
-    transform: translateY(-2px);
 }
 .quiz-opt.correct {
     background: linear-gradient(135deg, var(--neon-green), #059669);
     border-color: var(--neon-green);
-    animation: correctPop 0.5s;
-}
-@keyframes correctPop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
 }
 .quiz-opt.wrong {
     background: linear-gradient(135deg, var(--vip-red), #991b1b);
     border-color: var(--vip-red);
-    animation: shake 0.5s;
 }
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-8px); }
-    75% { transform: translateX(8px); }
-}
-.quiz-opt:disabled { cursor: not-allowed; }
 
-/* ================= COLOR PREDICTION ================= */
+/* COLOR */
 .color-btns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1039,31 +813,14 @@ body::before {
     font-weight: 900;
     color: #fff;
     transition: 0.3s;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    letter-spacing: 1px;
 }
-.color-btn[data-color="red"] { 
-    background: linear-gradient(135deg, #dc2626, #b91c1c);
-    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
-}
-.color-btn[data-color="green"] { 
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    box-shadow: 0 4px 20px rgba(22, 163, 74, 0.4);
-}
-.color-btn[data-color="violet"] { 
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
-}
-.color-btn:hover { transform: translateY(-4px) scale(1.03); }
-.color-btn.selected { 
-    border-color: var(--neon-yellow);
-    box-shadow: 0 0 30px rgba(234, 179, 8, 0.8);
-    transform: scale(1.05);
-}
+.color-btn[data-color="red"] { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.color-btn[data-color="green"] { background: linear-gradient(135deg, #16a34a, #15803d); }
+.color-btn[data-color="violet"] { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.color-btn.selected { border-color: var(--neon-yellow); box-shadow: 0 0 30px rgba(234, 179, 8, 0.8); }
 
 .color-display {
-    width: 130px;
-    height: 130px;
+    width: 130px; height: 130px;
     border-radius: 50%;
     margin: 20px auto;
     background: #1e293b;
@@ -1075,35 +832,14 @@ body::before {
     color: #fff;
     border: 5px solid rgba(168, 85, 247, 0.3);
     transition: 0.3s;
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
 }
-.color-display.result-red { 
-    background: radial-gradient(circle, #ef4444, #991b1b);
-    border-color: #dc2626;
-    box-shadow: 0 0 40px rgba(220, 38, 38, 0.6);
-    animation: colorPulse 0.5s;
-}
-.color-display.result-green { 
-    background: radial-gradient(circle, #22c55e, #166534);
-    border-color: #16a34a;
-    box-shadow: 0 0 40px rgba(22, 163, 74, 0.6);
-    animation: colorPulse 0.5s;
-}
-.color-display.result-violet { 
-    background: radial-gradient(circle, #a855f7, #6d28d9);
-    border-color: #8b5cf6;
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
-    animation: colorPulse 0.5s;
-}
-@keyframes colorPulse {
-    0% { transform: scale(0.8); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
+.color-display.result-red { background: radial-gradient(circle, #ef4444, #991b1b); }
+.color-display.result-green { background: radial-gradient(circle, #22c55e, #166534); }
+.color-display.result-violet { background: radial-gradient(circle, #a855f7, #6d28d9); }
 
-/* ================= MATH ================= */
+/* MATH */
 .math-question {
-    font-size: 46px;
+    font-size: 42px;
     font-weight: 900;
     background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
     -webkit-background-clip: text;
@@ -1114,101 +850,54 @@ body::before {
     font-family: 'Courier New', monospace;
 }
 .math-input {
-    width: 180px;
-    font-size: 36px;
+    width: 160px;
+    font-size: 32px;
     font-weight: 900;
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     background: rgba(10, 14, 39, 0.8);
     color: #fff;
     border: 3px solid var(--neon-cyan);
     border-radius: 16px;
     outline: none;
-    transition: 0.3s;
     font-family: 'Courier New', monospace;
 }
-.math-input:focus {
-    border-color: var(--neon-pink);
-    box-shadow: 0 0 25px rgba(236, 72, 153, 0.5);
-}
-.math-timer {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--neon-yellow);
-    margin: 10px 0;
-    text-shadow: 0 0 20px rgba(234, 179, 8, 0.5);
-}
 
-/* ================= DAILY CHALLENGE ================= */
+/* DAILY */
 .daily-badge {
     background: linear-gradient(135deg, var(--neon-yellow), var(--neon-orange));
     color: #0a0e27;
-    padding: 24px;
+    padding: 20px;
     border-radius: 18px;
     margin: 15px 0;
     font-size: 14px;
     font-weight: 900;
     text-align: center;
-    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
-    position: relative;
-    overflow: hidden;
 }
-.daily-badge::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transform: translateX(-100%);
-    animation: shine 3s infinite;
-}
-@keyframes shine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-.daily-badge .db-big { 
-    font-size: 40px; 
-    margin: 12px 0; 
-    font-weight: 900;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 1;
-}
+.daily-badge .db-big { font-size: 38px; margin: 10px 0; font-weight: 900; }
 .daily-streak {
     display: flex;
     justify-content: center;
     gap: 6px;
-    margin-top: 14px;
-    position: relative;
-    z-index: 1;
+    margin-top: 12px;
 }
 .streak-day {
-    width: 36px;
-    height: 36px;
+    width: 34px; height: 34px;
     border-radius: 50%;
     background: rgba(0,0,0,0.2);
-    border: 2px solid rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 11px;
     font-weight: 900;
     color: rgba(0,0,0,0.6);
-    transition: 0.3s;
 }
 .streak-day.done {
     background: var(--vip-green);
     color: #fff;
-    border-color: #fff;
-    box-shadow: 0 0 15px rgba(22, 163, 74, 0.6);
-    animation: streakPop 0.5s;
-}
-@keyframes streakPop {
-    0% { transform: scale(0.5); }
-    70% { transform: scale(1.15); }
-    100% { transform: scale(1); }
 }
 
-/* ================= TOAST ================= */
+/* TOAST */
 .toast {
     position: fixed;
     top: 80px;
@@ -1228,69 +917,24 @@ body::before {
     max-width: 90%;
     text-align: center;
 }
-.toast.show {
-    display: block;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-.toast.error {
-    background: linear-gradient(135deg, var(--vip-red), #991b1b);
-}
+.toast.show { display: block; opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast.error { background: linear-gradient(135deg, var(--vip-red), #991b1b); }
 
-/* ================= CONFETTI ================= */
+/* CONFETTI */
 .confetti {
     position: fixed;
-    width: 10px;
-    height: 10px;
+    width: 10px; height: 10px;
     z-index: 9999;
     pointer-events: none;
     animation: confettiFall 3s linear forwards;
     border-radius: 2px;
 }
 @keyframes confettiFall { 
-    0% { transform: translateY(-100vh) rotate(0deg) scale(1); opacity: 1; } 
-    100% { transform: translateY(100vh) rotate(720deg) scale(0.5); opacity: 0; } 
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } 
 }
 
-/* ================= FLOATING BUTTONS ================= */
-.floating-btns {
-    position: fixed;
-    bottom: 20px;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 999;
-}
-.float-btn {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    text-decoration: none;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-.float-btn:hover {
-    transform: scale(1.12) rotate(5deg);
-}
-.whatsapp-btn {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-}
-.top-btn {
-    background: linear-gradient(135deg, var(--neon-yellow), var(--neon-orange));
-    color: #0a0e27;
-    box-shadow: 0 6px 20px rgba(234, 179, 8, 0.5);
-}
-
-/* ================= COPYRIGHT ================= */
+/* COPYRIGHT */
 .copyright-box {
     text-align: center;
     padding: 30px 20px;
@@ -1301,25 +945,16 @@ body::before {
     position: relative;
     z-index: 1;
 }
-
-@media (max-width: 480px) {
-    .hero h1 { font-size: 26px; }
-    .guess-input-lg { font-size: 38px; width: 120px; }
-    .wheel-container { width: 220px; height: 220px; }
-    .dice { width: 65px; height: 65px; font-size: 38px; }
-    .math-question { font-size: 36px; }
-    .memory-grid { max-width: 300px; }
-}
 </style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <div class="header">
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
         <div id="dropdownMenu" class="dropdown-menu">
-            <div class="menu-group-title">🎮 GAMES</div>
+            <div class="menu-group-title">🎮 GAMES (20)</div>
             <div class="dropdown-item" onclick="openGame('numberGuess'); closeDropdown()">🎯 Number Guess</div>
             <div class="dropdown-item" onclick="openGame('spinWheel'); closeDropdown()">🎰 Spin Wheel</div>
             <div class="dropdown-item" onclick="openGame('diceRoll'); closeDropdown()">🎲 Dice Roll</div>
@@ -1328,28 +963,33 @@ body::before {
             <div class="dropdown-item" onclick="openGame('colorPrediction'); closeDropdown()">🎨 Color Predict</div>
             <div class="dropdown-item" onclick="openGame('mathChallenge'); closeDropdown()">🔢 Math Challenge</div>
             <div class="dropdown-item" onclick="openGame('dailyChallenge'); closeDropdown()">🏆 Daily Challenge</div>
-            <div class="menu-group-title">🏅 MORE</div>
-            <div class="dropdown-item" onclick="scrollToLeaderboard(); closeDropdown()">🏅 Leaderboard</div>
-            <div class="dropdown-item" onclick="scrollToRewards(); closeDropdown()">🎁 Rewards</div>
+            <div class="dropdown-item" onclick="openGame('slotMachine'); closeDropdown()">🎰 Slot Machine</div>
+            <div class="dropdown-item" onclick="openGame('balloonPop'); closeDropdown()">🎈 Balloon Pop</div>
+            <div class="dropdown-item" onclick="openGame('magic8Ball'); closeDropdown()">🔮 Magic 8 Ball</div>
+            <div class="dropdown-item" onclick="openGame('mysteryBox'); closeDropdown()">🎁 Mystery Box</div>
+            <div class="dropdown-item" onclick="openGame('tapChallenge'); closeDropdown()">⚡ Tap Challenge</div>
+            <div class="dropdown-item" onclick="openGame('numberSequence'); closeDropdown()">🔢 Number Sequence</div>
+            <div class="dropdown-item" onclick="openGame('reactionTime'); closeDropdown()">🎯 Reaction Time</div>
+            <div class="dropdown-item" onclick="openGame('whackAMole'); closeDropdown()">🎪 Whack-a-Mole</div>
+            <div class="dropdown-item" onclick="openGame('ticTacToe'); closeDropdown()">♟️ Tic Tac Toe</div>
+            <div class="dropdown-item" onclick="openGame('dartBoard'); closeDropdown()">🎯 Dart Board</div>
+            <div class="dropdown-item" onclick="openGame('basketballShot'); closeDropdown()">🏀 Basketball</div>
+            <div class="dropdown-item" onclick="openGame('dailyLoginBonus'); closeDropdown()">📅 Daily Login</div>
         </div>
     </div>
     <div class="header-content">
         <h1>ROYAL GAMES</h1>
-        <div class="sub-title">8 PREMIUM GAMES</div>
-    </div>
-    <div class="header-right">
-        <button class="mode-toggle" onclick="toggleDarkMode()" id="modeBtn">🌙</button>
+        <div class="sub-title">20 PREMIUM GAMES</div>
     </div>
 </div>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <div class="hero">
-    <div class="hero-badge"><span class="live-dot"></span>LIVE • 8 GAMES ACTIVE</div>
     <h1>PLAY & EARN</h1>
-    <p>8 Games • Free to Play • Win Rewards</p>
+    <p>20 Games • Free to Play • Win Rewards</p>
 </div>
 
-<!-- ================= WALLET ================= -->
+<!-- WALLET -->
 <div class="wallet-bar">
     <div class="wallet-item">
         <div class="wi-lbl">💰 Points</div>
@@ -1365,14 +1005,15 @@ body::before {
     </div>
 </div>
 
-<!-- ================= GAMES GRID ================= -->
+<!-- GAMES GRID -->
 <div class="section-title">🎮 Choose Your Game</div>
 <div class="games-grid">
+    <!-- 8 Original -->
     <div class="game-tile" onclick="openGame('numberGuess')">
         <span class="gt-badge hot">HOT</span>
         <span class="gt-icon">🎯</span>
         <span class="gt-name">Number Guess</span>
-        <span class="gt-desc">0-99 Guess</span>
+        <span class="gt-desc">0-99</span>
     </div>
     <div class="game-tile" onclick="openGame('spinWheel')">
         <span class="gt-icon">🎰</span>
@@ -1393,7 +1034,7 @@ body::before {
         <span class="gt-badge new">NEW</span>
         <span class="gt-icon">❓</span>
         <span class="gt-name">Quiz Game</span>
-        <span class="gt-desc">Test Knowledge</span>
+        <span class="gt-desc">Test IQ</span>
     </div>
     <div class="game-tile" onclick="openGame('colorPrediction')">
         <span class="gt-icon">🎨</span>
@@ -1409,35 +1050,92 @@ body::before {
         <span class="gt-badge daily">DAILY</span>
         <span class="gt-icon">🏆</span>
         <span class="gt-name">Daily Challenge</span>
-        <span class="gt-desc">Bonus Points</span>
+        <span class="gt-desc">Bonus</span>
+    </div>
+    <!-- 12 New -->
+    <div class="game-tile" onclick="openGame('slotMachine')">
+        <span class="gt-badge hot">HOT</span>
+        <span class="gt-icon">🎰</span>
+        <span class="gt-name">Slot Machine</span>
+        <span class="gt-desc">Match 3</span>
+    </div>
+    <div class="game-tile" onclick="openGame('balloonPop')">
+        <span class="gt-icon">🎈</span>
+        <span class="gt-name">Balloon Pop</span>
+        <span class="gt-desc">Pop Fast</span>
+    </div>
+    <div class="game-tile" onclick="openGame('magic8Ball')">
+        <span class="gt-icon">🔮</span>
+        <span class="gt-name">Magic 8 Ball</span>
+        <span class="gt-desc">Get Answer</span>
+    </div>
+    <div class="game-tile" onclick="openGame('mysteryBox')">
+        <span class="gt-badge new">NEW</span>
+        <span class="gt-icon">🎁</span>
+        <span class="gt-name">Mystery Box</span>
+        <span class="gt-desc">Surprise</span>
+    </div>
+    <div class="game-tile" onclick="openGame('tapChallenge')">
+        <span class="gt-icon">⚡</span>
+        <span class="gt-name">Tap Challenge</span>
+        <span class="gt-desc">Fast Tap</span>
+    </div>
+    <div class="game-tile" onclick="openGame('numberSequence')">
+        <span class="gt-icon">🔢</span>
+        <span class="gt-name">Number Sequence</span>
+        <span class="gt-desc">Find Next</span>
+    </div>
+    <div class="game-tile" onclick="openGame('reactionTime')">
+        <span class="gt-icon">🎯</span>
+        <span class="gt-name">Reaction Time</span>
+        <span class="gt-desc">Quick Click</span>
+    </div>
+    <div class="game-tile" onclick="openGame('whackAMole')">
+        <span class="gt-icon">🎪</span>
+        <span class="gt-name">Whack-a-Mole</span>
+        <span class="gt-desc">Tap Fast</span>
+    </div>
+    <div class="game-tile" onclick="openGame('ticTacToe')">
+        <span class="gt-icon">♟️</span>
+        <span class="gt-name">Tic Tac Toe</span>
+        <span class="gt-desc">Beat AI</span>
+    </div>
+    <div class="game-tile" onclick="openGame('dartBoard')">
+        <span class="gt-icon">🎯</span>
+        <span class="gt-name">Dart Board</span>
+        <span class="gt-desc">Hit Target</span>
+    </div>
+    <div class="game-tile" onclick="openGame('basketballShot')">
+        <span class="gt-icon">🏀</span>
+        <span class="gt-name">Basketball</span>
+        <span class="gt-desc">Score Hoops</span>
+    </div>
+    <div class="game-tile" onclick="openGame('dailyLoginBonus')">
+        <span class="gt-badge daily">DAILY</span>
+        <span class="gt-icon">📅</span>
+        <span class="gt-name">Daily Login</span>
+        <span class="gt-desc">Free Points</span>
     </div>
 </div>
 
-<!-- ================= LEADERBOARD ================= -->
-<div class="section-title" id="leaderboardSection">🏆 Top Players</div>
+<!-- LEADERBOARD -->
+<div class="section-title">🏆 Top Players</div>
 <div class="leaderboard-panel">
     <div id="leaderboardList"></div>
 </div>
 
-<!-- ================= REWARDS ================= -->
-<div class="section-title" id="rewardsSection">🎁 Rewards Shop</div>
+<!-- REWARDS -->
+<div class="section-title">🎁 Rewards Shop</div>
 <div class="leaderboard-panel">
     <div class="rewards-grid" id="rewardsList"></div>
 </div>
 
-<!-- ================= COPYRIGHT ================= -->
 <div class="copyright-box">ALL RIGHTS RESERVED (2026) © ROYAL GAMES</div>
 
-<!-- ================= FLOATING ================= -->
-<div class="floating-btns">
-    <a href="https://wa.me/919999999999" target="_blank" class="float-btn whatsapp-btn">💬</a>
-    <button class="float-btn top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆</button>
-</div>
-
-<!-- ================= TOAST ================= -->
+<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- ================= GAME MODAL ================= -->
+<!-- GAME MODAL -->
 <div class="game-overlay" id="gameOverlay">
     <div class="game-modal">
         <div class="game-modal-header">
@@ -1500,32 +1198,9 @@ function addPlay(pts = 0) {
 }
 
 function updateWallet() {
-    animateValue('walletPoints', userData.points);
+    document.getElementById('walletPoints').innerText = userData.points;
     document.getElementById('walletToday').innerText = getTodayGames() + '/' + CONFIG.dailyGameLimit;
-    animateValue('walletBest', userData.best);
-}
-
-function animateValue(id, value) {
-    const el = document.getElementById(id);
-    const current = parseInt(el.innerText) || 0;
-    if (current === value) return;
-    const diff = value - current;
-    const steps = 20;
-    const step = diff / steps;
-    let i = 0;
-    const interval = setInterval(() => {
-        i++;
-        el.innerText = Math.round(current + step * i);
-        if (i >= steps) {
-            el.innerText = value;
-            clearInterval(interval);
-        }
-    }, 30);
-}
-
-// ================= DARK MODE (always dark now, just toggle effect) =================
-function toggleDarkMode() {
-    document.body.style.filter = document.body.style.filter ? '' : 'hue-rotate(180deg)';
+    document.getElementById('walletBest').innerText = userData.best;
 }
 
 // ================= DROPDOWN =================
@@ -1566,7 +1241,7 @@ function launchConfetti() {
     }
 }
 
-// ================= OPEN / CLOSE GAME =================
+// ================= OPEN / CLOSE =================
 let currentGame = null;
 
 function openGame(gameType) {
@@ -1586,7 +1261,19 @@ function openGame(gameType) {
         quizGame: { title: '❓ Quiz Game', render: renderQuiz },
         colorPrediction: { title: '🎨 Color Prediction', render: renderColorPrediction },
         mathChallenge: { title: '🔢 Math Challenge', render: renderMathChallenge },
-        dailyChallenge: { title: '🏆 Daily Challenge', render: renderDailyChallenge }
+        dailyChallenge: { title: '🏆 Daily Challenge', render: renderDailyChallenge },
+        slotMachine: { title: '🎰 Slot Machine', render: renderSlotMachine },
+        balloonPop: { title: '🎈 Balloon Pop', render: renderBalloonPop },
+        magic8Ball: { title: '🔮 Magic 8 Ball', render: renderMagic8Ball },
+        mysteryBox: { title: '🎁 Mystery Box', render: renderMysteryBox },
+        tapChallenge: { title: '⚡ Tap Challenge', render: renderTapChallenge },
+        numberSequence: { title: '🔢 Number Sequence', render: renderNumberSequence },
+        reactionTime: { title: '🎯 Reaction Time', render: renderReactionTime },
+        whackAMole: { title: '🎪 Whack-a-Mole', render: renderWhackAMole },
+        ticTacToe: { title: '♟️ Tic Tac Toe', render: renderTicTacToe },
+        dartBoard: { title: '🎯 Dart Board', render: renderDartBoard },
+        basketballShot: { title: '🏀 Basketball', render: renderBasketball },
+        dailyLoginBonus: { title: '📅 Daily Login Bonus', render: renderDailyLogin }
     };
     
     if (games[gameType]) {
@@ -1624,9 +1311,8 @@ function renderNumberGuess() {
     window.submitNG = function() {
         const inp = document.getElementById('ngInput');
         const guess = parseInt(inp.value);
-        
         if (isNaN(guess) || guess < 0 || guess > 99) return showToast("⚠️ 0-99 ke beech daalo", "error");
-        if (guesses.includes(guess)) return showToast("⚠️ Ye already guess kiya", "error");
+        if (guesses.includes(guess)) return showToast("⚠️ Already guess kiya", "error");
         if (guesses.length >= 3) return showToast("⚠️ 3 guesses khatam", "error");
         
         guesses.push(guess);
@@ -1634,7 +1320,6 @@ function renderNumberGuess() {
         
         const diff = Math.abs(guess - target);
         let pts = 0, type = 'lose', msg = '';
-        
         if (diff === 0) { pts = 100; type = 'win'; msg = '🎉 EXACT! +100 Points!'; }
         else if (diff === 1) { pts = 50; type = 'win'; msg = '🔥 Very Close! +50 Points!'; }
         else if (diff === 2) { pts = 25; type = 'win'; msg = '👍 Close! +25 Points!'; }
@@ -1648,7 +1333,6 @@ function renderNumberGuess() {
         
         if (pts > 0) { addPlay(pts); launchConfetti(); }
         else addPlay(0);
-        
         inp.value = '';
         if (guesses.length >= 3) {
             document.getElementById('ngBtn').disabled = true;
@@ -1669,7 +1353,6 @@ function renderSpinWheel() {
         </div>
         <div style="text-align:center;padding:10px 0;">
             <div class="wheel-container">
-                <div class="wheel-glow"></div>
                 <div class="wheel-pointer">▼</div>
                 <div class="wheel" id="wheelEl"></div>
                 <div class="wheel-center">SPIN</div>
@@ -1681,16 +1364,13 @@ function renderSpinWheel() {
     
     window.doSpin = function() {
         if (spinning || spins >= 2) return;
-        spinning = true;
-        spins++;
+        spinning = true; spins++;
         document.getElementById('swCount').innerText = spins + '/2';
         document.getElementById('spinBtn').disabled = true;
         
         const segAngle = 360 / segs.length;
         const randomIdx = Math.floor(Math.random() * segs.length);
-        const spins360 = 5 * 360;
-        const finalAngle = spins360 + (randomIdx * segAngle) + (segAngle / 2);
-        
+        const finalAngle = 5 * 360 + (randomIdx * segAngle) + (segAngle / 2);
         document.getElementById('wheelEl').style.transform = `rotate(${finalAngle}deg)`;
         
         setTimeout(() => {
@@ -1722,7 +1402,7 @@ function renderDiceRoll() {
                 <div class="dice" id="dice1">⚀</div>
                 <div class="dice" id="dice2">⚀</div>
             </div>
-            <p style="font-size:12px;font-weight:700;color:var(--text-soft);margin-bottom:10px;">Sum guess karo (2-12)</p>
+            <p style="font-size:12px;font-weight:700;color:#94a3b8;margin-bottom:10px;">Sum guess karo (2-12)</p>
             <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0;">
                 ${[2,3,4,5,6,7,8,9,10,11,12].map(n => `<button class="game-btn secondary" data-sum="${n}" onclick="pickSum(${n}, this)" style="padding:6px 12px;font-size:13px;margin:2px;">${n}</button>`).join('')}
             </div>
@@ -1735,6 +1415,7 @@ function renderDiceRoll() {
         guess = n;
         document.querySelectorAll('[data-sum]').forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
+        btn.style.borderColor = '#eab308';
         if (rolls < 2) document.getElementById('rollBtn').disabled = false;
     };
     
@@ -1773,12 +1454,11 @@ function renderDiceRoll() {
                 const r = document.getElementById('drResult');
                 r.className = 'game-result-box show ' + type;
                 r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${type==='win'?'🎉':'❌'}</div>${msg}`;
-                
                 addPlay(pts);
                 if (pts > 0) launchConfetti();
                 
                 guess = null;
-                document.querySelectorAll('[data-sum]').forEach(b => b.classList.remove('selected'));
+                document.querySelectorAll('[data-sum]').forEach(b => { b.classList.remove('selected'); b.style.borderColor = ''; });
                 if (rolls >= 2) document.getElementById('rollBtn').innerText = '✅ Done!';
                 else document.getElementById('rollBtn').disabled = false;
             }
@@ -1811,7 +1491,6 @@ function renderMemoryMatch() {
     
     window.flipCard = function(card) {
         if (locked || card.classList.contains('flipped') || card.classList.contains('matched')) return;
-        
         card.classList.add('flipped');
         card.innerText = card.dataset.val;
         flipped.push(card);
@@ -1907,7 +1586,7 @@ function renderColorPrediction() {
         </div>
         <div style="text-align:center;padding:10px 0;">
             <div class="color-display" id="colorDisplay">?</div>
-            <p style="font-size:12px;font-weight:700;color:var(--text-soft);margin:10px 0;">Apna color choose karo:</p>
+            <p style="font-size:12px;font-weight:700;color:#94a3b8;margin:10px 0;">Apna color choose karo:</p>
             <div class="color-btns">
                 <button class="color-btn" data-color="red" onclick="pickColor('red', this)">RED</button>
                 <button class="color-btn" data-color="green" onclick="pickColor('green', this)">GREEN</button>
@@ -1993,7 +1672,6 @@ function renderMathChallenge() {
         if (op === '+') { a = Math.floor(Math.random() * 50) + 1; b = Math.floor(Math.random() * 50) + 1; currentAnswer = a + b; }
         else if (op === '-') { a = Math.floor(Math.random() * 50) + 20; b = Math.floor(Math.random() * 20) + 1; currentAnswer = a - b; }
         else { a = Math.floor(Math.random() * 12) + 1; b = Math.floor(Math.random() * 12) + 1; currentAnswer = a * b; }
-        
         document.getElementById('mathQ').innerText = `${a} ${op} ${b} = ?`;
         document.getElementById('mathInput').value = '';
         document.getElementById('mathInput').focus();
@@ -2025,12 +1703,7 @@ function renderMathChallenge() {
         const inp = document.getElementById('mathInput');
         const ans = parseInt(inp.value);
         if (isNaN(ans)) return;
-        
-        if (ans === currentAnswer) {
-            score += 10;
-            document.getElementById('mcScore').innerText = score;
-        }
-        
+        if (ans === currentAnswer) { score += 10; document.getElementById('mcScore').innerText = score; }
         round++;
         if (round >= totalRounds) endGame();
         else {
@@ -2056,8 +1729,7 @@ function renderDailyChallenge() {
     
     const days = [];
     for (let i = 6; i >= 0; i--) {
-        const d = new Date();
-        d.setDate(d.getDate() - i);
+        const d = new Date(); d.setDate(d.getDate() - i);
         const k = d.toISOString().slice(0, 10);
         days.push({ date: k, done: !!localStorage.getItem('dailyCheckin_' + k) });
     }
@@ -2092,23 +1764,742 @@ function renderDailyChallenge() {
     window.submitDC = function(target) {
         const inp = document.getElementById('dcInput');
         const guess = parseInt(inp.value);
-        if (isNaN(guess) || guess < 1 || guess > 50) return showToast("⚠️ 1-50 ke beech daalo", "error");
+        if (isNaN(guess) || guess < 1 || guess > 50) return showToast("⚠️ 1-50 ke beech", "error");
         
         const diff = Math.abs(guess - target);
         const pts = diff === 0 ? 50 : diff <= 3 ? 25 : diff <= 7 ? 10 : 0;
-        
         localStorage.setItem('dailyCheckin_' + todayKey(), 'true');
         if (pts > 0) userData.streak = (userData.streak || 0) + 1;
         saveUserData();
         
         const r = document.getElementById('dcResult');
         r.className = 'game-result-box show ' + (pts > 0 ? 'win' : 'lose');
-        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${pts > 0 ? '🎉' : '❌'}</div>${pts > 0 ? '+' + pts + ' Points!' : 'Target: ' + target + '. Kal try!'}`;
-        
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${pts > 0 ? '🎉' : '❌'}</div>${pts > 0 ? '+' + pts + ' Points!' : 'Target: ' + target}`;
         addPlay(pts);
         if (pts > 0) launchConfetti();
         inp.disabled = true;
         document.querySelector('#gameContent .game-btn').disabled = true;
+    };
+}
+
+// ================= GAME 9: SLOT MACHINE =================
+function renderSlotMachine() {
+    const symbols = ['🍒', '🍋', '🍊', '🍇', '💎', '7️⃣', '⭐'];
+    let spins = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎰 Spins: <b id="smCount">0/3</b></span>
+            <span>💯 Max: <b>100 pts</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div style="display:flex;gap:10px;justify-content:center;margin-bottom:20px;">
+                <div id="reel1" style="width:80px;height:100px;background:linear-gradient(145deg,#fff,#e2e8f0);border:3px solid #1e293b;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 8px 25px rgba(0,0,0,0.3);">🍒</div>
+                <div id="reel2" style="width:80px;height:100px;background:linear-gradient(145deg,#fff,#e2e8f0);border:3px solid #1e293b;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 8px 25px rgba(0,0,0,0.3);">🍒</div>
+                <div id="reel3" style="width:80px;height:100px;background:linear-gradient(145deg,#fff,#e2e8f0);border:3px solid #1e293b;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 8px 25px rgba(0,0,0,0.3);">🍒</div>
+            </div>
+            <button class="game-btn" onclick="spinSlot()" id="slotBtn">🎰 SPIN</button>
+            <div class="game-result-box" id="smResult"></div>
+        </div>
+    `;
+    
+    window.spinSlot = function() {
+        if (spins >= 3) return;
+        spins++;
+        document.getElementById('smCount').innerText = spins + '/3';
+        document.getElementById('slotBtn').disabled = true;
+        
+        let ticks = 0;
+        const interval = setInterval(() => {
+            document.getElementById('reel1').innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            document.getElementById('reel2').innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            document.getElementById('reel3').innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            ticks++;
+            if (ticks > 20) {
+                clearInterval(interval);
+                const r1 = symbols[Math.floor(Math.random() * symbols.length)];
+                const r2 = symbols[Math.floor(Math.random() * symbols.length)];
+                const r3 = symbols[Math.floor(Math.random() * symbols.length)];
+                document.getElementById('reel1').innerText = r1;
+                document.getElementById('reel2').innerText = r2;
+                document.getElementById('reel3').innerText = r3;
+                
+                let pts = 0, type = 'lose', msg = '';
+                if (r1 === r2 && r2 === r3) { pts = 100; type = 'win'; msg = '🎉 JACKPOT! +100 Points!'; }
+                else if (r1 === r2 || r2 === r3 || r1 === r3) { pts = 30; type = 'win'; msg = '🎊 2 Match! +30 Points!'; }
+                else { msg = '❌ No match'; }
+                
+                const r = document.getElementById('smResult');
+                r.className = 'game-result-box show ' + type;
+                r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${type==='win'?'🎉':'❌'}</div>${msg}`;
+                addPlay(pts);
+                if (pts > 0) launchConfetti();
+                if (spins >= 3) document.getElementById('slotBtn').innerText = '✅ Done!';
+                else document.getElementById('slotBtn').disabled = false;
+            }
+        }, 80);
+    };
+}
+
+// ================= GAME 10: BALLOON POP =================
+function renderBalloonPop() {
+    let popped = 0, timeLeft = 15, timerInterval = null;
+    const totalBalloons = 12;
+    let balloons = [];
+    
+    for (let i = 0; i < totalBalloons; i++) {
+        balloons.push({
+            id: i,
+            color: ['#ef4444','#3b82f6','#10b981','#f59e0b','#a855f7','#ec4899'][i % 6],
+            popped: false,
+            x: 5 + Math.random() * 80,
+            y: 5 + Math.random() * 80
+        });
+    }
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎈 Popped: <b id="bpCount">0/${totalBalloons}</b></span>
+            <span>⏰ <b id="bpTimer">15s</b></span>
+        </div>
+        <div id="balloonArea" style="position:relative;width:100%;height:300px;background:linear-gradient(180deg,#0ea5e9,#3b82f6);border-radius:14px;overflow:hidden;margin:10px 0;"></div>
+        <div class="game-result-box" id="bpResult"></div>
+    `;
+    
+    const area = document.getElementById('balloonArea');
+    balloons.forEach(b => {
+        const balloon = document.createElement('div');
+        balloon.style.cssText = `
+            position:absolute;
+            left:${b.x}%;top:${b.y}%;
+            width:40px;height:50px;
+            background:${b.color};
+            border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+            cursor:pointer;
+            box-shadow:inset -5px -5px 10px rgba(0,0,0,0.2);
+            transition:transform 0.3s;
+        `;
+        balloon.dataset.id = b.id;
+        balloon.onclick = function() {
+            if (b.popped || timeLeft <= 0) return;
+            b.popped = true;
+            popped++;
+            document.getElementById('bpCount').innerText = popped + '/' + totalBalloons;
+            balloon.style.transform = 'scale(0)';
+            setTimeout(() => balloon.remove(), 300);
+            if (popped >= totalBalloons) endBalloonGame();
+        };
+        area.appendChild(balloon);
+    });
+    
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById('bpTimer').innerText = timeLeft + 's';
+        if (timeLeft <= 0) endBalloonGame();
+    }, 1000);
+    
+    function endBalloonGame() {
+        if (timerInterval) clearInterval(timerInterval);
+        timerInterval = null;
+        const pts = popped * 5;
+        const r = document.getElementById('bpResult');
+        r.className = 'game-result-box show ' + (pts > 0 ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${pts > 0 ? '🎉' : '⏰'}</div>Popped ${popped} balloons! +${pts} Points!`;
+        addPlay(pts);
+        if (pts > 0) launchConfetti();
+        area.querySelectorAll('div').forEach(b => b.style.pointerEvents = 'none');
+    }
+}
+
+// ================= GAME 11: MAGIC 8 BALL =================
+function renderMagic8Ball() {
+    const answers = [
+        { text: "Yes! Bilkul!", type: "win" },
+        { text: "No, nahi hoga", type: "lose" },
+        { text: "Shayad ho sakta hai", type: "lose" },
+        { text: "Zaroor! 100%", type: "win" },
+        { text: "Abhi nahi", type: "lose" },
+        { text: "Try karo, hoga!", type: "win" },
+        { text: "Nahi, dusra try karo", type: "lose" },
+        { text: "Bilkul sahi!", type: "win" }
+    ];
+    let used = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🔮 Uses: <b id="m8Count">0/3</b></span>
+            <span>💯 Max: <b>60 pts</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div id="m8Ball" style="width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #6d28d9, #1e1b4b);margin:15px auto;display:flex;align-items:center;justify-content:center;font-size:64px;box-shadow:0 10px 40px rgba(139,92,246,0.5);">🎱</div>
+            <p style="font-size:13px;color:#94a3b8;font-weight:700;margin:10px 0;">Sawal likho aur ball shake karo</p>
+            <input type="text" id="m8Question" placeholder="Apna sawal..." style="width:90%;padding:12px;background:rgba(10,14,39,0.8);color:#fff;border:2px solid rgba(168,85,247,0.4);border-radius:10px;font-size:13px;margin-bottom:10px;outline:none;">
+            <button class="game-btn" onclick="shakeBall()" id="m8Btn">🔮 SHAKE</button>
+            <div class="game-result-box" id="m8Result"></div>
+        </div>
+    `;
+    
+    window.shakeBall = function() {
+        if (used >= 3) return;
+        const q = document.getElementById('m8Question').value.trim();
+        if (!q) return showToast("⚠️ Pehle sawal likho", "error");
+        
+        used++;
+        document.getElementById('m8Count').innerText = used + '/3';
+        document.getElementById('m8Btn').disabled = true;
+        
+        const ball = document.getElementById('m8Ball');
+        ball.style.transform = 'rotate(720deg)';
+        ball.style.transition = 'transform 1.5s';
+        
+        setTimeout(() => {
+            const ans = answers[Math.floor(Math.random() * answers.length)];
+            ball.style.transform = 'rotate(0deg)';
+            ball.style.transition = 'transform 0.3s';
+            ball.innerText = ans.type === 'win' ? '✨' : '💫';
+            
+            const pts = ans.type === 'win' ? 20 : 5;
+            const r = document.getElementById('m8Result');
+            r.className = 'game-result-box show ' + ans.type;
+            r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🔮</div>${ans.text}<br><small>+${pts} Points</small>`;
+            addPlay(pts);
+            if (ans.type === 'win') launchConfetti();
+            
+            document.getElementById('m8Question').value = '';
+            if (used >= 3) document.getElementById('m8Btn').innerText = '✅ Done!';
+            else document.getElementById('m8Btn').disabled = false;
+        }, 1500);
+    };
+}
+
+// ================= GAME 12: MYSTERY BOX =================
+function renderMysteryBox() {
+    const rewards = [10, 20, 30, 50, 100, 5, 15, 25];
+    let opened = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎁 Opened: <b id="mbCount">0/3</b></span>
+            <span>💯 Max: <b>100 pts</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <p style="font-size:13px;color:#94a3b8;font-weight:700;margin-bottom:15px;">Koi bhi box choose karo</p>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:300px;margin:0 auto;">
+                ${[0,1,2].map(i => `
+                    <div id="mbox${i}" onclick="openBox(${i})" style="aspect-ratio:1;background:linear-gradient(145deg,#a855f7,#7c3aed);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:40px;cursor:pointer;transition:0.3s;box-shadow:0 6px 20px rgba(168,85,247,0.4);border:2px solid rgba(255,255,255,0.2);">🎁</div>
+                `).join('')}
+            </div>
+            <div class="game-result-box" id="mbResult"></div>
+        </div>
+    `;
+    
+    window.openBox = function(idx) {
+        const box = document.getElementById('mbox' + idx);
+        if (box.dataset.opened) return;
+        if (opened >= 3) return;
+        
+        box.dataset.opened = 'true';
+        opened++;
+        document.getElementById('mbCount').innerText = opened + '/3';
+        
+        const pts = rewards[Math.floor(Math.random() * rewards.length)];
+        box.style.transform = 'scale(0.8) rotate(10deg)';
+        
+        setTimeout(() => {
+            box.innerText = '💎';
+            box.style.background = 'linear-gradient(145deg,#10b981,#059669)';
+            box.style.transform = 'scale(1)';
+            
+            const r = document.getElementById('mbResult');
+            r.className = 'game-result-box show win';
+            r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎉</div>+${pts} Points!`;
+            addPlay(pts);
+            launchConfetti();
+        }, 400);
+    };
+}
+
+// ================= GAME 13: TAP CHALLENGE =================
+function renderTapChallenge() {
+    let taps = 0, timeLeft = 10, running = false, timer = null;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>⚡ Taps: <b id="tcCount">0</b></span>
+            <span>⏰ <b id="tcTimer">10s</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div id="tapArea" style="width:200px;height:200px;margin:15px auto;border-radius:50%;background:radial-gradient(circle, #f59e0b, #d97706);display:flex;align-items:center;justify-content:center;font-size:60px;cursor:pointer;user-select:none;box-shadow:0 10px 40px rgba(245,158,11,0.5);transition:0.05s;">👆</div>
+            <p style="font-size:12px;color:#94a3b8;font-weight:700;">10 second me max tap karo!</p>
+            <button class="game-btn" onclick="startTap()" id="tapStartBtn" style="margin-top:10px;">⚡ START</button>
+            <div class="game-result-box" id="tcResult"></div>
+        </div>
+    `;
+    
+    window.startTap = function() {
+        if (running) return;
+        running = true;
+        taps = 0; timeLeft = 10;
+        document.getElementById('tcCount').innerText = '0';
+        document.getElementById('tcTimer').innerText = '10s';
+        document.getElementById('tapStartBtn').disabled = true;
+        document.getElementById('tapStartBtn').innerText = '⚡ TAP NOW!';
+        
+        const area = document.getElementById('tapArea');
+        area.onclick = () => {
+            if (!running) return;
+            taps++;
+            document.getElementById('tcCount').innerText = taps;
+            area.style.transform = 'scale(0.95)';
+            setTimeout(() => area.style.transform = 'scale(1)', 50);
+        };
+        
+        timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('tcTimer').innerText = timeLeft + 's';
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                running = false;
+                area.onclick = null;
+                const pts = Math.min(taps * 2, 60);
+                const r = document.getElementById('tcResult');
+                r.className = 'game-result-box show ' + (pts > 0 ? 'win' : 'lose');
+                r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">⚡</div>${taps} taps! +${pts} Points!`;
+                addPlay(pts);
+                if (pts > 0) launchConfetti();
+                document.getElementById('tapStartBtn').innerText = '✅ Done!';
+            }
+        }, 1000);
+    };
+}
+
+// ================= GAME 14: NUMBER SEQUENCE =================
+function renderNumberSequence() {
+    let round = 0, score = 0;
+    const totalRounds = 5;
+    
+    function genSeq() {
+        const type = Math.floor(Math.random() * 3);
+        let seq = [], answer = 0;
+        if (type === 0) {
+            const start = Math.floor(Math.random() * 5) + 1;
+            const step = Math.floor(Math.random() * 3) + 2;
+            for (let i = 0; i < 5; i++) seq.push(start + step * i);
+            answer = seq[4]; seq = seq.slice(0, 4);
+        } else if (type === 1) {
+            const start = Math.floor(Math.random() * 3) + 1;
+            for (let i = 0; i < 5; i++) seq.push(start * Math.pow(2, i));
+            answer = seq[4]; seq = seq.slice(0, 4);
+        } else {
+            let a = Math.floor(Math.random() * 5) + 1;
+            let b = Math.floor(Math.random() * 5) + 2;
+            seq = [a, b];
+            for (let i = 2; i < 5; i++) seq.push(seq[i-1] + seq[i-2]);
+            answer = seq[4]; seq = seq.slice(0, 4);
+        }
+        return { seq, answer };
+    }
+    
+    function newRound() {
+        if (round >= totalRounds) { endGame(); return; }
+        round++;
+        const { seq, answer } = genSeq();
+        
+        document.getElementById('gameContent').innerHTML = `
+            <div class="game-info">
+                <span>🔢 Round: <b>${round}/${totalRounds}</b></span>
+                <span>💯 Score: <b>${score}</b></span>
+            </div>
+            <div style="text-align:center;padding:15px 0;">
+                <div style="font-size:26px;font-weight:900;color:#fff;letter-spacing:4px;margin:20px 0;font-family:'Courier New',monospace;">
+                    ${seq.join(' , ')} , <span style="color:#06b6d4;">?</span>
+                </div>
+                <input type="number" id="seqInput" class="math-input" placeholder="?" style="width:140px;font-size:28px;">
+                <br>
+                <button class="game-btn" onclick="submitSeq(${answer})" style="margin-top:12px;">✅ SUBMIT</button>
+                <div class="game-result-box" id="seqResult"></div>
+            </div>
+        `;
+        setTimeout(() => document.getElementById('seqInput').focus(), 100);
+    }
+    
+    function endGame() {
+        const r = document.getElementById('seqResult');
+        r.className = 'game-result-box show ' + (score > 0 ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎉</div>Final Score: ${score} Points!`;
+        addPlay(score);
+        if (score > 0) launchConfetti();
+    }
+    
+    window.submitSeq = function(correct) {
+        const inp = document.getElementById('seqInput');
+        const ans = parseInt(inp.value);
+        if (isNaN(ans)) return;
+        if (ans === correct) score += 10;
+        newRound();
+    };
+    
+    newRound();
+}
+
+// ================= GAME 15: REACTION TIME =================
+function renderReactionTime() {
+    let state = 'waiting', startTime = 0, bestTime = 9999, rounds = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎯 Round: <b id="rtRound">0/3</b></span>
+            <span>⚡ Best: <b id="rtBest">--</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div id="rtArea" style="width:100%;height:220px;border-radius:14px;background:#dc2626;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;cursor:pointer;transition:background 0.1s;user-select:none;">Tap to Start</div>
+            <div class="game-result-box" id="rtResult"></div>
+        </div>
+    `;
+    
+    const area = document.getElementById('rtArea');
+    area.onclick = () => {
+        if (state === 'waiting') {
+            state = 'ready';
+            area.style.background = '#dc2626';
+            area.innerText = 'Wait for GREEN...';
+            const delay = 1500 + Math.random() * 3000;
+            setTimeout(() => {
+                if (state !== 'ready') return;
+                state = 'clicked';
+                area.style.background = '#16a34a';
+                area.innerText = 'CLICK NOW!';
+                startTime = Date.now();
+            }, delay);
+        } else if (state === 'ready') {
+            area.style.background = '#7f1d1d';
+            area.innerText = 'Too early!';
+            state = 'waiting';
+            setTimeout(() => {
+                area.style.background = '#dc2626';
+                area.innerText = 'Tap to Start';
+            }, 1000);
+        } else if (state === 'clicked') {
+            const time = Date.now() - startTime;
+            rounds++;
+            document.getElementById('rtRound').innerText = rounds + '/3';
+            if (time < bestTime) { bestTime = time; document.getElementById('rtBest').innerText = time + 'ms'; }
+            const pts = Math.max(30 - Math.floor(time / 100), 5);
+            const r = document.getElementById('rtResult');
+            r.className = 'game-result-box show win';
+            r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">⚡</div>${time}ms! +${pts} Points!`;
+            addPlay(pts);
+            if (rounds >= 3) {
+                area.innerText = '✅ Done!';
+                area.style.background = '#475569';
+                area.onclick = null;
+            } else {
+                state = 'waiting';
+                area.style.background = '#dc2626';
+                area.innerText = 'Tap to Start';
+            }
+        }
+    };
+}
+
+// ================= GAME 16: WHACK-A-MOLE =================
+function renderWhackAMole() {
+    let score = 0, timeLeft = 20;
+    const totalHoles = 9;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎪 Score: <b id="wmScore">0</b></span>
+            <span>⏰ <b id="wmTimer">20s</b></span>
+        </div>
+        <div style="padding:10px 0;">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:320px;margin:0 auto;">
+                ${Array(totalHoles).fill(0).map((_, i) => `
+                    <div id="hole${i}" style="aspect-ratio:1;background:linear-gradient(145deg,#451a03,#78350f);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;cursor:pointer;user-select:none;box-shadow:inset 0 5px 15px rgba(0,0,0,0.5);border:3px solid #1c1917;">
+                        <span style="opacity:0;">🐹</span>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="game-result-box" id="wmResult"></div>
+        </div>
+    `;
+    
+    for (let i = 0; i < totalHoles; i++) {
+        document.getElementById('hole' + i).onclick = function() {
+            if (timeLeft <= 0) return;
+            const mole = this.querySelector('span');
+            if (mole.style.opacity === '1') {
+                mole.style.opacity = '0';
+                score += 10;
+                document.getElementById('wmScore').innerText = score;
+                this.style.background = 'linear-gradient(145deg,#16a34a,#15803d)';
+                setTimeout(() => {
+                    this.style.background = 'linear-gradient(145deg,#451a03,#78350f)';
+                }, 200);
+            }
+        };
+    }
+    
+    const timerInt = setInterval(() => {
+        timeLeft--;
+        document.getElementById('wmTimer').innerText = timeLeft + 's';
+        if (timeLeft <= 0) {
+            clearInterval(timerInt);
+            clearInterval(moleInt);
+            const r = document.getElementById('wmResult');
+            r.className = 'game-result-box show ' + (score > 0 ? 'win' : 'lose');
+            r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎪</div>Score: ${score} Points!`;
+            addPlay(score);
+            if (score > 0) launchConfetti();
+        }
+    }, 1000);
+    
+    const moleInt = setInterval(() => {
+        const idx = Math.floor(Math.random() * totalHoles);
+        const hole = document.getElementById('hole' + idx);
+        const mole = hole.querySelector('span');
+        mole.style.opacity = '1';
+        setTimeout(() => mole.style.opacity = '0', 800);
+    }, 600);
+}
+
+// ================= GAME 17: TIC TAC TOE =================
+function renderTicTacToe() {
+    let board = ['','','','','','','','',''];
+    let gameOver = false;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>You: <b style="color:#06b6d4;">X</b></span>
+            <span>AI: <b style="color:#ec4899;">O</b></span>
+        </div>
+        <div style="padding:15px 0;text-align:center;">
+            <div id="tttGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:280px;margin:0 auto;">
+                ${Array(9).fill(0).map((_, i) => `<div class="ttt-cell" data-idx="${i}" onclick="playTTT(${i})" style="aspect-ratio:1;background:rgba(10,14,39,0.6);border:2px solid rgba(168,85,247,0.4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:900;cursor:pointer;transition:0.2s;color:#fff;"></div>`).join('')}
+            </div>
+            <button class="game-btn" onclick="resetTTT()" style="margin-top:15px;">🔄 RESET</button>
+            <div class="game-result-box" id="tttResult"></div>
+        </div>
+    `;
+    
+    function checkWin(b, p) {
+        const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+        return lines.some(l => l.every(i => b[i] === p));
+    }
+    
+    function aiMove() {
+        const empty = board.map((v, i) => v === '' ? i : -1).filter(i => i !== -1);
+        if (empty.length === 0) return;
+        const idx = empty[Math.floor(Math.random() * empty.length)];
+        board[idx] = 'O';
+        updateBoard();
+        if (checkWin(board, 'O')) endTTT('lose');
+        else if (board.every(c => c !== '')) endTTT('draw');
+    }
+    
+    function updateBoard() {
+        document.querySelectorAll('.ttt-cell').forEach((c, i) => {
+            c.innerText = board[i];
+            if (board[i] === 'X') c.style.color = '#06b6d4';
+            else if (board[i] === 'O') c.style.color = '#ec4899';
+        });
+    }
+    
+    window.playTTT = function(idx) {
+        if (gameOver || board[idx] !== '') return;
+        board[idx] = 'X';
+        updateBoard();
+        if (checkWin(board, 'X')) { endTTT('win'); return; }
+        if (board.every(c => c !== '')) { endTTT('draw'); return; }
+        setTimeout(aiMove, 400);
+    };
+    
+    window.resetTTT = function() {
+        board = ['','','','','','','','',''];
+        gameOver = false;
+        updateBoard();
+        document.getElementById('tttResult').className = 'game-result-box';
+    };
+    
+    function endTTT(result) {
+        gameOver = true;
+        const r = document.getElementById('tttResult');
+        let pts = 0, msg = '';
+        if (result === 'win') { pts = 50; msg = '🎉 You WIN! +50 Points!'; }
+        else if (result === 'lose') { pts = 5; msg = '😢 AI Wins! +5 Points for trying'; }
+        else { pts = 10; msg = '🤝 Draw! +10 Points'; }
+        r.className = 'game-result-box show ' + (result === 'win' ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${result === 'win' ? '🎉' : result === 'draw' ? '🤝' : '😢'}</div>${msg}`;
+        addPlay(pts);
+        if (result === 'win') launchConfetti();
+    }
+}
+
+// ================= GAME 18: DART BOARD =================
+function renderDartBoard() {
+    let score = 0, throws = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎯 Throws: <b id="dbCount">0/3</b></span>
+            <span>💯 Score: <b id="dbScore">0</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div id="dartBoard" style="width:280px;height:280px;margin:15px auto;border-radius:50%;background:radial-gradient(circle, #fbbf24 0%, #fbbf24 15%, #ef4444 15%, #ef4444 35%, #22c55e 35%, #22c55e 55%, #fbbf24 55%, #fbbf24 100%);position:relative;cursor:crosshair;box-shadow:0 10px 40px rgba(0,0,0,0.5);border:8px solid #1e293b;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px;background:#1e293b;border-radius:50%;"></div>
+            </div>
+            <p style="font-size:12px;color:#94a3b8;font-weight:700;">Board pe click karo!</p>
+            <div class="game-result-box" id="dbResult"></div>
+        </div>
+    `;
+    
+    document.getElementById('dartBoard').onclick = function(e) {
+        if (throws >= 3) return;
+        throws++;
+        document.getElementById('dbCount').innerText = throws + '/3';
+        
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const dist = Math.sqrt(x * x + y * y);
+        const maxDist = rect.width / 2;
+        const percentage = dist / maxDist;
+        
+        let pts = 0, label = '';
+        if (percentage < 0.15) { pts = 50; label = '🎯 BULLSEYE! +50'; }
+        else if (percentage < 0.35) { pts = 30; label = '🎯 Great! +30'; }
+        else if (percentage < 0.55) { pts = 20; label = '👍 Good! +20'; }
+        else if (percentage < 0.8) { pts = 10; label = '😊 +10'; }
+        else { pts = 5; label = '🙂 +5'; }
+        
+        score += pts;
+        document.getElementById('dbScore').innerText = score;
+        
+        const r = document.getElementById('dbResult');
+        r.className = 'game-result-box show win';
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${label.split(' ')[0]}</div>${label}`;
+        
+        if (throws >= 3) {
+            addPlay(score);
+            launchConfetti();
+            r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎉</div>Final Score: ${score} Points!`;
+        }
+    };
+}
+
+// ================= GAME 19: BASKETBALL =================
+function renderBasketball() {
+    let score = 0, shots = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🏀 Shots: <b id="bbCount">0/5</b></span>
+            <span>💯 Score: <b id="bbScore">0</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div style="position:relative;height:200px;background:linear-gradient(180deg, #0ea5e9, #1e40af);border-radius:14px;overflow:hidden;margin-bottom:15px;">
+                <div style="position:absolute;top:20px;right:40px;font-size:50px;">🏀</div>
+                <div style="position:absolute;top:60px;right:60px;font-size:60px;">🥅</div>
+            </div>
+            <p style="font-size:12px;color:#94a3b8;font-weight:700;margin-bottom:10px;">Power choose karo (0-100)</p>
+            <input type="range" id="bbPower" min="0" max="100" value="50" style="width:80%;margin-bottom:10px;">
+            <br>
+            <span id="bbPowerVal" style="color:#eab308;font-weight:900;font-size:18px;">50%</span>
+            <br>
+            <button class="game-btn" onclick="shootBall()" id="bbBtn" style="margin-top:10px;">🏀 SHOOT</button>
+            <div class="game-result-box" id="bbResult"></div>
+        </div>
+    `;
+    
+    document.getElementById('bbPower').oninput = function() {
+        document.getElementById('bbPowerVal').innerText = this.value + '%';
+    };
+    
+    window.shootBall = function() {
+        if (shots >= 5) return;
+        shots++;
+        document.getElementById('bbCount').innerText = shots + '/5';
+        document.getElementById('bbBtn').disabled = true;
+        
+        const power = parseInt(document.getElementById('bbPower').value);
+        const target = 50 + Math.floor(Math.random() * 20) - 10;
+        const diff = Math.abs(power - target);
+        
+        let pts = 0, label = '';
+        if (diff <= 3) { pts = 30; label = '🎯 PERFECT! +30'; }
+        else if (diff <= 8) { pts = 20; label = '👍 GREAT! +20'; }
+        else if (diff <= 15) { pts = 10; label = '😊 GOOD! +10'; }
+        else { pts = 2; label = '❌ Miss! +2'; }
+        
+        score += pts;
+        document.getElementById('bbScore').innerText = score;
+        
+        const r = document.getElementById('bbResult');
+        r.className = 'game-result-box show ' + (pts >= 10 ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">${label.split(' ')[0]}</div>${label}`;
+        
+        setTimeout(() => {
+            if (shots >= 5) {
+                addPlay(score);
+                if (score > 0) launchConfetti();
+                r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎉</div>Final: ${score} Points!`;
+                document.getElementById('bbBtn').innerText = '✅ Done!';
+            } else {
+                document.getElementById('bbBtn').disabled = false;
+            }
+        }, 500);
+    };
+}
+
+// ================= GAME 20: DAILY LOGIN BONUS =================
+function renderDailyLogin() {
+    const today = todayKey();
+    const claimed = localStorage.getItem('loginBonus_' + today);
+    
+    const days = [];
+    for (let i = 6; i >= 0; i--) {
+        const d = new Date(); d.setDate(d.getDate() - i);
+        const k = d.toISOString().slice(0, 10);
+        days.push({ date: k, claimed: !!localStorage.getItem('loginBonus_' + k) });
+    }
+    
+    const streak = days.filter(d => d.claimed).length;
+    const bonus = [10, 20, 30, 50, 75, 100, 150][Math.min(streak, 6)];
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>📅 Streak: <b>${streak} days</b></span>
+            <span>💯 Next: <b>+${bonus} pts</b></span>
+        </div>
+        <div style="text-align:center;padding:15px 0;">
+            <div class="daily-badge">
+                📅 DAILY LOGIN BONUS
+                <div class="db-big">${claimed ? '✅ CLAIMED' : '🎁 +' + bonus + ' pts'}</div>
+                <div class="daily-streak">
+                    ${days.map((d, i) => `<div class="streak-day ${d.claimed?'done':''}">D${i+1}</div>`).join('')}
+                </div>
+            </div>
+            ${claimed ? `
+                <div class="game-result-box show win" style="margin-top:15px;">
+                    <div style="font-size:36px;margin-bottom:6px">✅</div>
+                    Aaj ka bonus claim ho gaya!<br>Kal +${[10, 20, 30, 50, 75, 100, 150][Math.min(streak, 6)]} points milenge.
+                </div>
+            ` : `
+                <button class="game-btn" onclick="claimLogin()" id="loginClaimBtn" style="margin-top:15px;">🎁 CLAIM +${bonus} PTS</button>
+                <div class="game-result-box" id="dlResult"></div>
+            `}
+        </div>
+    `;
+    
+    window.claimLogin = function() {
+        localStorage.setItem('loginBonus_' + today, 'true');
+        const r = document.getElementById('dlResult');
+        r.className = 'game-result-box show win';
+        r.innerHTML = `<div style="font-size:36px;margin-bottom:6px">🎉</div>+${bonus} Points Claimed!`;
+        addPlay(bonus);
+        launchConfetti();
+        document.getElementById('loginClaimBtn').disabled = true;
+        document.getElementById('loginClaimBtn').innerText = '✅ Claimed!';
     };
 }
 
@@ -2130,13 +2521,6 @@ function renderLeaderboard() {
             <span class="lb-pts">${l.pts} pts</span>
         </div>
     `).join('');
-}
-
-function scrollToLeaderboard() {
-    document.getElementById('leaderboardSection').scrollIntoView({ behavior: 'smooth' });
-}
-function scrollToRewards() {
-    document.getElementById('rewardsSection').scrollIntoView({ behavior: 'smooth' });
 }
 
 // ================= REWARDS =================
@@ -2186,19 +2570,6 @@ window.addEventListener('load', () => {
     renderLeaderboard();
     renderRewards();
 });
-</script>
-
-<!-- ================= TAWK.TO ================= -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a6b47d42539311d47e435cc/1juph15ut';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
 </script>
 
 </body>
