@@ -3,11 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>ROYAL PANEL CHART | Live Results & Free Game</title>
-<meta name="description" content="ROYAL PANEL CHART - सबसे तेज़ और सटीक सट्टा मटका चार्ट रिजल्ट्स। Live updates, statistics, PDF download, free game और बहुत कुछ।">
-<meta name="keywords" content="Royal Panel Chart, Satta Matka, Matka Results, VIP Chart, Free Game">
-<meta property="og:title" content="ROYAL PANEL CHART - Live Results">
-<meta property="og:description" content="सबसे भरोसेमंद और सटीक सट्टा मटका चार्ट।">
+<title>ROYAL GAMES ZONE | 8 Free Games - Earn Points</title>
+<meta name="description" content="8 free games khelo, points kamao, free subscription pao. No money needed!">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
@@ -24,6 +21,9 @@
     --header-bg: #16a34a;
     --input-bg: #ffffff;
     --border-soft: #e2e8f0;
+    --game-purple: #8b5cf6;
+    --game-blue: #0ea5e9;
+    --game-pink: #ec4899;
 }
 
 body.dark-mode {
@@ -62,292 +62,196 @@ body {
     align-items: center;
     justify-content: center;
 }
-.header h1 { margin: 0; font-size: 19px; color: #000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
+.header h1 { margin: 0; font-size: 18px; color: #000; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; }
 .header .sub-title { margin: 4px 0 0 0; font-size: 10px; color: #000; text-transform: uppercase; font-weight: 700; }
 
 .menu-container { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); }
 .menu-icon { font-size: 22px; color: #fff; cursor: pointer; font-weight: bold; padding: 4px 10px; border-radius: 4px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); }
-.header-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
+.header-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); display: flex; gap: 6px; }
 .mode-toggle { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 16px; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
 
 .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #0f172a; border: 1.5px solid var(--gold); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 1000; width: 240px; text-align: left; overflow: hidden; max-height: 85vh; overflow-y: auto; }
 .dropdown-menu.active { display: block; }
 .dropdown-item { display: block; padding: 12px 16px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; border-bottom: 1px solid #1e293b; cursor: pointer; transition: 0.2s; }
-.dropdown-item:last-child { border-bottom: none; }
 .dropdown-item:hover { background: #1e293b; color: var(--gold); }
 .menu-group-title { padding: 8px 16px; font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; background: #0f172a; border-bottom: 1px solid #1e293b; border-top: 1px solid #334155; }
 
-/* ================= ANNOUNCEMENT BANNER ================= */
-.announcement-banner {
-    display: none;
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
-    color: #78350f;
-    padding: 12px 45px 12px 15px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 700;
-    border: 2px solid #f59e0b;
-    text-align: left;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(245,158,11,0.3);
-}
-.announcement-banner.show { display: block; }
-.announcement-banner .close-ann {
-    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-    cursor: pointer; font-size: 18px; font-weight: 900; color: #78350f;
-    background: rgba(255,255,255,0.6); width: 26px; height: 26px;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-}
-
-/* ================= FEATURED JODIS ================= */
-.featured-section {
-    display: none;
-    background: var(--card-bg);
+/* ================= WALLET BAR ================= */
+.wallet-bar {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #fff;
+    padding: 12px;
     margin: 12px auto;
     width: 90%;
     max-width: 600px;
-    padding: 14px;
     border-radius: 12px;
     border: 2px solid var(--gold);
-    box-shadow: 0 4px 15px rgba(245,158,11,0.2);
+    box-shadow: 0 4px 15px rgba(245,158,11,0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.featured-section.show { display: block; }
-.featured-section h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
-.featured-grid { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; justify-content: center; flex-wrap: wrap; }
-.featured-card {
-    background: linear-gradient(145deg, #fef3c7, #fde68a);
-    border: 2px solid #f59e0b;
-    border-radius: 12px;
-    padding: 12px 18px;
-    min-width: 90px;
-    box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+.wallet-item { text-align: center; }
+.wallet-item .wi-lbl { font-size: 9px; color: var(--gold); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+.wallet-item .wi-val { font-size: 22px; font-weight: 900; color: #fff; margin-top: 2px; }
+
+/* ================= HERO ================= */
+.hero {
+    background: linear-gradient(135deg, var(--game-purple), var(--game-pink));
+    color: #fff;
+    padding: 24px 16px;
+    margin: 12px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(139,92,246,0.4);
 }
-.featured-card .fj-num { font-size: 26px; font-weight: 900; color: #78350f; letter-spacing: 2px; font-family: 'Courier New', monospace; }
-.featured-card .fj-label { font-size: 10px; color: #92400e; font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.hero h2 { margin: 0 0 6px; font-size: 22px; letter-spacing: 1px; }
+.hero p { margin: 0; font-size: 12px; opacity: 0.95; }
 
-/* ================= LIVE BADGE ================= */
-.live-wrap { text-align: center; margin-top: 12px; }
-.live-badge { display: inline-flex; align-items: center; gap: 6px; background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1.5px solid #16a34a; }
-body.dark-mode .live-badge { background: rgba(22,163,74,0.2); color: #4ade80; }
-.live-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: livePulse 1.5s infinite; }
-@keyframes livePulse { 0%,100% { opacity:1; transform:scale(1); box-shadow:0 0 0 0 rgba(22,163,74,0.7); } 50% { opacity:0.7; transform:scale(1.2); box-shadow:0 0 0 8px rgba(22,163,74,0); } }
-
-/* ================= COUNTDOWN ================= */
-.countdown-bar { background: linear-gradient(135deg, #1e293b, #0f172a); color: #fff; padding: 12px; margin: 12px auto; width: 90%; max-width: 600px; border-radius: 10px; border: 2px solid var(--gold); box-shadow: 0 4px 15px rgba(245,158,11,0.3); }
-.countdown-bar .cd-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
-.countdown-bar .cd-time { font-size: 26px; font-weight: 900; letter-spacing: 2px; font-family: 'Courier New', monospace; }
-.countdown-bar .cd-result { font-size: 11px; color: #94a3b8; margin-top: 4px; }
-
-/* ================= DISCLAIMER ================= */
-.disclaimer-box { background: var(--card-bg); padding: 10px 14px; margin: 10px auto; width: 90%; max-width: 500px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
-.disclaimer-box p { margin: 0; font-size: 11px; color: var(--text-soft); line-height: 1.5; font-weight: 600; }
-
-/* ================= SEARCH & FILTER ================= */
-.search-section { background: var(--card-bg); margin: 12px auto; width: 90%; max-width: 600px; padding: 12px; border-radius: 10px; border: 1.5px solid var(--border-soft); }
-.search-row { display: flex; gap: 8px; margin-bottom: 10px; }
-.search-input { flex: 1; padding: 10px 12px; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); outline: none; }
-.search-input:focus { border-color: var(--vip-green); }
-.search-btn { background: var(--vip-green); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
-
-.month-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
-.month-tab { padding: 7px 14px; background: var(--border-soft); color: var(--text-soft); border-radius: 20px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; border: none; }
-.month-tab.active { background: var(--vip-green); color: white; }
-
-/* ================= QUICK ACTIONS ================= */
-.action-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 12px auto; width: 90%; max-width: 600px; }
-.action-btn { background: var(--card-bg); border: 1.5px solid var(--border-soft); border-radius: 10px; padding: 10px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: 0.2s; }
-.action-btn:hover { border-color: var(--vip-green); transform: translateY(-2px); }
-.action-btn .ic { font-size: 18px; }
-.action-btn .lbl { font-size: 9px; font-weight: 700; color: var(--text-main); }
-
-/* ================= CHART TOP BAR ================= */
-.chart-top-bar { display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); padding: 10px 15px; border-radius: 8px; border: 1.5px solid var(--border-soft); max-width: 90%; margin: 15px auto; gap: 8px; }
-.go-to-bottom-btn { background: #16a34a; color: #fff; padding: 8px 12px; border-radius: 5px; font-size: 11px; font-weight: bold; text-decoration: none; cursor: pointer; border: none; }
-.blink-game-btn { display: flex; align-items: center; gap: 6px; background: #e0f2fe; color: #0284c7; padding: 8px 14px; border-radius: 6px; font-size: 11px; font-weight: 800; cursor: pointer; border: 1.5px solid #38bdf8; text-transform: uppercase; animation: skyNeonBlink 1.2s infinite; }
-@keyframes skyNeonBlink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.75; transform:scale(0.97); box-shadow: 0 0 20px rgba(56,189,248,0.9); } }
-
-/* ================= CHART TABLE ================= */
-#chartWrapper { width: 90%; max-width: 600px; margin: 10px auto; background: var(--card-bg); border: 2px solid var(--grid-border); border-radius: 6px; overflow-x: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: box-shadow 0.3s; }
-table { border-collapse: collapse; width: 100%; min-width: 300px; table-layout: fixed; }
-th { background: #fef3c7; color: #78350f; font-size: 11px; padding: 8px 0; border: 1px solid var(--grid-border); font-weight: 800; }
-body.dark-mode th { background: #78350f; color: #fef3c7; }
-td { border: 1px solid var(--grid-border); height: 50px; background: var(--card-bg); vertical-align: middle; text-align: center; padding: 0; position: relative; }
-tr.highlight-row td { background: #fef9c3 !important; }
-body.dark-mode tr.highlight-row td { background: #422006 !important; }
-tr.hidden-row { display: none; }
-
-.date-box { background: #fef3c7 !important; font-size: 11px; font-weight: 700; width: 52px !important; color: #0a192f !important; line-height: 1.15; padding: 2px; word-break: break-word; }
-body.dark-mode .date-box { background: #78350f !important; color: #fef3c7 !important; }
-
-.cell-content { display: flex; align-items: center; justify-content: center; width: 100%; }
-.panna-vertical { display: flex; flex-direction: column; font-size: 8px; line-height: 0.9; width: 10px; font-weight: 700; color: #475569; }
-body.dark-mode .panna-vertical { color: #cbd5e1; }
-.jodi { font-size: 18px; font-weight: 900; color: var(--text-main); margin: 0 4px; }
-.red-house .jodi, .red-house .panna-vertical { color: var(--vip-red) !important; }
-
-.fav-btn { position: absolute; top: 1px; right: 1px; font-size: 11px; cursor: pointer; opacity: 0.3; user-select: none; }
-.fav-btn.active { opacity: 1; }
-
-.lock-btn { color: var(--vip-green); font-size: 20px; font-weight: bold; cursor: pointer; background: #f0fdf4; padding: 6px 12px; border-radius: 6px; border: 1px dashed var(--vip-green); display: inline-block; }
-
-/* ================= STATS PANEL ================= */
-.stats-panel { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid var(--border-soft); display: none; }
-.stats-panel.show { display: block; }
-.stats-panel h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
-.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-bottom: 12px; }
-.stat-box { background: #f8fafc; padding: 10px 6px; border-radius: 8px; border: 1px solid var(--border-soft); }
-body.dark-mode .stat-box { background: #0f172a; }
-.stat-box .num { font-size: 20px; font-weight: 900; color: var(--vip-green); }
-.stat-box .lbl { font-size: 9px; color: var(--text-soft); margin-top: 3px; text-transform: uppercase; font-weight: 700; }
-
-.hot-cold-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-.hc-box { background: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid var(--border-soft); text-align: left; }
-body.dark-mode .hc-box { background: #0f172a; }
-.hc-box h4 { margin: 0 0 6px; font-size: 11px; color: var(--text-soft); text-transform: uppercase; }
-.hc-box .hc-item { font-size: 12px; padding: 3px 0; color: var(--text-main); font-weight: 700; display: flex; justify-content: space-between; }
-.hc-box .hc-item span { color: var(--vip-green); }
-
-/* ================= INFO SECTIONS ================= */
-.info-section { background: var(--card-bg); margin: 15px auto; width: 90%; max-width: 600px; padding: 15px; border-radius: 10px; border: 1.5px solid var(--border-soft); text-align: left; }
-.info-section h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
-
-.faq-item { border-bottom: 1px solid var(--border-soft); padding: 10px 0; cursor: pointer; }
-.faq-item:last-child { border-bottom: none; }
-.faq-q { font-size: 13px; font-weight: 700; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.faq-q::after { content: '+'; font-size: 20px; color: var(--vip-green); font-weight: 900; }
-.faq-item.open .faq-q::after { content: '−'; }
-.faq-a { font-size: 12px; color: var(--text-soft); margin-top: 6px; line-height: 1.6; display: none; }
-.faq-item.open .faq-a { display: block; }
-
-.contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; margin: 6px 0; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; background: var(--input-bg); color: var(--text-main); font-family: inherit; outline: none; }
-.contact-form textarea { min-height: 70px; resize: vertical; }
-.contact-form button { background: var(--vip-green); color: white; padding: 11px; border: none; border-radius: 8px; width: 100%; font-weight: 700; cursor: pointer; font-size: 13px; margin-top: 6px; }
-
-/* ================= FLOATING BUTTONS ================= */
-.floating-btns { position: fixed; bottom: 20px; right: 15px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
-.float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.2s; border: none; cursor: pointer; }
-.float-btn:hover { transform: scale(1.1); }
-.whatsapp-btn { background: #25d366; color: #fff; }
-.top-btn { background: var(--gold); color: #0f172a; }
-
-/* ================= TOAST ================= */
-.toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: var(--vip-green); color: #fff; padding: 12px 24px; border-radius: 25px; font-weight: 700; font-size: 13px; z-index: 10000; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-.toast.show { display: block; animation: toastSlide 0.3s ease; }
-.toast.error { background: var(--vip-red); }
-.toast.info { background: #0ea5e9; }
-@keyframes toastSlide { from { opacity: 0; transform: translate(-50%, -20px); } to { opacity: 1; transform: translate(-50%, 0); } }
-
-/* ================= CONFETTI ================= */
-.confetti { position: fixed; width: 10px; height: 10px; background: #f59e0b; z-index: 9999; pointer-events: none; animation: confettiFall 3s linear forwards; }
-@keyframes confettiFall { 
-    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 
-    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } 
+/* ================= GAMES GRID ================= */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    width: 90%;
+    max-width: 600px;
+    margin: 15px auto;
 }
+.game-tile {
+    background: var(--card-bg);
+    border: 2px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 16px 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.game-tile:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+.game-tile .gt-icon { font-size: 38px; }
+.game-tile .gt-name { font-size: 13px; font-weight: 800; color: var(--text-main); text-align: center; }
+.game-tile .gt-desc { font-size: 10px; color: var(--text-soft); font-weight: 600; }
+.game-tile .gt-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--vip-green);
+    color: #fff;
+    font-size: 8px;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+.game-tile .gt-badge.hot { background: var(--vip-red); }
+.game-tile .gt-badge.new { background: var(--game-blue); }
 
-/* ================= GAME SECTION ================= */
-.game-section {
+/* ================= GAME MODAL ================= */
+.game-overlay {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: var(--bg-gradient);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
     z-index: 5000;
-    overflow-y: auto;
+    justify-content: center;
+    align-items: flex-start;
     padding: 15px;
-    box-sizing: border-box;
+    overflow-y: auto;
 }
-.game-section.show { display: block; }
+.game-overlay.show { display: flex; }
 
-.game-header {
+.game-modal {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    margin: auto;
+    position: relative;
+}
+
+.game-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--vip-green);
     color: #fff;
-    padding: 14px 18px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(22,163,74,0.4);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.game-header h2 { margin: 0; font-size: 16px; letter-spacing: 0.5px; }
-.game-close {
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.4);
-    color: #fff; width: 32px; height: 32px;
-    border-radius: 50%; font-size: 16px;
-    cursor: pointer; font-weight: 900;
-}
-
-.game-user-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 600px;
-    margin: 0 auto 15px;
-}
-.gui-item {
-    background: var(--card-bg);
-    padding: 12px 8px;
+    padding: 12px 16px;
     border-radius: 10px;
-    border: 1.5px solid var(--border-soft);
-    text-align: center;
+    margin-bottom: 15px;
 }
-.gui-lbl {
-    display: block;
-    font-size: 10px;
-    color: var(--text-soft);
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-.gui-val {
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--vip-green);
-}
-
-.game-target {
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+.game-modal-header h3 { margin: 0; font-size: 15px; }
+.game-modal-close {
+    background: rgba(255,255,255,0.25);
+    border: none;
     color: #fff;
-    padding: 20px;
-    border-radius: 14px;
-    text-align: center;
-    margin: 0 auto 15px;
-    max-width: 600px;
-    border: 2px solid var(--gold);
-    box-shadow: 0 6px 20px rgba(245,158,11,0.3);
-}
-.gt-label {
-    font-size: 12px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    font-weight: 800;
-    margin-bottom: 6px;
-}
-.gt-hint {
-    font-size: 13px;
-    color: #94a3b8;
-    font-weight: 600;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
 }
 
-.game-guess-box {
-    background: var(--card-bg);
-    padding: 18px;
-    border-radius: 14px;
+/* ================= COMMON GAME UI ================= */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    background: var(--input-bg);
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
     border: 1.5px solid var(--border-soft);
-    margin: 0 auto 15px;
-    max-width: 600px;
-    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
 }
-#guessInput {
-    width: 120px;
-    font-size: 42px;
+.game-info span { color: var(--vip-green); }
+
+.game-body { padding: 12px 0; }
+
+.game-btn {
+    background: var(--vip-green);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 12px rgba(22,163,74,0.3);
+    transition: 0.2s;
+    letter-spacing: 0.5px;
+}
+.game-btn:hover { transform: translateY(-2px); }
+.game-btn:disabled { background: #64748b; cursor: not-allowed; transform: none; box-shadow: none; }
+.game-btn.secondary { background: var(--game-blue); }
+
+.game-result-box {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    display: none;
+}
+.game-result-box.show { display: block; animation: popIn 0.4s; }
+@keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.game-result-box.win { background: #dcfce7; color: #166534; border: 2px solid var(--vip-green); }
+.game-result-box.lose { background: #fee2e2; color: #991b1b; border: 2px solid var(--vip-red); }
+body.dark-mode .game-result-box.win { background: rgba(22,163,74,0.2); color: #4ade80; }
+body.dark-mode .game-result-box.lose { background: rgba(220,38,38,0.2); color: #fca5a5; }
+
+/* ================= NUMBER GUESS SPECIFIC ================= */
+.guess-input-lg {
+    width: 140px;
+    font-size: 44px;
     font-weight: 900;
     text-align: center;
     padding: 12px;
@@ -355,112 +259,282 @@ body.dark-mode .hc-box { background: #0f172a; }
     color: var(--text-main);
     border: 3px solid var(--gold);
     border-radius: 12px;
-    margin: 0 auto 12px;
+    margin: 10px auto;
     display: block;
     letter-spacing: 4px;
     outline: none;
 }
-#guessInput:focus { border-color: var(--vip-green); }
-.guess-btn {
-    background: var(--vip-green);
+.guess-input-lg:focus { border-color: var(--vip-green); }
+
+/* ================= SPIN WHEEL ================= */
+.wheel-container {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 15px auto;
+}
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #dc2626 0deg 45deg,
+        #16a34a 45deg 90deg,
+        #0ea5e9 90deg 135deg,
+        #f59e0b 135deg 180deg,
+        #8b5cf6 180deg 225deg,
+        #ec4899 225deg 270deg,
+        #14b8a6 270deg 315deg,
+        #f97316 315deg 360deg
+    );
+    border: 6px solid #1e293b;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    position: relative;
+}
+.wheel-pointer {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: var(--vip-red);
+    z-index: 10;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+.wheel-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 12px;
+    color: #1e293b;
+    z-index: 5;
+}
+.wheel-numbers {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.wheel-num {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 900;
     color: #fff;
-    border: none;
-    padding: 14px 40px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ================= DICE ================= */
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.dice {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 3px solid #1e293b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.dice.rolling { animation: diceRoll 0.5s infinite; }
+@keyframes diceRoll { 
+    0%,100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+}
+
+/* ================= MEMORY CARDS ================= */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 15px auto;
+    max-width: 320px;
+}
+.mem-card {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--game-purple), var(--game-pink));
     border-radius: 10px;
-    font-size: 15px;
-    font-weight: 800;
     cursor: pointer;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(22,163,74,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    transition: 0.3s;
+    user-select: none;
+}
+.mem-card.flipped { background: #fff; color: #1e293b; border: 2px solid var(--vip-green); }
+.mem-card.matched { background: var(--vip-green); color: #fff; cursor: default; }
+
+/* ================= QUIZ ================= */
+.quiz-question {
+    background: var(--input-bg);
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid var(--border-soft);
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.quiz-opt {
+    padding: 14px 8px;
+    background: var(--input-bg);
+    border: 2px solid var(--border-soft);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text-main);
     transition: 0.2s;
 }
-.guess-btn:hover { transform: translateY(-2px); }
-.guess-btn:disabled { background: #475569; cursor: not-allowed; transform: none; }
+.quiz-opt:hover { border-color: var(--vip-green); }
+.quiz-opt.correct { background: var(--vip-green); color: #fff; border-color: var(--vip-green); }
+.quiz-opt.wrong { background: var(--vip-red); color: #fff; border-color: var(--vip-red); }
+.quiz-opt:disabled { cursor: not-allowed; }
 
-.game-result {
-    display: none;
-    padding: 18px;
-    border-radius: 14px;
-    margin: 0 auto 15px;
-    max-width: 600px;
-    text-align: center;
-    animation: resultPop 0.5s;
-}
-.game-result.show { display: block; }
-@keyframes resultPop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-.game-result.win {
-    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-    border: 2px solid var(--vip-green);
-    color: #166534;
-}
-.game-result.lose {
-    background: linear-gradient(135deg, #fee2e2, #fecaca);
-    border: 2px solid var(--vip-red);
-    color: #991b1b;
-}
-.game-result .gr-icon { font-size: 42px; margin-bottom: 6px; }
-.game-result .gr-title { font-size: 18px; font-weight: 900; }
-.game-result .gr-sub { font-size: 12px; margin-top: 6px; }
-
-.game-history, .game-rewards, .game-leaderboard {
-    background: var(--card-bg);
-    padding: 15px;
-    border-radius: 14px;
-    border: 1.5px solid var(--border-soft);
-    margin: 0 auto 15px;
-    max-width: 600px;
-}
-.game-history h4, .game-rewards h4, .game-leaderboard h4 {
-    margin: 0 0 12px;
-    font-size: 13px;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.guess-history { display: flex; flex-wrap: wrap; gap: 8px; }
-.gh-item {
-    background: var(--input-bg);
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    border: 1px solid var(--border-soft);
-}
-.gh-item.win { border-color: var(--vip-green); color: var(--vip-green); }
-.gh-item.lose { border-color: var(--vip-red); color: var(--vip-red); }
-
-.rewards-grid {
+/* ================= COLOR PREDICTION ================= */
+.color-btns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin: 15px 0;
 }
-.reward-card {
-    background: linear-gradient(145deg, #fef3c7, #fde68a);
-    border: 2px solid var(--gold);
-    border-radius: 10px;
+.color-btn {
+    padding: 24px 10px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    transition: 0.2s;
+}
+.color-btn[data-color="red"] { background: #dc2626; }
+.color-btn[data-color="green"] { background: #16a34a; }
+.color-btn[data-color="violet"] { background: #8b5cf6; }
+.color-btn:hover { transform: scale(1.05); }
+.color-btn.selected { border-color: #f59e0b; box-shadow: 0 0 20px rgba(245,158,11,0.6); }
+
+.color-display {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 15px auto;
+    background: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 900;
+    color: #fff;
+    border: 5px solid var(--border-soft);
+    transition: 0.3s;
+}
+.color-display.result-red { background: #dc2626; border-color: #991b1b; }
+.color-display.result-green { background: #16a34a; border-color: #166534; }
+.color-display.result-violet { background: #8b5cf6; border-color: #6d28d9; }
+
+/* ================= MATH ================= */
+.math-question {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+.math-input {
+    width: 160px;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
     padding: 12px;
+    background: var(--input-bg);
+    color: var(--text-main);
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+    outline: none;
+}
+.math-timer {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--vip-red);
+    margin: 10px 0;
+}
+
+/* ================= DAILY CHALLENGE ================= */
+.daily-badge {
+    background: linear-gradient(135deg, var(--gold), #d97706);
+    color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 800;
     text-align: center;
 }
-.reward-card.locked { opacity: 0.5; filter: grayscale(0.7); }
-.reward-card .rc-icon { font-size: 24px; }
-.reward-card .rc-title { font-size: 12px; font-weight: 800; color: #78350f; margin: 4px 0; }
-.reward-card .rc-cost { font-size: 11px; color: #92400e; font-weight: 700; }
-.reward-card .rc-btn {
-    margin-top: 6px;
-    background: var(--vip-green);
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    width: 100%;
+.daily-badge .db-big { font-size: 38px; margin: 10px 0; font-weight: 900; }
+.daily-streak {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
 }
-.reward-card .rc-btn:disabled { background: #94a3b8; cursor: not-allowed; }
+.streak-day {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--input-bg);
+    border: 2px solid var(--border-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-soft);
+}
+.streak-day.done { background: var(--vip-green); color: #fff; border-color: var(--vip-green); }
 
-.leaderboard-list { display: flex; flex-direction: column; gap: 6px; }
-.lb-item {
+/* ================= LEADERBOARD ================= */
+.leaderboard-panel {
+    background: var(--card-bg);
+    margin: 15px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1.5px solid var(--border-soft);
+}
+.leaderboard-panel h3 { margin: 0 0 12px; font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
+.lb-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -470,60 +544,49 @@ body.dark-mode .hc-box { background: #0f172a; }
     border: 1px solid var(--border-soft);
     font-size: 13px;
     font-weight: 700;
+    margin-bottom: 6px;
 }
+.lb-row.top1 { background: linear-gradient(90deg, #fef3c7, transparent); border-color: #f59e0b; }
+.lb-row.top2 { background: linear-gradient(90deg, #e2e8f0, transparent); border-color: #94a3b8; }
+.lb-row.top3 { background: linear-gradient(90deg, #fed7aa, transparent); border-color: #ea580c; }
 .lb-rank { color: var(--gold); font-weight: 900; }
 .lb-name { flex: 1; text-align: left; margin-left: 10px; }
-.lb-points { color: var(--vip-green); font-weight: 900; }
+.lb-pts { color: var(--vip-green); font-weight: 900; }
 
-.game-ad-space {
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 20px;
-    background: var(--card-bg);
-    border: 2px dashed var(--border-soft);
-    border-radius: 12px;
-    text-align: center;
-}
-.ad-placeholder {
-    color: var(--text-soft);
-    font-size: 12px;
-    font-weight: 700;
+/* ================= OTHER STYLES ================= */
+.live-wrap { text-align: center; margin-top: 12px; }
+.live-badge { display: inline-flex; align-items: center; gap: 6px; background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1.5px solid #16a34a; }
+body.dark-mode .live-badge { background: rgba(22,163,74,0.2); color: #4ade80; }
+.live-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: livePulse 1.5s infinite; }
+@keyframes livePulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.7; transform:scale(1.2); } }
+
+.toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: var(--vip-green); color: #fff; padding: 12px 24px; border-radius: 25px; font-weight: 700; font-size: 13px; z-index: 10000; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.toast.show { display: block; animation: toastSlide 0.3s ease; }
+.toast.error { background: var(--vip-red); }
+@keyframes toastSlide { from { opacity: 0; transform: translate(-50%, -20px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+.confetti { position: fixed; width: 10px; height: 10px; background: #f59e0b; z-index: 9999; pointer-events: none; animation: confettiFall 3s linear forwards; }
+@keyframes confettiFall { 
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } 
 }
 
-/* ================= PAYMENT MODAL ================= */
-.btn-pay-main { background: var(--vip-green); color: white; padding: 12px; border: none; border-radius: 8px; width: 100%; font-weight: 700; font-size: 15px; margin: 10px 0; cursor: pointer; }
-.overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index: 10000; align-items: center; justify-content: center; }
-.overlay.active { display: flex; }
-.modal-content { background: var(--card-bg); width: 95%; max-width: 650px; padding: 20px; border-radius: 14px; max-height: 90vh; overflow-y: auto; color: var(--text-main); }
-.qr-img { width: 160px; border: 2px solid #cbd5e1; border-radius: 8px; margin: 10px auto; display: block; }
-input { width: 100%; padding: 11px 14px; margin: 8px 0; border: 1.5px solid var(--border-soft); border-radius: 8px; font-size: 13px; outline: none; background: var(--input-bg); color: var(--text-main); }
-.modal-header-box { background: var(--vip-green); color: white; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; font-weight: 800; font-size: 15px; text-align: center; }
-.notice-box { background: #f8fafc; border-left: 4px solid var(--vip-green); padding: 12px; border-radius: 6px; margin-bottom: 12px; font-size: 11.5px; color: var(--text-main); line-height: 1.5; }
-body.dark-mode .notice-box { background: #0f172a; }
-.upi-box { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; font-size: 13px; font-weight: 700; border: 1.5px solid var(--border-soft); }
-body.dark-mode .upi-box { background: #0f172a; }
-.copy-btn { background: var(--vip-green); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600; }
-.instruction-box, .next-box { background: #f8fafc; border: 1px solid var(--border-soft); padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 11.5px; color: var(--text-main); line-height: 1.6; text-align: left; }
-body.dark-mode .instruction-box, body.dark-mode .next-box { background: #0f172a; }
-.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
-.sub-plan-card { border: 2px solid var(--border-soft); border-radius: 10px; padding: 10px; background: var(--card-bg); text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-.sub-plan-card:hover { border-color: var(--vip-green); }
-.sub-plan-logo { font-size: 22px; }
-.sub-plan-title { font-size: 12px; font-weight: 800; color: var(--text-main); }
-.sub-plan-price { font-size: 16px; font-weight: 900; color: var(--vip-green); margin: 6px 0; }
-.sub-plan-desc { font-size: 9.5px; color: var(--text-soft); margin-bottom: 8px; font-weight: 600; }
-.sel-btn { background: var(--vip-green); color: white; border: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; width: 100%; }
+.floating-btns { position: fixed; bottom: 20px; right: 15px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+.float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.2s; border: none; cursor: pointer; }
+.float-btn:hover { transform: scale(1.1); }
+.whatsapp-btn { background: #25d366; color: #fff; }
+.top-btn { background: var(--gold); color: #0f172a; }
+
 .copyright-box { background: var(--card-bg); border: 1px solid var(--grid-border); padding: 10px; margin: 25px auto 10px auto; width: 90%; max-width: 360px; border-radius: 8px; font-size: 12px; font-weight: 700; color: var(--text-soft); }
 
 @media (max-width: 480px) {
-    .header h1 { font-size: 16px; }
-    .countdown-bar .cd-time { font-size: 22px; }
-    .action-grid { grid-template-columns: repeat(3, 1fr); }
-    .action-btn .lbl { font-size: 10px; }
-    .featured-card { min-width: 75px; padding: 10px 12px; }
-    .featured-card .fj-num { font-size: 22px; }
-    #guessInput { font-size: 34px; width: 100px; }
-    .game-header h2 { font-size: 14px; }
+    .header h1 { font-size: 15px; }
+    .guess-input-lg { font-size: 34px; width: 110px; }
+    .game-tile .gt-icon { font-size: 32px; }
+    .game-tile .gt-name { font-size: 11px; }
+    .games-grid { grid-template-columns: repeat(2, 1fr); }
+    .wheel-container { width: 200px; height: 200px; }
+    .dice { width: 60px; height: 60px; font-size: 32px; }
 }
 </style>
 </head>
@@ -534,335 +597,231 @@ body.dark-mode .instruction-box, body.dark-mode .next-box { background: #0f172a;
     <div class="menu-container">
         <span class="menu-icon" onclick="toggleDropdown(event)">☰</span>
         <div id="dropdownMenu" class="dropdown-menu">
-            <div class="menu-group-title">📍 Navigation</div>
-            <a href="#top" class="dropdown-item" onclick="closeDropdown()">🏠 Home</a>
-            <a href="#chartWrapper" class="dropdown-item" onclick="closeDropdown()">📊 Chart</a>
-            <a class="dropdown-item" onclick="toggleStats(); closeDropdown()">📈 Statistics</a>
-            <a href="#faqSection" class="dropdown-item" onclick="closeDropdown()">❓ FAQ</a>
-            <a href="#contactSection" class="dropdown-item" onclick="closeDropdown()">📞 Contact</a>
+            <div class="menu-group-title">🎮 GAMES</div>
+            <div class="dropdown-item" onclick="openGame('numberGuess'); closeDropdown()">🎯 Number Guess</div>
+            <div class="dropdown-item" onclick="openGame('spinWheel'); closeDropdown()">🎰 Spin Wheel</div>
+            <div class="dropdown-item" onclick="openGame('diceRoll'); closeDropdown()">🎲 Dice Roll</div>
+            <div class="dropdown-item" onclick="openGame('memoryMatch'); closeDropdown()">🃏 Memory Match</div>
+            <div class="dropdown-item" onclick="openGame('quizGame'); closeDropdown()">❓ Quiz Game</div>
+            <div class="dropdown-item" onclick="openGame('colorPrediction'); closeDropdown()">🎨 Color Prediction</div>
+            <div class="dropdown-item" onclick="openGame('mathChallenge'); closeDropdown()">🔢 Math Challenge</div>
+            <div class="dropdown-item" onclick="openGame('dailyChallenge'); closeDropdown()">🏆 Daily Challenge</div>
             
-            <div class="menu-group-title">🛠️ Tools</div>
-            <div class="dropdown-item" onclick="openSearchFromMenu()">🔍 Search Date</div>
-            <div class="dropdown-item" onclick="downloadPDF(); closeDropdown()">📥 Download PDF</div>
-            <div class="dropdown-item" onclick="closeDropdown(); setTimeout(()=>window.print(),300)">🖨️ Print</div>
-            <div class="dropdown-item" onclick="shareWhatsApp(); closeDropdown()">📱 Share</div>
-            
-            <div class="menu-group-title">👤 Account</div>
-            <div class="dropdown-item" onclick="openGameSection(); closeDropdown()">🎮 Play Game</div>
+            <div class="menu-group-title">🏅 MORE</div>
+            <div class="dropdown-item" onclick="showLeaderboard(); closeDropdown()">🏅 Leaderboard</div>
+            <div class="dropdown-item" onclick="showRewards(); closeDropdown()">🎁 Rewards</div>
             <div class="dropdown-item" onclick="openLoginDirect(); closeDropdown()">🔑 Login</div>
         </div>
     </div>
     <div class="header-content">
-        <h1>ROYAL PANEL CHART</h1>
-        <div class="sub-title">WELCOME • LIVE RESULTS</div>
+        <h1>ROYAL GAMES ZONE</h1>
+        <div class="sub-title">8 GAMES • FREE TO PLAY</div>
     </div>
     <div class="header-right">
         <button class="mode-toggle" onclick="toggleDarkMode()" id="modeBtn">🌙</button>
     </div>
 </div>
 
-<!-- ================= ANNOUNCEMENT ================= -->
-<div class="announcement-banner" id="announcementBanner">
-    <span id="announcementText"></span>
-    <span class="close-ann" onclick="closeAnnouncement()">✕</span>
-</div>
-
 <!-- ================= LIVE BADGE ================= -->
 <div class="live-wrap">
-    <span class="live-badge">
-        <span class="live-dot"></span>
-        <span>LIVE UPDATING</span>
-    </span>
+    <span class="live-badge"><span class="live-dot"></span><span>LIVE • 8 GAMES ACTIVE</span></span>
 </div>
 
-<!-- ================= COUNTDOWN ================= -->
-<div class="countdown-bar">
-    <div class="cd-label">⏰ NEXT RESULT IN</div>
-    <div class="cd-time" id="countdown">--:--:--</div>
-    <div class="cd-result" id="nextResultInfo">Loading...</div>
-</div>
-
-<!-- ================= DISCLAIMER ================= -->
-<div class="disclaimer-box">
-    <p><b>Disclaimer:</b> This website is for entertainment purposes only. All charts are for record purposes. Please make decisions at your own discretion.</p>
-</div>
-
-<!-- ================= SEARCH & FILTER ================= -->
-<div class="search-section">
-    <div class="search-row">
-        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search date (e.g. 01-01)" onkeypress="if(event.key==='Enter') searchDate()">
-        <button class="search-btn" onclick="searchDate()">Search</button>
+<!-- ================= WALLET BAR ================= -->
+<div class="wallet-bar">
+    <div class="wallet-item">
+        <div class="wi-lbl">💰 Points</div>
+        <div class="wi-val" id="walletPoints">0</div>
     </div>
-    <div class="month-tabs">
-        <button class="month-tab active" onclick="filterMonth('all', this)">All</button>
-        <button class="month-tab" onclick="filterMonth('01', this)">Jan</button>
-        <button class="month-tab" onclick="filterMonth('02', this)">Feb</button>
-        <button class="month-tab" onclick="filterMonth('03', this)">Mar</button>
-        <button class="month-tab" onclick="filterMonth('04', this)">Apr</button>
-        <button class="month-tab" onclick="filterMonth('05', this)">May</button>
-        <button class="month-tab" onclick="filterMonth('06', this)">Jun</button>
-        <button class="month-tab" onclick="filterMonth('07', this)">Jul</button>
-        <button class="month-tab" onclick="filterMonth('08', this)">Aug</button>
-        <button class="month-tab" onclick="filterMonth('09', this)">Sep</button>
-        <button class="month-tab" onclick="filterMonth('10', this)">Oct</button>
-        <button class="month-tab" onclick="filterMonth('11', this)">Nov</button>
-        <button class="month-tab" onclick="filterMonth('12', this)">Dec</button>
+    <div class="wallet-item">
+        <div class="wi-lbl">🎯 Today</div>
+        <div class="wi-val" id="walletToday">0</div>
+    </div>
+    <div class="wallet-item">
+        <div class="wi-lbl">🏆 Best</div>
+        <div class="wi-val" id="walletBest">0</div>
     </div>
 </div>
 
-<!-- ================= QUICK ACTIONS ================= -->
-<div class="action-grid">
-    <button class="action-btn" onclick="toggleStats()"><span class="ic">📊</span><span class="lbl">Stats</span></button>
-    <button class="action-btn" onclick="downloadPDF()"><span class="ic">📥</span><span class="lbl">PDF</span></button>
-    <button class="action-btn" onclick="window.print()"><span class="ic">🖨️</span><span class="lbl">Print</span></button>
-    <button class="action-btn" onclick="shareWhatsApp()"><span class="ic">📱</span><span class="lbl">Share</span></button>
-    <button class="action-btn" onclick="openGameSection()"><span class="ic">🎮</span><span class="lbl">Game</span></button>
-    <button class="action-btn" onclick="enableNotifications()"><span class="ic">🔔</span><span class="lbl">Notify</span></button>
+<!-- ================= HERO ================= -->
+<div class="hero">
+    <h2>🎮 ROYAL GAMES ZONE</h2>
+    <p>8 Games khelo, Points kamao, Free Subscription pao!</p>
 </div>
 
-<!-- ================= STATS PANEL ================= -->
-<div class="stats-panel" id="statsPanel">
-    <h3>📈 Chart Statistics</h3>
-    <div class="stats-grid">
-        <div class="stat-box"><div class="num" id="stTotal">0</div><div class="lbl">Total</div></div>
-        <div class="stat-box"><div class="num" id="stRed">0</div><div class="lbl">Red</div></div>
-        <div class="stat-box"><div class="num" id="stBlack">0</div><div class="lbl">Black</div></div>
-        <div class="stat-box"><div class="num" id="stUnique">0</div><div class="lbl">Unique</div></div>
+<!-- ================= GAMES GRID ================= -->
+<div class="games-grid">
+    <div class="game-tile" onclick="openGame('numberGuess')">
+        <span class="gt-badge hot">HOT</span>
+        <span class="gt-icon">🎯</span>
+        <span class="gt-name">Number Guess</span>
+        <span class="gt-desc">0-99 Guess</span>
     </div>
-    <div class="hot-cold-section">
-        <div class="hc-box"><h4>🔥 Hot Jodis</h4><div id="hotList"></div></div>
-        <div class="hc-box"><h4>❄️ Cold Jodis</h4><div id="coldList"></div></div>
+    <div class="game-tile" onclick="openGame('spinWheel')">
+        <span class="gt-badge">POPULAR</span>
+        <span class="gt-icon">🎰</span>
+        <span class="gt-name">Spin Wheel</span>
+        <span class="gt-desc">Lucky Spin</span>
     </div>
-</div>
-
-<!-- ================= CHART TOP BAR ================= -->
-<div class="chart-top-bar">
-    <button class="go-to-bottom-btn" onclick="window.scrollTo({top: document.body.scrollHeight, behavior:'smooth'})">↓ Bottom</button>
-    <button class="blink-game-btn" onclick="openGameSection()">🎮 PLAY GAME</button>
-</div>
-
-<!-- ================= CHART ================= -->
-<div id="chartWrapper">
-    <table>
-        <thead>
-            <tr>
-                <th style="width:52px;">DATE</th>
-                <th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
-            </tr>
-        </thead>
-        <tbody id="gridData"></tbody>
-    </table>
-</div>
-
-<!-- ================= FAQ ================= -->
-<div class="info-section" id="faqSection">
-    <h3>❓ FAQ</h3>
-    <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">What is Royal Panel Chart?</div>
-        <div class="faq-a">Royal Panel Chart is a live updated chart showing daily Matka results. We provide accurate and up-to-date records for entertainment purposes.</div>
+    <div class="game-tile" onclick="openGame('diceRoll')">
+        <span class="gt-icon">🎲</span>
+        <span class="gt-name">Dice Roll</span>
+        <span class="gt-desc">Roll & Win</span>
     </div>
-    <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">How often is the chart updated?</div>
-        <div class="faq-a">The chart is updated live as soon as new results are available. You can see the LIVE badge at the top indicating real-time updates.</div>
+    <div class="game-tile" onclick="openGame('memoryMatch')">
+        <span class="gt-icon">🃏</span>
+        <span class="gt-name">Memory Match</span>
+        <span class="gt-desc">Match Cards</span>
     </div>
-    <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Can I download the chart?</div>
-        <div class="faq-a">Yes! Use the PDF button to download the chart, or use Print option to save it as PDF.</div>
+    <div class="game-tile" onclick="openGame('quizGame')">
+        <span class="gt-badge new">NEW</span>
+        <span class="gt-icon">❓</span>
+        <span class="gt-name">Quiz Game</span>
+        <span class="gt-desc">Test Knowledge</span>
     </div>
-    <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Is the game free?</div>
-        <div class="faq-a">Yes! ROYAL NUMBER HUNT is 100% free. Play daily, earn points, and redeem free subscriptions.</div>
+    <div class="game-tile" onclick="openGame('colorPrediction')">
+        <span class="gt-icon">🎨</span>
+        <span class="gt-name">Color Predict</span>
+        <span class="gt-desc">Guess Color</span>
+    </div>
+    <div class="game-tile" onclick="openGame('mathChallenge')">
+        <span class="gt-icon">🔢</span>
+        <span class="gt-name">Math Challenge</span>
+        <span class="gt-desc">Fast Calculate</span>
+    </div>
+    <div class="game-tile" onclick="openGame('dailyChallenge')">
+        <span class="gt-badge hot">DAILY</span>
+        <span class="gt-icon">🏆</span>
+        <span class="gt-name">Daily Challenge</span>
+        <span class="gt-desc">Bonus Points</span>
     </div>
 </div>
 
-<!-- ================= CONTACT ================= -->
-<div class="info-section" id="contactSection">
-    <h3>📞 Contact Us</h3>
-    <form class="contact-form" onsubmit="submitContact(event)">
-        <input type="text" id="ctName" placeholder="Your Name" required>
-        <input type="tel" id="ctPhone" placeholder="Mobile Number" required>
-        <textarea id="ctMsg" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<!-- ================= LEADERBOARD ================= -->
+<div class="leaderboard-panel">
+    <h3>🏆 TOP PLAYERS</h3>
+    <div id="leaderboardList"></div>
 </div>
 
-<!-- ================= PAYMENT BUTTON ================= -->
-<div style="font-size: 13px; font-weight: 800; color: #b45309; margin: 15px 0 2px 0; text-transform: uppercase;">ACCESS PANEL CHART</div>
-<button class="btn-pay-main" style="width:90%; max-width:360px;" onclick="openGameSection()">खाता बनाएँ / CREATE ACCOUNT 🔑</button>
-
-<!-- ================= COPYRIGHT ================= -->
-<div class="copyright-box">ALL RIGHTS RESERVED (2026)</div>
+<!-- ================= REWARDS ================= -->
+<div class="leaderboard-panel">
+    <h3>🎁 REWARDS SHOP</h3>
+    <div id="rewardsList"></div>
+</div>
 
 <!-- ================= FLOATING BUTTONS ================= -->
 <div class="floating-btns">
-    <a href="https://wa.me/919999999999" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp">💬</a>
-    <button class="float-btn top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Top">⬆</button>
+    <a href="https://wa.me/919999999999" target="_blank" class="float-btn whatsapp-btn">💬</a>
+    <button class="float-btn top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆</button>
 </div>
 
 <!-- ================= TOAST ================= -->
 <div class="toast" id="toast"></div>
 
-<!-- ================= GAME SECTION ================= -->
-<div class="game-section" id="gameSection">
-    <div class="game-header">
-        <h2>🎯 ROYAL NUMBER HUNT</h2>
-        <button class="game-close" onclick="closeGame()">✕</button>
-    </div>
-
-    <div class="game-user-info">
-        <div class="gui-item"><span class="gui-lbl">💰 Points</span><span class="gui-val" id="gamePoints">0</span></div>
-        <div class="gui-item"><span class="gui-lbl">🎯 Today</span><span class="gui-val" id="gameTodayCount">0/5</span></div>
-        <div class="gui-item"><span class="gui-lbl">🏆 Best</span><span class="gui-val" id="gameBest">0</span></div>
-    </div>
-
-    <div class="game-target">
-        <div class="gt-label">🎯 AAJ KA TARGET</div>
-        <div class="gt-hint">0-99 ke beech number guess karo</div>
-    </div>
-
-    <div class="game-guess-box">
-        <input type="number" id="guessInput" min="0" max="99" placeholder="00" onkeypress="if(event.key==='Enter') submitGuess()">
-        <button onclick="submitGuess()" class="guess-btn" id="guessBtn">🎯 GUESS KARO</button>
-    </div>
-
-    <div class="game-result" id="gameResult"></div>
-
-    <div class="game-history">
-        <h4>📜 Aaj Ke Guesses</h4>
-        <div id="guessHistory" class="guess-history">
-            <div style="color:#94a3b8;font-size:12px;">Abhi tak koi guess nahi</div>
+<!-- ================= GAME MODAL ================= -->
+<div class="game-overlay" id="gameOverlay">
+    <div class="game-modal">
+        <div class="game-modal-header">
+            <h3 id="modalTitle">🎮 Game</h3>
+            <button class="game-modal-close" onclick="closeGame()">✕</button>
         </div>
-    </div>
-
-    <div class="game-rewards">
-        <h4>🎁 Rewards</h4>
-        <div class="rewards-grid" id="rewardsGrid"></div>
-    </div>
-
-    <div class="game-leaderboard">
-        <h4>🏆 Top Players</h4>
-        <div id="leaderboard" class="leaderboard-list"></div>
-    </div>
-
-    <div class="game-ad-space">
-        <div class="ad-placeholder">📺 Ad Space (AdSense yahan aayega)</div>
+        <div id="gameContent"></div>
     </div>
 </div>
 
 <!-- ================= PAYMENT MODAL ================= -->
-<div id="vipModal" class="overlay">
-    <div class="modal-content">
+<div id="vipModal" class="game-overlay" style="z-index: 6000;">
+    <div class="game-modal">
         <div id="step-create-account">
-            <div class="modal-header-box" style="display:flex; justify-content:space-between; align-items:center;">
-                <span>ENTER DETAILS</span>
-                <span onclick="closeVipModal()" style="font-size:20px; cursor:pointer;">✕</span>
-            </div>
-            <div class="notice-box"><b>Account Activation:</b> विवरण और भुगतान जमा करने के बाद एडमिन द्वारा अकाउंट ओपन किया जाएगा।</div>
-            <label style="font-size:11.5px; font-weight:700;">Name:</label>
-            <input type="text" id="vName" placeholder="अपना नाम">
-            <label style="font-size:11.5px; font-weight:700;">Mobile:</label>
-            <input type="number" id="vPhone" placeholder="मोबाइल नंबर">
-            <button class="btn-pay-main" onclick="goPay()">NEXT</button>
-            <button class="btn-pay-main" style="background:#64748b;" onclick="closeVipModal()">बंद करें</button>
+            <div class="game-modal-header"><h3>ENTER DETAILS</h3><button class="game-modal-close" onclick="closeVipModal()">✕</button></div>
+            <input type="text" id="vName" placeholder="Name" style="width:100%;padding:11px;margin:6px 0;border:1.5px solid var(--border-soft);border-radius:8px;background:var(--input-bg);color:var(--text-main);">
+            <input type="number" id="vPhone" placeholder="Mobile" style="width:100%;padding:11px;margin:6px 0;border:1.5px solid var(--border-soft);border-radius:8px;background:var(--input-bg);color:var(--text-main);">
+            <button class="game-btn" style="width:100%;margin-top:10px;" onclick="goPay()">NEXT</button>
         </div>
-
         <div id="step2" style="display:none;">
-            <div class="modal-header-box">One Time Account Activation</div>
-            <div style="text-align:center;">
-                <span style="font-size:11.5px; font-weight:700;">Fee:</span><br>
-                <span style="color:var(--vip-green); font-weight:900; font-size:24px;">₹799</span>
+            <div class="game-modal-header"><h3>PAYMENT</h3><button class="game-modal-close" onclick="closeVipModal()">✕</button></div>
+            <div style="text-align:center;padding:10px;">
+                <p style="font-size:13px;font-weight:700;">Registration Fee</p>
+                <p style="font-size:28px;font-weight:900;color:var(--vip-green);">₹799</p>
+                <div style="background:#f8fafc;padding:10px;border-radius:8px;margin:10px 0;font-size:13px;font-weight:700;color:#1e293b;">
+                    UPI: omkaryadav@paytm
+                </div>
+                <button class="game-btn" style="width:100%;" onclick="closeVipModal(); showToast('✅ Payment received!')">PAYMENT DONE</button>
             </div>
-            <img src="paytm-png.jpeg" class="qr-img" alt="QR">
-            <div style="font-size:11.5px; font-weight:700; margin-bottom:4px;">UPI ID:</div>
-            <div class="upi-box"><span id="upiText">omkaryadav@paytm</span><button class="copy-btn" onclick="copyUpi()">COPY</button></div>
-            <div class="instruction-box">
-                <b>Instructions:</b>
-                <ul><li>QR स्कैन करें या UPI ID पर भुगतान करें।</li><li>UTR सुरक्षित रखें।</li></ul>
-            </div>
-            <button class="btn-pay-main" onclick="goToPaymentDetails()">PAYMENT DONE</button>
-            <p onclick="backToStep1()" style="color:var(--vip-green); cursor:pointer; font-size:12px; text-align:center; font-weight:700;">← वापस</p>
-        </div>
-
-        <div id="step-pay-details" style="display:none;">
-            <div class="modal-header-box">Payment Details</div>
-            <label style="font-size:11.5px; font-weight:700;">Mobile:</label>
-            <input type="number" id="payNumber">
-            <label style="font-size:11.5px; font-weight:700;">UPI ID:</label>
-            <input type="text" id="payUpi" placeholder="yourname@paytm">
-            <label style="font-size:11.5px; font-weight:700;">UTR ID:</label>
-            <input type="text" id="payUtid" placeholder="12 Digit UTR">
-            <button class="btn-pay-main" onclick="submitPayment()">SUBMIT</button>
-            <p onclick="backToStep2()" style="color:var(--vip-green); cursor:pointer; font-size:12px; text-align:center; font-weight:700;">← वापस</p>
-        </div>
-
-        <div id="step3" style="display:none; text-align:center;">
-            <div class="modal-header-box">THANK YOU</div>
-            <p style="font-size:13px; font-weight:800; color:var(--vip-green);">Pending Admin Approval</p>
-            <div class="notice-box" style="text-align:left;">आपका पेमेंट सफल रहा। एडमिन जाँच के बाद अकाउंट ओपन करेगा।</div>
-            <div style="font-size:11.5px; font-weight:700;">Verification Timer:</div>
-            <div id="timerBox" style="font-size:32px; color:var(--vip-green); font-weight:900;">02:00</div>
-        </div>
-
-        <div id="step-subscription" style="display:none;">
-            <div class="modal-header-box">Subscription Plans</div>
-            <div class="plans-grid">
-                <div class="sub-plan-card"><div><div class="sub-plan-logo">🔑</div><div class="sub-plan-title">1 Day</div><div class="sub-plan-price">₹1499</div></div><button class="sel-btn" onclick="openPlanPayment('1 Day', '1499')">SELECT</button></div>
-                <div class="sub-plan-card"><div><div class="sub-plan-logo">⚡</div><div class="sub-plan-title">7 Days</div><div class="sub-plan-price">₹2499</div></div><button class="sel-btn" onclick="openPlanPayment('7 Days', '2499')">SELECT</button></div>
-                <div class="sub-plan-card"><div><div class="sub-plan-logo">⭐</div><div class="sub-plan-title">10 Days</div><div class="sub-plan-price">₹3499</div></div><button class="sel-btn" onclick="openPlanPayment('10 Days', '3499')">SELECT</button></div>
-                <div class="sub-plan-card"><div><div class="sub-plan-logo">💎</div><div class="sub-plan-title">30 Days</div><div class="sub-plan-price">₹4999</div></div><button class="sel-btn" onclick="openPlanPayment('30 Days', '4999')">SELECT</button></div>
-            </div>
-        </div>
-
-        <div id="step-plan-pay" style="display:none; text-align:center;">
-            <div class="modal-header-box" id="planTitleDisplay">Plan</div>
-            <div style="font-size:24px; font-weight:900; color:var(--vip-green);" id="planPriceDisplay">₹0</div>
-            <img src="paytm-png.jpeg" class="qr-img" alt="QR">
-            <div class="upi-box"><span id="planUpiText">omkaryadav@paytm</span><button class="copy-btn" onclick="copyPlanUpi()">COPY</button></div>
-            <label style="font-size:11.5px; font-weight:700; display:block; text-align:left;">UTR ID:</label>
-            <input type="text" id="planUtidInput" placeholder="12 Digit UTR">
-            <button class="btn-pay-main" onclick="submitPlanPayment()">PAYMENT DONE</button>
-        </div>
-
-        <div id="step-plan-timer" style="display:none; text-align:center;">
-            <div class="modal-header-box">VERIFYING</div>
-            <div id="planTimerBox" style="font-size:34px; color:var(--vip-green); font-weight:900;">01:00</div>
-        </div>
-
-        <div id="step4" style="display:none; text-align:center;">
-            <div class="modal-header-box">SUCCESS ✅</div>
-            <p style="font-size:12px; font-weight:800; color:var(--vip-green);">भुगतान सफलतापूर्वक प्राप्त हुआ</p>
-            <div class="next-box">एडमिन द्वारा जाँच के बाद सबस्क्रिप्शन एक्टिव होगा।</div>
-            <button class="btn-pay-main" onclick="closeVipModal()">CLOSE</button>
         </div>
     </div>
 </div>
 
 <script>
 // ================= CONFIG =================
-const CSV = "https://docs.google.com/spreadsheets/d/1z7pEP9CAcp5xozZR_hPVzsEBEYrzQ8gbYusHpfWYBxQ/export?format=csv&gid=0";
+const CONFIG = {
+    dailyGameLimit: 10,       // 10 games per day
+    wheelSegments: [10, 20, 30, 40, 50, 60, 70, 100],
+    memoryCardValues: ['🍎','🍌','🍇','🍒','🍎','🍌','🍇','🍒'],
+    quizQuestions: [
+        { q: "2 + 2 = ?", opts: ["3","4","5","6"], ans: 1 },
+        { q: "10 × 5 = ?", opts: ["40","45","50","55"], ans: 2 },
+        { q: "100 ÷ 4 = ?", opts: ["20","25","30","35"], ans: 1 },
+        { q: "15 + 27 = ?", opts: ["40","41","42","43"], ans: 2 },
+        { q: "9 × 9 = ?", opts: ["72","79","81","90"], ans: 2 }
+    ]
+};
 
-let allChartRows = [];
-let lastDataHash = "";
-let favorites = JSON.parse(localStorage.getItem('royalFavs') || '[]');
-let currentMonthFilter = 'all';
+// ================= USER DATA =================
+let userData = JSON.parse(localStorage.getItem('royalGames') || 'null');
+if (!userData) {
+    userData = {
+        id: 'u_' + Math.random().toString(36).slice(2, 10),
+        name: 'Player' + Math.floor(Math.random() * 9999),
+        points: 0,
+        best: 0,
+        totalGames: 0,
+        dailyGames: {},
+        rewards: [],
+        streak: 0
+    };
+    saveUserData();
+}
 
-// ================= INIT =================
-window.addEventListener('load', () => {
-    initDarkMode();
-    loadChart();
-    startCountdown();
-    setInterval(loadChart, 30000);
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) loadChart();
-    });
-});
+function saveUserData() {
+    localStorage.setItem('royalGames', JSON.stringify(userData));
+}
+
+function todayKey() {
+    return new Date().toISOString().slice(0, 10);
+}
+
+function getTodayGames() {
+    return userData.dailyGames[todayKey()] || 0;
+}
+
+function canPlay() {
+    return getTodayGames() < CONFIG.dailyGameLimit;
+}
+
+function addPlay(pts = 0) {
+    const today = todayKey();
+    userData.dailyGames[today] = (userData.dailyGames[today] || 0) + 1;
+    userData.totalGames++;
+    if (pts > 0) {
+        userData.points += pts;
+        if (userData.points > userData.best) userData.best = userData.points;
+    }
+    saveUserData();
+    updateWallet();
+}
+
+// ================= WALLET =================
+function updateWallet() {
+    document.getElementById('walletPoints').innerText = userData.points;
+    document.getElementById('walletToday').innerText = getTodayGames() + '/' + CONFIG.dailyGameLimit;
+    document.getElementById('walletBest').innerText = userData.best;
+}
 
 // ================= DARK MODE =================
-function initDarkMode() {
-    if (localStorage.getItem('royalDarkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('modeBtn').innerText = '☀️';
-    }
+if (localStorage.getItem('royalDarkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('modeBtn').innerText = '☀️';
 }
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
@@ -871,222 +830,31 @@ function toggleDarkMode() {
     localStorage.setItem('royalDarkMode', isDark);
 }
 
-// ================= LOAD CHART =================
-async function loadChart() {
-    try {
-        const res = await fetch(CSV + "&cache=" + Date.now());
-        const data = await res.text();
-        const currentHash = simpleHash(data);
-        const isNewData = lastDataHash !== "" && currentHash !== lastDataHash;
-        if (currentHash === lastDataHash) return;
-        lastDataHash = currentHash;
-        
-        const rows = data.split('\n').filter(r => r.trim() !== '').map(r => r.split(','));
-        allChartRows = rows;
-        renderChart();
-        computeStats();
-        
-        if (isNewData) {
-            showToast("🎉 New Result Updated!");
-            launchConfetti();
-            sendNotification();
-        }
-    } catch (e) { console.log("Load error:", e); }
-}
-
-function simpleHash(str) {
-    let h = 0;
-    for (let i = 0; i < str.length; i++) {
-        h = ((h << 5) - h) + str.charCodeAt(i);
-        h |= 0;
-    }
-    return h;
-}
-
-// ================= RENDER CHART =================
-function renderChart() {
-    let html = '';
-    let lockShown = false;
-    
-    for (let i = 1; i < allChartRows.length; i++) {
-        let d = (allChartRows[i][0] || "").trim();
-        if (!d) continue;
-        
-        const monthMatch = d.match(/[-/](\d{1,2})[-/]/);
-        let month = monthMatch ? monthMatch[1].padStart(2, '0') : '';
-        const hideRow = currentMonthFilter !== 'all' && month !== currentMonthFilter;
-        
-        let formattedDate = d.includes('-') ? d.replace('-', '<br>') 
-                          : d.includes('/') ? d.replace('/', '<br>') 
-                          : d.replace(' ', '<br>');
-        
-        html += `<tr data-date="${d}" data-month="${month}" ${hideRow ? 'class="hidden-row"' : ''}>
-                    <td class="date-box">${formattedDate}</td>`;
-        
-        for (let j = 1; j <= 16; j += 3) {
-            let lp = (allChartRows[i][j] || "").trim();
-            let jd = (allChartRows[i][j+1] || "").trim();
-            let rp = (allChartRows[i][j+2] || "").trim();
-            
-            if (!jd && !lp) {
-                if (!lockShown) {
-                    html += `<td onclick="openGameSection()"><span class="lock-btn">🔒</span></td>`;
-                    lockShown = true;
-                } else html += `<td></td>`;
-            } else {
-                let isRed = (jd.length === 2 && (jd[0] === jd[1] || Math.abs(jd[0]-jd[1]) === 5));
-                let isFav = favorites.includes(jd);
-                html += `<td class="${isRed ? 'red-house' : ''}">
-                    <div class="cell-content">
-                        <div class="panna-vertical">${lp.split('').map(n => `<span>${n}</span>`).join('')}</div>
-                        <div class="jodi">${jd}</div>
-                        <div class="panna-vertical">${rp.split('').map(n => `<span>${n}</span>`).join('')}</div>
-                    </div>
-                    <span class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFav(event, '${jd}')">⭐</span>
-                </td>`;
-            }
-        }
-        html += `</tr>`;
-    }
-    document.getElementById('gridData').innerHTML = html;
-}
-
-// ================= SEARCH =================
-function searchDate() {
-    const q = document.getElementById('searchInput').value.trim();
-    if (!q) return showToast("Enter a date", "error");
-    document.querySelectorAll('#gridData tr').forEach(tr => tr.classList.remove('highlight-row'));
-    currentMonthFilter = 'all';
-    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.month-tab')[0].classList.add('active');
-    
-    let found = false;
-    document.querySelectorAll('#gridData tr').forEach(tr => {
-        tr.classList.remove('hidden-row');
-        const date = tr.getAttribute('data-date') || '';
-        if (date.includes(q) || q.includes(date)) {
-            tr.classList.add('highlight-row');
-            tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            found = true;
-        }
-    });
-    showToast(found ? "✅ Match found!" : "❌ No match", found ? "" : "error");
-}
-
-function openSearchFromMenu() {
-    closeDropdown();
-    setTimeout(() => {
-        const inp = document.getElementById('searchInput');
-        inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        inp.focus();
-    }, 300);
-}
-
-// ================= MONTH FILTER =================
-function filterMonth(month, btn) {
-    currentMonthFilter = month;
-    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('#gridData tr').forEach(tr => {
-        const m = tr.getAttribute('data-month') || '';
-        if (month === 'all' || m === month) tr.classList.remove('hidden-row');
-        else tr.classList.add('hidden-row');
-    });
-}
-
-// ================= FAVORITES =================
-function toggleFav(e, jodi) {
+// ================= DROPDOWN =================
+function toggleDropdown(e) {
     e.stopPropagation();
-    if (!jodi) return;
-    const idx = favorites.indexOf(jodi);
-    if (idx > -1) favorites.splice(idx, 1);
-    else favorites.push(jodi);
-    localStorage.setItem('royalFavs', JSON.stringify(favorites));
-    renderChart();
-    showToast(idx > -1 ? "Removed" : "⭐ Added");
+    document.getElementById('dropdownMenu').classList.toggle('active');
 }
-
-// ================= STATS =================
-function computeStats() {
-    let jodiCount = {};
-    let total = 0, red = 0, black = 0;
-    const uniqueSet = new Set();
-    
-    for (let i = 1; i < allChartRows.length; i++) {
-        for (let j = 2; j <= 16; j += 3) {
-            const jd = (allChartRows[i][j] || "").trim();
-            if (!jd || jd.length !== 2) continue;
-            total++;
-            uniqueSet.add(jd);
-            jodiCount[jd] = (jodiCount[jd] || 0) + 1;
-            const isRed = (jd[0] === jd[1] || Math.abs(jd[0]-jd[1]) === 5);
-            if (isRed) red++; else black++;
-        }
-    }
-    
-    document.getElementById('stTotal').innerText = total;
-    document.getElementById('stRed').innerText = red;
-    document.getElementById('stBlack').innerText = black;
-    document.getElementById('stUnique').innerText = uniqueSet.size;
-    
-    const sorted = Object.entries(jodiCount).sort((a,b) => b[1] - a[1]);
-    const hot = sorted.slice(0, 5);
-    const cold = sorted.slice(-5).reverse();
-    
-    document.getElementById('hotList').innerHTML = hot.length 
-        ? hot.map(([k,v]) => `<div class="hc-item">${k} <span>×${v}</span></div>`).join('')
-        : '<div class="hc-item" style="color:#64748b">No data</div>';
-    document.getElementById('coldList').innerHTML = cold.length 
-        ? cold.map(([k,v]) => `<div class="hc-item">${k} <span>×${v}</span></div>`).join('')
-        : '<div class="hc-item" style="color:#64748b">No data</div>';
+function closeDropdown() {
+    document.getElementById('dropdownMenu').classList.remove('active');
 }
+window.addEventListener('click', e => {
+    if (!e.target.matches('.menu-icon')) closeDropdown();
+});
 
-function toggleStats() {
-    const p = document.getElementById('statsPanel');
-    p.classList.toggle('show');
-    if (p.classList.contains('show')) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// ================= PDF / PRINT =================
-function downloadPDF() {
-    showToast("📥 Generating PDF...");
-    const el = document.getElementById('chartWrapper');
-    const opt = {
-        margin: 5,
-        filename: 'royal-chart-' + new Date().toISOString().slice(0,10) + '.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(el).save().then(() => {
-        showToast("✅ PDF Downloaded!");
-    });
-}
-
-// ================= WHATSAPP =================
-function shareWhatsApp() {
-    const text = "🎯 Check out ROYAL PANEL CHART — Live Matka Results!\n" + window.location.href;
-    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-}
-
-// ================= NOTIFICATIONS =================
-async function enableNotifications() {
-    if (!("Notification" in window)) return showToast("Not supported", "error");
-    if (Notification.permission === "granted") return showToast("✅ Already ON");
-    const perm = await Notification.requestPermission();
-    showToast(perm === "granted" ? "✅ Enabled!" : "❌ Denied", perm === "granted" ? "" : "error");
-}
-
-function sendNotification() {
-    if (Notification.permission === "granted") {
-        new Notification("🎯 New Result Updated!", { body: "Royal Panel Chart has new data" });
-    }
+// ================= TOAST =================
+function showToast(msg, type = '') {
+    const t = document.getElementById('toast');
+    t.innerText = msg;
+    t.className = 'toast show ' + type;
+    clearTimeout(t._t);
+    t._t = setTimeout(() => t.className = 'toast ' + type, 2800);
 }
 
 // ================= CONFETTI =================
 function launchConfetti() {
-    const colors = ['#f59e0b', '#16a34a', '#dc2626', '#0ea5e9', '#8b5cf6'];
-    for (let i = 0; i < 40; i++) {
+    const colors = ['#f59e0b','#16a34a','#dc2626','#0ea5e9','#8b5cf6'];
+    for (let i = 0; i < 30; i++) {
         const c = document.createElement('div');
         c.className = 'confetti';
         c.style.left = Math.random() * 100 + 'vw';
@@ -1098,178 +866,602 @@ function launchConfetti() {
     }
 }
 
-// ================= COUNTDOWN =================
-const RESULT_TIMES = ["11:30", "12:30", "15:30", "17:30", "19:30", "21:30"];
-function startCountdown() {
-    setInterval(() => {
-        const now = new Date();
-        const cur = now.getHours() * 60 + now.getMinutes();
-        let next = null;
-        for (const t of RESULT_TIMES) {
-            const [th, tm] = t.split(':').map(Number);
-            if (th * 60 + tm > cur) { next = t; break; }
-        }
-        if (!next) next = RESULT_TIMES[0];
-        const [nh, nm] = next.split(':').map(Number);
-        let diff = (nh * 60 + nm) - cur;
-        if (diff < 0) diff += 24 * 60;
-        const h = Math.floor(diff / 60);
-        const m = diff % 60;
-        const s = 59 - now.getSeconds();
-        document.getElementById('countdown').innerText =
-            String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-        document.getElementById('nextResultInfo').innerText = "Next result at " + next + " IST";
-    }, 1000);
-}
+// ================= OPEN / CLOSE GAME MODAL =================
+let currentGame = null;
 
-// ================= DROPDOWN =================
-function toggleDropdown(e) {
-    e.stopPropagation();
-    document.getElementById('dropdownMenu').classList.toggle('active');
-}
-function closeDropdown() {
-    document.getElementById('dropdownMenu').classList.remove('active');
-}
-window.addEventListener('click', (e) => {
-    if (!e.target.matches('.menu-icon')) closeDropdown();
-});
-
-// ================= CONTACT =================
-function submitContact(e) {
-    e.preventDefault();
-    showToast("✅ Message sent!");
-    e.target.reset();
-}
-
-// ================= TOAST =================
-function showToast(msg, type = '') {
-    const t = document.getElementById('toast');
-    t.innerText = msg;
-    t.className = 'toast show ' + type;
-    clearTimeout(t._to);
-    t._to = setTimeout(() => t.className = 'toast ' + type, 2800);
-}
-
-// ================= GAME LOGIC =================
-function getDailyTarget() {
-    const today = new Date();
-    const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-    return Math.abs((seed * 9301 + 49297) % 233280) % 100;
-}
-
-let gameData = JSON.parse(localStorage.getItem('royalGameData') || 'null');
-if (!gameData) {
-    gameData = {
-        userId: 'user_' + Math.random().toString(36).slice(2, 10),
-        points: 0,
-        bestPoints: 0,
-        guesses: {},
-        rewards: []
-    };
-    saveGameData();
-}
-
-function saveGameData() {
-    localStorage.setItem('royalGameData', JSON.stringify(gameData));
-}
-
-function getTodayKey() {
-    return new Date().toISOString().slice(0, 10);
-}
-
-function openGame() {
-    document.getElementById('gameSection').classList.add('show');
+function openGame(gameType) {
+    if (!canPlay()) {
+        showToast("⚠️ Aaj ke " + CONFIG.dailyGameLimit + " games khatam! Kal aana.", "error");
+        return;
+    }
+    currentGame = gameType;
+    document.getElementById('gameOverlay').classList.add('show');
     document.body.style.overflow = 'hidden';
-    refreshGameUI();
+    
+    const games = {
+        numberGuess: { title: '🎯 Number Guess', render: renderNumberGuess },
+        spinWheel: { title: '🎰 Spin Wheel', render: renderSpinWheel },
+        diceRoll: { title: '🎲 Dice Roll', render: renderDiceRoll },
+        memoryMatch: { title: '🃏 Memory Match', render: renderMemoryMatch },
+        quizGame: { title: '❓ Quiz Game', render: renderQuiz },
+        colorPrediction: { title: '🎨 Color Prediction', render: renderColorPrediction },
+        mathChallenge: { title: '🔢 Math Challenge', render: renderMathChallenge },
+        dailyChallenge: { title: '🏆 Daily Challenge', render: renderDailyChallenge }
+    };
+    
+    if (games[gameType]) {
+        document.getElementById('modalTitle').innerText = games[gameType].title;
+        games[gameType].render();
+    }
 }
 
 function closeGame() {
-    document.getElementById('gameSection').classList.remove('show');
+    document.getElementById('gameOverlay').classList.remove('show');
     document.body.style.overflow = '';
+    currentGame = null;
+    updateWallet();
 }
 
-function submitGuess() {
-    const inp = document.getElementById('guessInput');
-    const guess = parseInt(inp.value);
+// ================= GAME 1: NUMBER GUESS =================
+function renderNumberGuess() {
+    const today = new Date();
+    const seed = today.getFullYear()*10000 + (today.getMonth()+1)*100 + today.getDate();
+    const target = Math.abs((seed * 9301 + 49297) % 233280) % 100;
+    let guesses = [];
     
-    if (isNaN(guess) || guess < 0 || guess > 99) {
-        showToast("⚠️ 0-99 ke beech daalo", "error");
-        return;
-    }
-    
-    const todayKey = getTodayKey();
-    const todayGuesses = gameData.guesses[todayKey] || [];
-    
-    if (todayGuesses.length >= 5) return showToast("⚠️ Aaj ke 5 guesses khatam!", "error");
-    if (todayGuesses.includes(guess)) return showToast("⚠️ Ye already guess kiya", "error");
-    
-    const target = getDailyTarget();
-    const diff = Math.abs(guess - target);
-    
-    let pointsEarned = 0, resultType = 'lose', message = '';
-    
-    if (diff === 0) { pointsEarned = 100; resultType = 'win'; message = '🎉 EXACT MATCH! 100 Points!'; }
-    else if (diff === 1) { pointsEarned = 50; resultType = 'win'; message = '🔥 Bahut Close! 50 Points!'; }
-    else if (diff === 2) { pointsEarned = 25; resultType = 'win'; message = '👍 Close! 25 Points!'; }
-    else if (diff <= 5) { pointsEarned = 10; resultType = 'win'; message = '😊 Thoda Close! 10 Points!'; }
-    else if (diff <= 10) { pointsEarned = 5; resultType = 'win'; message = '🙂 5 Points!'; }
-    else { message = '❌ Door hai! Try again.'; }
-    
-    todayGuesses.push(guess);
-    gameData.guesses[todayKey] = todayGuesses;
-    gameData.points = (gameData.points || 0) + pointsEarned;
-    if (gameData.points > (gameData.bestPoints || 0)) gameData.bestPoints = gameData.points;
-    saveGameData();
-    
-    const resultEl = document.getElementById('gameResult');
-    resultEl.className = 'game-result show ' + resultType;
-    resultEl.innerHTML = `
-        <div class="gr-icon">${resultType === 'win' ? '🎉' : '❌'}</div>
-        <div class="gr-title">${message}</div>
-        <div class="gr-sub">Target: <b>${String(target).padStart(2,'0')}</b> | Aapka: <b>${String(guess).padStart(2,'0')}</b></div>
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎯 Target: 0-99</span>
+            <span>🎮 Guesses: <b id="ngCount">0/3</b></span>
+        </div>
+        <div class="game-body">
+            <input type="number" id="ngInput" class="guess-input-lg" placeholder="00" min="0" max="99">
+            <button class="game-btn" onclick="submitNG()" id="ngBtn">🎯 GUESS KARO</button>
+            <div class="game-result-box" id="ngResult"></div>
+        </div>
     `;
     
-    if (pointsEarned > 0) launchConfetti();
-    inp.value = '';
-    refreshGameUI();
+    window.submitNG = function() {
+        const inp = document.getElementById('ngInput');
+        const guess = parseInt(inp.value);
+        
+        if (isNaN(guess) || guess < 0 || guess > 99) return showToast("⚠️ 0-99 ke beech daalo", "error");
+        if (guesses.includes(guess)) return showToast("⚠️ Ye already guess kiya", "error");
+        if (guesses.length >= 3) return showToast("⚠️ 3 guesses khatam", "error");
+        
+        guesses.push(guess);
+        document.getElementById('ngCount').innerText = guesses.length + '/3';
+        
+        const diff = Math.abs(guess - target);
+        let pts = 0, type = 'lose', msg = '';
+        
+        if (diff === 0) { pts = 100; type = 'win'; msg = '🎉 EXACT! 100 Points!'; }
+        else if (diff === 1) { pts = 50; type = 'win'; msg = '🔥 Very Close! 50 Points!'; }
+        else if (diff === 2) { pts = 25; type = 'win'; msg = '👍 Close! 25 Points!'; }
+        else if (diff <= 5) { pts = 10; type = 'win'; msg = '😊 10 Points!'; }
+        else if (diff <= 10) { pts = 5; type = 'win'; msg = '🙂 5 Points!'; }
+        else { msg = '❌ Door! Target was ' + target; }
+        
+        const r = document.getElementById('ngResult');
+        r.className = 'game-result-box show ' + type;
+        r.innerHTML = `<div style="font-size:30px">${type==='win'?'🎉':'❌'}</div>${msg}`;
+        
+        if (pts > 0) { addPlay(pts); launchConfetti(); }
+        else addPlay(0);
+        
+        inp.value = '';
+        if (guesses.length >= 3) {
+            document.getElementById('ngBtn').disabled = true;
+            document.getElementById('ngBtn').innerText = '✅ Done!';
+        }
+    };
 }
 
-function refreshGameUI() {
-    document.getElementById('gamePoints').innerText = gameData.points || 0;
-    document.getElementById('gameBest').innerText = gameData.bestPoints || 0;
+// ================= GAME 2: SPIN WHEEL =================
+function renderSpinWheel() {
+    const segs = CONFIG.wheelSegments;
+    let spinning = false;
+    let spins = 0;
     
-    const todayKey = getTodayKey();
-    const todayGuesses = gameData.guesses[todayKey] || [];
-    document.getElementById('gameTodayCount').innerText = todayGuesses.length + '/5';
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎰 Spins: <b id="swCount">0/2</b></span>
+            <span>💯 Max: 100 pts</span>
+        </div>
+        <div class="game-body" style="text-align:center;">
+            <div class="wheel-container">
+                <div class="wheel-pointer">▼</div>
+                <div class="wheel" id="wheelEl"></div>
+                <div class="wheel-center">SPIN</div>
+            </div>
+            <button class="game-btn" onclick="doSpin()" id="spinBtn">🎰 SPIN KARO</button>
+            <div class="game-result-box" id="swResult"></div>
+        </div>
+    `;
     
-    const histEl = document.getElementById('guessHistory');
-    if (todayGuesses.length === 0) {
-        histEl.innerHTML = '<div style="color:#94a3b8;font-size:12px;">Abhi tak koi guess nahi</div>';
-    } else {
-        const target = getDailyTarget();
-        histEl.innerHTML = todayGuesses.map(g => {
-            const diff = Math.abs(g - target);
-            const cls = diff <= 5 ? 'win' : 'lose';
-            return `<div class="gh-item ${cls}">${String(g).padStart(2,'0')}</div>`;
-        }).join('');
+    window.doSpin = function() {
+        if (spinning || spins >= 2) return;
+        spinning = true;
+        spins++;
+        document.getElementById('swCount').innerText = spins + '/2';
+        document.getElementById('spinBtn').disabled = true;
+        
+        const segAngle = 360 / segs.length;
+        const randomIdx = Math.floor(Math.random() * segs.length);
+        const spins360 = 5 * 360;
+        const finalAngle = spins360 + (randomIdx * segAngle) + (segAngle / 2);
+        
+        document.getElementById('wheelEl').style.transform = `rotate(${finalAngle}deg)`;
+        
+        setTimeout(() => {
+            const pts = segs[randomIdx];
+            const r = document.getElementById('swResult');
+            r.className = 'game-result-box show win';
+            r.innerHTML = `<div style="font-size:30px">🎉</div>You won ${pts} Points!`;
+            addPlay(pts);
+            launchConfetti();
+            spinning = false;
+            if (spins >= 2) {
+                document.getElementById('spinBtn').innerText = '✅ Done!';
+            } else {
+                document.getElementById('spinBtn').disabled = false;
+            }
+        }, 4200);
+    };
+}
+
+// ================= GAME 3: DICE ROLL =================
+function renderDiceRoll() {
+    let guess = null;
+    let rolls = 0;
+    const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎲 Rolls: <b id="drCount">0/2</b></span>
+            <span>💯 Max: 30 pts</span>
+        </div>
+        <div class="game-body" style="text-align:center;">
+            <div class="dice-container">
+                <div class="dice" id="dice1">⚀</div>
+                <div class="dice" id="dice2">⚀</div>
+            </div>
+            <p style="font-size:12px;font-weight:700;color:var(--text-soft);">Sum guess karo (2-12)</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0;">
+                ${[2,3,4,5,6,7,8,9,10,11,12].map(n => `<button class="game-btn secondary" data-sum="${n}" onclick="pickSum(${n}, this)" style="padding:6px 12px;font-size:13px;">${n}</button>`).join('')}
+            </div>
+            <button class="game-btn" onclick="rollDice()" id="rollBtn" disabled>🎲 ROLL KARO</button>
+            <div class="game-result-box" id="drResult"></div>
+        </div>
+    `;
+    
+    window.pickSum = function(n, btn) {
+        guess = n;
+        document.querySelectorAll('[data-sum]').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        if (rolls < 2) document.getElementById('rollBtn').disabled = false;
+    };
+    
+    window.rollDice = function() {
+        if (!guess || rolls >= 2) return;
+        rolls++;
+        document.getElementById('drCount').innerText = rolls + '/2';
+        document.getElementById('rollBtn').disabled = true;
+        
+        const d1 = document.getElementById('dice1');
+        const d2 = document.getElementById('dice2');
+        d1.classList.add('rolling');
+        d2.classList.add('rolling');
+        
+        let ticks = 0;
+        const interval = setInterval(() => {
+            d1.innerText = diceFaces[Math.floor(Math.random() * 6)];
+            d2.innerText = diceFaces[Math.floor(Math.random() * 6)];
+            ticks++;
+            if (ticks > 15) {
+                clearInterval(interval);
+                d1.classList.remove('rolling');
+                d2.classList.remove('rolling');
+                
+                const v1 = Math.floor(Math.random() * 6) + 1;
+                const v2 = Math.floor(Math.random() * 6) + 1;
+                d1.innerText = diceFaces[v1 - 1];
+                d2.innerText = diceFaces[v2 - 1];
+                const sum = v1 + v2;
+                
+                let pts = 0, type = 'lose', msg = '';
+                if (sum === guess) { pts = 30; type = 'win'; msg = `🎉 EXACT! Sum ${sum} = 30 Points!`; }
+                else if (Math.abs(sum - guess) === 1) { pts = 10; type = 'win'; msg = `👍 Close! Sum ${sum} = 10 Points!`; }
+                else { msg = `❌ Sum was ${sum}. Try again!`; }
+                
+                const r = document.getElementById('drResult');
+                r.className = 'game-result-box show ' + type;
+                r.innerHTML = `<div style="font-size:30px">${type==='win'?'🎉':'❌'}</div>${msg}`;
+                
+                addPlay(pts);
+                if (pts > 0) launchConfetti();
+                
+                guess = null;
+                document.querySelectorAll('[data-sum]').forEach(b => b.classList.remove('selected'));
+                if (rolls >= 2) {
+                    document.getElementById('rollBtn').innerText = '✅ Done!';
+                } else {
+                    document.getElementById('rollBtn').disabled = false;
+                }
+            }
+        }, 80);
+    };
+}
+
+// ================= GAME 4: MEMORY MATCH =================
+function renderMemoryMatch() {
+    const values = [...CONFIG.memoryCardValues];
+    // Shuffle
+    for (let i = values.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [values[i], values[j]] = [values[j], values[i]];
     }
     
-    renderRewards();
-    renderLeaderboard();
+    let flipped = [];
+    let matched = 0;
+    let moves = 0;
+    let locked = false;
     
-    const inp = document.getElementById('guessInput');
-    const btn = document.getElementById('guessBtn');
-    if (todayGuesses.length >= 5) {
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🃏 Moves: <b id="mmMoves">0</b></span>
+            <span>✅ Pairs: <b id="mmPairs">0/4</b></span>
+        </div>
+        <div class="game-body">
+            <div class="memory-grid" id="memGrid">
+                ${values.map((v, i) => `<div class="mem-card" data-idx="${i}" data-val="${v}" onclick="flipCard(this)">?</div>`).join('')}
+            </div>
+            <div class="game-result-box" id="mmResult"></div>
+        </div>
+    `;
+    
+    window.flipCard = function(card) {
+        if (locked || card.classList.contains('flipped') || card.classList.contains('matched')) return;
+        
+        card.classList.add('flipped');
+        card.innerText = card.dataset.val;
+        flipped.push(card);
+        moves++;
+        document.getElementById('mmMoves').innerText = moves;
+        
+        if (flipped.length === 2) {
+            locked = true;
+            if (flipped[0].dataset.val === flipped[1].dataset.val) {
+                setTimeout(() => {
+                    flipped[0].classList.add('matched');
+                    flipped[1].classList.add('matched');
+                    matched++;
+                    document.getElementById('mmPairs').innerText = matched + '/4';
+                    flipped = [];
+                    locked = false;
+                    
+                    if (matched === 4) {
+                        const pts = Math.max(50 - moves * 2, 10);
+                        const r = document.getElementById('mmResult');
+                        r.className = 'game-result-box show win';
+                        r.innerHTML = `<div style="font-size:30px">🎉</div>You matched all in ${moves} moves! +${pts} Points!`;
+                        addPlay(pts);
+                        launchConfetti();
+                    }
+                }, 500);
+            } else {
+                setTimeout(() => {
+                    flipped[0].classList.remove('flipped');
+                    flipped[1].classList.remove('flipped');
+                    flipped[0].innerText = '?';
+                    flipped[1].innerText = '?';
+                    flipped = [];
+                    locked = false;
+                }, 800);
+            }
+        }
+    };
+}
+
+// ================= GAME 5: QUIZ =================
+function renderQuiz() {
+    const qs = CONFIG.quizQuestions;
+    const q = qs[Math.floor(Math.random() * qs.length)];
+    let answered = false;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>❓ Question</span>
+            <span>💯 +20 pts</span>
+        </div>
+        <div class="game-body">
+            <div class="quiz-question">${q.q}</div>
+            <div class="quiz-options">
+                ${q.opts.map((o, i) => `<button class="quiz-opt" onclick="answerQuiz(${i})">${o}</button>`).join('')}
+            </div>
+            <div class="game-result-box" id="qzResult"></div>
+        </div>
+    `;
+    
+    window.answerQuiz = function(idx) {
+        if (answered) return;
+        answered = true;
+        const btns = document.querySelectorAll('.quiz-opt');
+        btns.forEach((b, i) => {
+            b.disabled = true;
+            if (i === q.ans) b.classList.add('correct');
+            else if (i === idx) b.classList.add('wrong');
+        });
+        
+        const r = document.getElementById('qzResult');
+        if (idx === q.ans) {
+            r.className = 'game-result-box show win';
+            r.innerHTML = `<div style="font-size:30px">🎉</div>Correct! +20 Points!`;
+            addPlay(20);
+            launchConfetti();
+        } else {
+            r.className = 'game-result-box show lose';
+            r.innerHTML = `<div style="font-size:30px">❌</div>Wrong! Correct: ${q.opts[q.ans]}`;
+            addPlay(0);
+        }
+    };
+}
+
+// ================= GAME 6: COLOR PREDICTION =================
+function renderColorPrediction() {
+    let selected = null;
+    let rounds = 0;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🎨 Rounds: <b id="cpCount">0/3</b></span>
+            <span>💯 +15 pts per correct</span>
+        </div>
+        <div class="game-body" style="text-align:center;">
+            <div class="color-display" id="colorDisplay">?</div>
+            <p style="font-size:12px;font-weight:700;color:var(--text-soft);margin:10px 0;">Apna color choose karo:</p>
+            <div class="color-btns">
+                <button class="color-btn" data-color="red" onclick="pickColor('red', this)">RED</button>
+                <button class="color-btn" data-color="green" onclick="pickColor('green', this)">GREEN</button>
+                <button class="color-btn" data-color="violet" onclick="pickColor('violet', this)">VIOLET</button>
+            </div>
+            <button class="game-btn" onclick="playColor()" id="cpBtn" disabled>🎨 PLAY</button>
+            <div class="game-result-box" id="cpResult"></div>
+        </div>
+    `;
+    
+    window.pickColor = function(color, btn) {
+        selected = color;
+        document.querySelectorAll('[data-color]').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        if (rounds < 3) document.getElementById('cpBtn').disabled = false;
+    };
+    
+    window.playColor = function() {
+        if (!selected || rounds >= 3) return;
+        rounds++;
+        document.getElementById('cpCount').innerText = rounds + '/3';
+        document.getElementById('cpBtn').disabled = true;
+        
+        const colors = ['red', 'green', 'violet'];
+        const result = colors[Math.floor(Math.random() * colors.length)];
+        const display = document.getElementById('colorDisplay');
+        
+        // Flicker
+        let ticks = 0;
+        const interval = setInterval(() => {
+            display.className = 'color-display result-' + colors[Math.floor(Math.random() * colors.length)];
+            ticks++;
+            if (ticks > 10) {
+                clearInterval(interval);
+                display.className = 'color-display result-' + result;
+                display.innerText = result.toUpperCase();
+                
+                const r = document.getElementById('cpResult');
+                if (selected === result) {
+                    r.className = 'game-result-box show win';
+                    r.innerHTML = `<div style="font-size:30px">🎉</div>Correct! +15 Points!`;
+                    addPlay(15);
+                    launchConfetti();
+                } else {
+                    r.className = 'game-result-box show lose';
+                    r.innerHTML = `<div style="font-size:30px">❌</div>It was ${result.toUpperCase()}`;
+                    addPlay(0);
+                }
+                
+                selected = null;
+                document.querySelectorAll('[data-color]').forEach(b => b.classList.remove('selected'));
+                if (rounds >= 3) {
+                    document.getElementById('cpBtn').innerText = '✅ Done!';
+                } else {
+                    document.getElementById('cpBtn').disabled = false;
+                }
+            }
+        }, 100);
+    };
+}
+
+// ================= GAME 7: MATH CHALLENGE =================
+function renderMathChallenge() {
+    let score = 0;
+    let round = 0;
+    let timeLeft = 20;
+    let timerInterval = null;
+    let currentAnswer = 0;
+    const totalRounds = 5;
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🔢 Round: <b id="mcRound">1/${totalRounds}</b></span>
+            <span>⏰ <b id="mcTimer">20s</b></span>
+            <span>💯 <b id="mcScore">0</b> pts</span>
+        </div>
+        <div class="game-body" style="text-align:center;">
+            <div class="math-question" id="mathQ">-- × -- = ?</div>
+            <input type="number" id="mathInput" class="math-input" placeholder="?" autofocus>
+            <br>
+            <button class="game-btn" onclick="submitMath()" style="margin-top:10px;">✅ SUBMIT</button>
+            <div class="game-result-box" id="mcResult"></div>
+        </div>
+    `;
+    
+    function newQuestion() {
+        const ops = ['+', '-', '×'];
+        const op = ops[Math.floor(Math.random() * ops.length)];
+        let a, b;
+        if (op === '+') { a = Math.floor(Math.random() * 50) + 1; b = Math.floor(Math.random() * 50) + 1; currentAnswer = a + b; }
+        else if (op === '-') { a = Math.floor(Math.random() * 50) + 20; b = Math.floor(Math.random() * 20) + 1; currentAnswer = a - b; }
+        else { a = Math.floor(Math.random() * 12) + 1; b = Math.floor(Math.random() * 12) + 1; currentAnswer = a * b; }
+        
+        document.getElementById('mathQ').innerText = `${a} ${op} ${b} = ?`;
+        document.getElementById('mathInput').value = '';
+        document.getElementById('mathInput').focus();
+    }
+    
+    function startTimer() {
+        timeLeft = 20;
+        document.getElementById('mcTimer').innerText = timeLeft + 's';
+        clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            document.getElementById('mcTimer').innerText = timeLeft + 's';
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                endGame();
+            }
+        }, 1000);
+    }
+    
+    function endGame() {
+        clearInterval(timerInterval);
+        const r = document.getElementById('mcResult');
+        r.className = 'game-result-box show ' + (score > 0 ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:30px">${score > 0 ? '🎉' : '⏰'}</div>Game Over! Score: ${score} Points`;
+        addPlay(score);
+        if (score > 0) launchConfetti();
+        document.getElementById('mathInput').disabled = true;
+        document.querySelector('.game-btn').disabled = true;
+    }
+    
+    window.submitMath = function() {
+        const inp = document.getElementById('mathInput');
+        const ans = parseInt(inp.value);
+        if (isNaN(ans)) return;
+        
+        if (ans === currentAnswer) {
+            score += 10;
+            document.getElementById('mcScore').innerText = score;
+        }
+        
+        round++;
+        if (round >= totalRounds) {
+            endGame();
+        } else {
+            document.getElementById('mcRound').innerText = (round + 1) + '/' + totalRounds;
+            newQuestion();
+        }
+    };
+    
+    document.getElementById('mathInput').addEventListener('keypress', e => {
+        if (e.key === 'Enter') window.submitMath();
+    });
+    
+    newQuestion();
+    startTimer();
+}
+
+// ================= GAME 8: DAILY CHALLENGE =================
+function renderDailyChallenge() {
+    const today = new Date();
+    const seed = today.getFullYear()*10000 + (today.getMonth()+1)*100 + today.getDate();
+    const target = Math.abs((seed * 7777 + 12345) % 233280) % 50 + 1;  // 1-50
+    const checkedIn = localStorage.getItem('dailyCheckin_' + todayKey());
+    
+    const days = [];
+    for (let i = 6; i >= 0; i--) {
+        const d = new Date();
+        d.setDate(d.getDate() - i);
+        const k = d.toISOString().slice(0, 10);
+        days.push({ date: k, done: !!localStorage.getItem('dailyCheckin_' + k) });
+    }
+    
+    document.getElementById('gameContent').innerHTML = `
+        <div class="game-info">
+            <span>🔥 Streak: <b>${userData.streak || 0}</b></span>
+            <span>💯 +50 pts</span>
+        </div>
+        <div class="game-body" style="text-align:center;">
+            <div class="daily-badge">
+                🏆 AAJ KA CHALLENGE
+                <div class="db-big">${checkedIn ? '✅ DONE' : '🎯 GUESS 1-' + 50}</div>
+                <div style="font-size:12px;">Target guess karo aur 50 points jeeto!</div>
+                <div class="daily-streak">
+                    ${days.map(d => `<div class="streak-day ${d.done?'done':''}">${d.done?'✓':'?'}</div>`).join('')}
+                </div>
+            </div>
+            ${checkedIn ? `
+                <div class="game-result-box show win">
+                    <div style="font-size:30px">✅</div>
+                    Aaj ka challenge complete! Kal wapas aana.
+                </div>
+            ` : `
+                <input type="number" id="dcInput" class="guess-input-lg" placeholder="1-50" min="1" max="50">
+                <button class="game-btn" onclick="submitDC(${target})">🎯 SUBMIT</button>
+                <div class="game-result-box" id="dcResult"></div>
+            `}
+        </div>
+    `;
+    
+    window.submitDC = function(target) {
+        const inp = document.getElementById('dcInput');
+        const guess = parseInt(inp.value);
+        if (isNaN(guess) || guess < 1 || guess > 50) return showToast("⚠️ 1-50 ke beech daalo", "error");
+        
+        const diff = Math.abs(guess - target);
+        const pts = diff === 0 ? 50 : diff <= 3 ? 25 : diff <= 7 ? 10 : 0;
+        
+        localStorage.setItem('dailyCheckin_' + todayKey(), 'true');
+        if (pts > 0) {
+            userData.streak = (userData.streak || 0) + 1;
+        }
+        
+        const r = document.getElementById('dcResult');
+        r.className = 'game-result-box show ' + (pts > 0 ? 'win' : 'lose');
+        r.innerHTML = `<div style="font-size:30px">${pts > 0 ? '🎉' : '❌'}</div>${pts > 0 ? '+' + pts + ' Points!' : 'Target was ' + target + '. Kal try karo!'}`;
+        
+        addPlay(pts);
+        if (pts > 0) launchConfetti();
         inp.disabled = true;
-        btn.disabled = true;
-        btn.innerText = '✅ Kal Aana!';
-    } else {
-        inp.disabled = false;
-        btn.disabled = false;
-        btn.innerText = '🎯 GUESS KARO';
-    }
+        document.querySelector('.game-btn').disabled = true;
+    };
 }
 
+// ================= LEADERBOARD =================
+function renderLeaderboard() {
+    const el = document.getElementById('leaderboardList');
+    // Mock data - baad me Google Sheet se
+    const leaders = [
+        { name: 'Rahul***', pts: 2450 },
+        { name: 'Priya***', pts: 1980 },
+        { name: 'Amit***', pts: 1650 },
+        { name: 'Sneha***', pts: 1230 },
+        { name: userData.name, pts: userData.points, isMe: true }
+    ].sort((a, b) => b.pts - a.pts);
+    
+    el.innerHTML = leaders.map((l, i) => `
+        <div class="lb-row top${i+1}">
+            <span class="lb-rank">#${i+1}</span>
+            <span class="lb-name">${l.name} ${l.isMe ? '(You)' : ''}</span>
+            <span class="lb-pts">${l.pts} pts</span>
+        </div>
+    `).join('');
+}
+
+function showLeaderboard() {
+    document.querySelector('.leaderboard-panel').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ================= REWARDS =================
 const REWARDS = [
     { icon: '🎫', title: '1 Din Free', cost: 500 },
     { icon: '⚡', title: '7 Din Free', cost: 1000 },
@@ -1278,129 +1470,66 @@ const REWARDS = [
 ];
 
 function renderRewards() {
-    const el = document.getElementById('rewardsGrid');
+    const el = document.getElementById('rewardsList');
     el.innerHTML = REWARDS.map((r, i) => {
-        const owned = (gameData.rewards || []).includes(i);
-        const canBuy = gameData.points >= r.cost && !owned;
+        const owned = (userData.rewards || []).includes(i);
+        const canBuy = userData.points >= r.cost && !owned;
         return `
-            <div class="reward-card ${owned || canBuy ? '' : 'locked'}">
-                <div class="rc-icon">${r.icon}</div>
-                <div class="rc-title">${r.title}</div>
-                <div class="rc-cost">${r.cost} Points</div>
-                <button class="rc-btn" ${!canBuy ? 'disabled' : ''} onclick="redeemReward(${i})">
-                    ${owned ? '✅ Claimed' : (canBuy ? 'Redeem' : '🔒 Locked')}
+            <div class="lb-row" style="flex-direction:column;gap:6px;padding:12px;">
+                <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+                    <span>${r.icon} <b>${r.title}</b></span>
+                    <span style="color:var(--vip-green);font-weight:900;">${r.cost} pts</span>
+                </div>
+                <button class="game-btn ${owned ? '' : canBuy ? '' : 'secondary'}" style="width:100%;padding:8px;font-size:12px;" ${!canBuy ? 'disabled' : ''} onclick="redeemReward(${i})">
+                    ${owned ? '✅ Claimed' : canBuy ? '🎁 Redeem' : '🔒 Locked'}
                 </button>
             </div>
         `;
     }).join('');
 }
 
-function redeemReward(idx) {
+window.redeemReward = function(idx) {
     const r = REWARDS[idx];
-    if (gameData.points < r.cost) return showToast("Points kam hai", "error");
-    if ((gameData.rewards || []).includes(idx)) return showToast("Already claimed", "error");
+    if (userData.points < r.cost) return showToast("Points kam hai", "error");
+    if ((userData.rewards || []).includes(idx)) return showToast("Already claimed", "error");
     
-    gameData.points -= r.cost;
-    gameData.rewards = gameData.rewards || [];
-    gameData.rewards.push(idx);
-    saveGameData();
-    
+    userData.points -= r.cost;
+    userData.rewards = userData.rewards || [];
+    userData.rewards.push(idx);
+    saveUserData();
+    updateWallet();
+    renderRewards();
     showToast("🎉 Mil gaya: " + r.title);
     launchConfetti();
-    refreshGameUI();
+};
+
+function showRewards() {
+    document.querySelectorAll('.leaderboard-panel')[1].scrollIntoView({ behavior: 'smooth' });
 }
 
-function renderLeaderboard() {
-    const el = document.getElementById('leaderboard');
-    const mockLeaders = [
-        { name: 'Rahul***', points: 1250 },
-        { name: 'Priya***', points: 980 },
-        { name: 'Amit***', points: 750 },
-        { name: 'Sneha***', points: 620 },
-        { name: 'Vikas***', points: 510 }
-    ];
-    el.innerHTML = mockLeaders.map((l, i) => `
-        <div class="lb-item">
-            <span class="lb-rank">#${i+1}</span>
-            <span class="lb-name">${l.name}</span>
-            <span class="lb-points">${l.points} pts</span>
-        </div>
-    `).join('');
-}
-
-function openGameSection() {
-    openGame();
-}
-
-// ================= PAYMENT FLOW =================
-function openVipModal() { document.getElementById('vipModal').classList.add('active'); resetModal(); }
-function closeVipModal() { document.getElementById('vipModal').classList.remove('active'); }
+// ================= PAYMENT (existing) =================
 function openLoginDirect() {
-    document.getElementById('vipModal').classList.add('active');
-    resetModal();
-    document.getElementById('step-create-account').style.display = 'none';
-    document.getElementById('step2').style.display = 'block';
-}
-function resetModal() {
+    document.getElementById('vipModal').classList.add('show');
     document.getElementById('step-create-account').style.display = 'block';
-    ['step2','step-pay-details','step3','step-subscription','step-plan-pay','step-plan-timer','step4'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'none';
-    });
+    document.getElementById('step2').style.display = 'none';
 }
-function backToStep1() { document.getElementById('step2').style.display = 'none'; document.getElementById('step-create-account').style.display = 'block'; }
-function backToStep2() { document.getElementById('step-pay-details').style.display = 'none'; document.getElementById('step2').style.display = 'block'; }
+function closeVipModal() {
+    document.getElementById('vipModal').classList.remove('show');
+}
 function goPay() {
-    if (!document.getElementById('vName').value || document.getElementById('vPhone').value.length < 10) return showToast("सही जानकारी भरें", "error");
-    document.getElementById('payNumber').value = document.getElementById('vPhone').value;
+    if (!document.getElementById('vName').value || document.getElementById('vPhone').value.length < 10) {
+        return showToast("Sahi details bharein", "error");
+    }
     document.getElementById('step-create-account').style.display = 'none';
     document.getElementById('step2').style.display = 'block';
-}
-function copyUpi() { navigator.clipboard.writeText(document.getElementById('upiText').innerText); showToast("✅ Copied!"); }
-function goToPaymentDetails() { document.getElementById('step2').style.display = 'none'; document.getElementById('step-pay-details').style.display = 'block'; }
-function submitPayment() {
-    const num = document.getElementById('payNumber').value;
-    const upi = document.getElementById('payUpi').value;
-    const utid = document.getElementById('payUtid').value;
-    if (num.length < 10 || !upi || utid.length < 6) return showToast("सभी विवरण भरें", "error");
-    document.getElementById('step-pay-details').style.display = 'none';
-    document.getElementById('step3').style.display = 'block';
-    startTimer('timerBox', 120, 'step3', 'step-subscription');
-}
-function startTimer(boxId, seconds, hideId, showId) {
-    let t = seconds;
-    const x = setInterval(() => {
-        const m = Math.floor(t / 60), s = t % 60;
-        document.getElementById(boxId).innerText = `0${m}:${s < 10 ? '0' + s : s}`;
-        if (t-- <= 0) {
-            clearInterval(x);
-            document.getElementById(hideId).style.display = 'none';
-            document.getElementById(showId).style.display = 'block';
-        }
-    }, 1000);
-}
-let selectedPlanName = "", selectedPlanPrice = "";
-function openPlanPayment(planName, price) {
-    selectedPlanName = planName;
-    selectedPlanPrice = price;
-    document.getElementById('planTitleDisplay').innerText = planName;
-    document.getElementById('planPriceDisplay').innerText = "₹" + price;
-    document.getElementById('step-subscription').style.display = 'none';
-    document.getElementById('step-plan-pay').style.display = 'block';
-}
-function copyPlanUpi() { navigator.clipboard.writeText(document.getElementById('planUpiText').innerText); showToast("✅ Copied!"); }
-function submitPlanPayment() {
-    const utid = document.getElementById('planUtidInput').value;
-    if (utid.length < 6) return showToast("UTR ID भरें", "error");
-    document.getElementById('step-plan-pay').style.display = 'none';
-    document.getElementById('step-plan-timer').style.display = 'block';
-    startTimer('planTimerBox', 60, 'step-plan-timer', 'step4');
 }
 
-function closeAnnouncement() {
-    document.getElementById('announcementBanner').classList.remove('show');
-    localStorage.setItem('announcementClosed', new Date().toISOString().slice(0,10));
-}
+// ================= INIT =================
+window.addEventListener('load', () => {
+    updateWallet();
+    renderLeaderboard();
+    renderRewards();
+});
 </script>
 
 <!-- ================= TAWK.TO CHAT ================= -->
